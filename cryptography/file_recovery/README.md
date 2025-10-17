@@ -1,0 +1,1 @@
+openssl rsautl -decrypt -inkey private.pem -in flag.enc -out decrypted_file.txt

@@ -1,0 +1,1 @@
+On ajoute un salt, mais ça ne change pas le concept des 4 chiffres de la question hash_breaker. D'ailleurs j'aurais pu garder le principe du hash map pour aller + vite mais ce n'était pas nécessaire.

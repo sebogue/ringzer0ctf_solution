@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyseur de Carte Perforée (IBM)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #1e293b;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 2em;
+        }
+        
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .control-group {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .control-group.upload {
+            background: #dbeafe;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+        
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px dashed #3b82f6;
+            border-radius: 6px;
+            cursor: pointer;
+            background: white;
+        }
+        
+        input[type="range"] {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: #cbd5e1;
+            outline: none;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #3b82f6;
+            cursor: pointer;
+        }
+        
+        .value-display {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button.analyze {
+            background: #10b981;
+            color: white;
+        }
+        button.decode{
+            background: #f04c23;
+            color: white;
+        }
+        button.decode:hover:not(:disabled) {
+            background: #b93210;
+            transform: translateY(-2px);
+        }
+        
+        button.analyze:hover:not(:disabled) {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+        
+        button.export {
+            background: #8b5cf6;
+            color: white;
+        }
+        
+        button.export:hover {
+            background: #7c3aed;
+            transform: translateY(-2px);
+        }
+        
+        button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .canvas-container {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+        }
+        
+        canvas {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #cbd5e1;
+            border-radius: 6px;
+        }
+        
+        .placeholder {
+            text-align: center;
+            color: #94a3b8;
+        }
+        
+        .placeholder svg {
+            width: 80px;
+            height: 80px;
+            opacity: 0.5;
+            margin-bottom: 15px;
+        }
+        
+        .results {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 20px;
+            display: none;
+        }
+        
+        .results.show {
+            display: block;
+        }
+        
+        .results h2 {
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+        
+        .holes-list {
+            max-height: 300px;
+            overflow-y: auto;
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+        }
+        
+        .holes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+            font-family: monospace;
+            font-size: 0.85em;
+        }
+        
+        .hole-item {
+            background: #dbeafe;
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        #close-help{
+            position: absolute;
+            top: 10px; right: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #help-content{
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+        #help-modal{
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        #help-btn{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3b82f6;
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        #example{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        #example h1 {
+            color: #ffff;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
+            </svg>
+            Analyseur de Carte Perforée (IBM)
+        </h1>
+        
+        <div class="grid-layout">
+            <div class="controls">
+                <div class="control-group upload">
+                    <label>Importer l'image de la carte</label>
+                    <input type="file" id="imageUpload" accept="image/*">
+                </div>
+                
+                <div class="control-group">
+                    <label>Colonnes: <span class="value-display" id="colsValue">80</span></label>
+                    <input type="range" id="colsSlider" min="10" max="120" value="80">
+                    
+                    <label style="margin-top: 15px;">Lignes: <span class="value-display" id="rowsValue">12</span></label>
+                    <input type="range" id="rowsSlider" min="8" max="20" value="12">
+                    
+                    <label style="margin-top: 15px;">Seuil de détection: <span class="value-display" id="thresholdValue">100</span></label>
+                    <input type="range" id="thresholdSlider" min="50" max="200" value="100">
+                </div>
+                
+                <button class="analyze" id="analyzeBtn" disabled>Analyser la carte</button>
+                <button class="export" id="exportBtn" style="display: none;">Exporter les données (JSON)</button>
+                <button class="decode" id="decodeBtn" style="display: none;">Décoder (table hollerith)</button>
+            </div>
+            
+            <div class="canvas-container" id="canvasContainer">
+                <div class="placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="17 8 12 3 7 8"/>
+                        <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                    <p style="font-size: 1.2em;">Importez une image de carte perforée</p>
+                </div>
+                <canvas id="canvas" style="display: none;"></canvas>
+            </div>
+            <div id="message" style="display: none;"></div>
+        </div>
+        <div id="help-btn">?</div>
+
+    <!-- Modal d'aide -->
+        <div id="help-modal">
+            <div id="help-content">
+                <span id="close-help">&times;</span>
+                <h2>Aide / Comment utiliser</h2>
+                <p>
+                    1. Importez votre image de carte perforée IBM.<br>
+                    2. Ajustez le nombre de colonnes et de lignes si nécessaire (normalement 12x80).<br>
+                    3. Ajustez le seuil pour la détection des trous.<br>
+                    4. Cliquez sur <strong>Analyser la carte</strong> pour détecter les trous.<br>
+                    5. Vous pouvez déplacer les lignes vertes pour affiner la grille.<br>
+                    6. Les cellules détectées sont affichées en rouge et listées ci-dessous.<br>
+                    7. Cliquez sur <strong>Exporter</strong> pour sauvegarder les résultats au format JSON.
+                </p>
+            </div>
+        </div>
+        
+        <div class="results" id="results">
+            <h2 id="resultsTitle">Résultats: 0 trous détectés</h2>
+            <div class="holes-list">
+                <div class="holes-grid" id="holesGrid"></div>
+            </div>
+        </div>
+    </div>
+    <div id="example">
+        <h1>Exemple de l'analyse d'une carte perforée IBM</h1>
+        <img src="./punchcard/example.png">
+    </div>
+
+    <script>
+        var imageData = null;
+        var detectedHoles = [];
+
+        var imageUpload = document.getElementById('imageUpload');
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        var analyzeBtn = document.getElementById('analyzeBtn');
+        var exportBtn = document.getElementById('exportBtn');
+        var decodeBtn = document.getElementById('decodeBtn');
+        var colsSlider = document.getElementById('colsSlider');
+        var rowsSlider = document.getElementById('rowsSlider');
+        var thresholdSlider = document.getElementById('thresholdSlider');
+        var colsValue = document.getElementById('colsValue');
+        var rowsValue = document.getElementById('rowsValue');
+        var thresholdValue = document.getElementById('thresholdValue');
+        var results = document.getElementById('results');
+        var resultsTitle = document.getElementById('resultsTitle');
+        var holesGrid = document.getElementById('holesGrid');
+
+        var rowLines = [];
+        var colLines = [];
+        const dict = {
+            "12": {"-1":'&', "1":'A', "2":'B', "3":'C', "4":'D', "5":'E', "6":'F', "7":'G', "8":'H', "9":'I',"10":'[',"11":'.',"12":'<', "13":'(', "14":'+', "15":'!' },
+            "11": {"-1":'-', "1":'J', "2":'K', "3":'L', "4":'M', "5":'N', "6":'O', "7":'P', "8":'Q', "9":'R',"10":']',"11":'$',"12":'*', "13":')', "14":';', "15":'^'},
+            "0":  {"-1":'0', "1":'/', "2":'S', "3":'T', "4":'U', "5":'V', "6":'W', "7":'X', "8":'Y', "9":'Z',"10":'\\',"11":',',"12":'%', "13":'_', "14":'>', "15":'?' },
+            "-1": {"1":'1', "2":'2', "3":'3', "4":'4', "5":'5', "6":'6', "7":'7', "8":'8', "9":'9', "10":':', "11":'#', "12":'@', "13":"'", "14":'=', "15":'"'} 
+        };
+        var draggingLine = null;
+        var draggingType = null;
+        var dragOffset = 0;
+        var helpBtn = document.getElementById('help-btn');
+        var helpModal = document.getElementById('help-modal');
+        var closeHelp = document.getElementById('close-help');
+        // initialisation sliders
+        colsSlider.addEventListener('input', function(e) {
+            colsValue.textContent = e.target.value;
+            initGridLines();
+            drawGrid();
+        });
+        rowsSlider.addEventListener('input', function(e) {
+            rowsValue.textContent = e.target.value;
+            initGridLines();
+            drawGrid();
+        });
+        thresholdSlider.addEventListener('input', function(e) {
+            thresholdValue.textContent = e.target.value;
+        });
+
+        // import image
+        imageUpload.addEventListener('change', function(e) {
+            var file = e.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    var img = new Image();
+                    img.onload = function() {
+                        imageData = img;
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        ctx.drawImage(img, 0, 0);
+
+                        document.querySelector('.placeholder').style.display = 'none';
+                        canvas.style.display = 'block';
+                        analyzeBtn.disabled = false;
+
+                        initGridLines();
+                        drawGrid();
+                    };
+                    img.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // initialise lignes/colonnes
+        function initGridLines() {
+            var rows = parseInt(rowsSlider.value);
+            var cols = parseInt(colsSlider.value);
+            rowLines = [];
+            colLines = [];
+            for (let i = 0; i <= rows; i++) rowLines.push(i * canvas.height / rows);
+            for (let i = 0; i <= cols; i++) colLines.push(i * canvas.width / cols);
+        }
+
+        // dessine image + grille
+        function drawGrid() {
+            if (!imageData) return;
+            ctx.drawImage(imageData, 0, 0);
+
+            ctx.strokeStyle = 'rgba(0, 255, 0, 0.7)'; // un peu plus visible
+            ctx.lineWidth = 5; // ligne plus épaisse
+
+            rowLines.forEach(y => {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(canvas.width, y);
+                ctx.stroke();
+            });
+            colLines.forEach(x => {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, canvas.height);
+                ctx.stroke();
+            });
+
+            // affichage trous rouges si détectés
+            if (detectedHoles.length > 0) {
+                ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+                detectedHoles.forEach(hole => {
+                    let x0 = colLines[hole.col];
+                    let y0 = rowLines[hole.row];
+                    let x1 = colLines[hole.col + 1];
+                    let y1 = rowLines[hole.row + 1];
+                    ctx.fillRect(x0 + 2, y0 + 2, x1 - x0 - 4, y1 - y0 - 4);
+                });
+            }
+        }
+
+        canvas.addEventListener('mousedown', function(e) {
+            // coordonnées réelles sur le canvas
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            const x = (e.clientX - rect.left) * scaleX;
+            const y = (e.clientY - rect.top) * scaleY;
+
+            draggingLine = null;
+
+            const proximity = 6; // zone cliquable +/- 6px
+
+            for (let i = 0; i < rowLines.length; i++) {
+                if (Math.abs(y - rowLines[i]) < proximity) {
+                    draggingLine = i;
+                    draggingType = 'row';
+                    dragOffset = y - rowLines[i];
+                    return;
+                }
+            }
+
+            for (let i = 0; i < colLines.length; i++) {
+                if (Math.abs(x - colLines[i]) < proximity) {
+                    draggingLine = i;
+                    draggingType = 'col';
+                    dragOffset = x - colLines[i];
+                    return;
+                }
+            }
+        });
+
+        canvas.addEventListener('mousemove', function(e) {
+            if (draggingLine === null) return;
+
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            const x = (e.clientX - rect.left) * scaleX;
+            const y = (e.clientY - rect.top) * scaleY;
+
+            if (draggingType === 'row') {
+                rowLines[draggingLine] = Math.min(Math.max(y - dragOffset, 0), canvas.height);
+            } else if (draggingType === 'col') {
+                colLines[draggingLine] = Math.min(Math.max(x - dragOffset, 0), canvas.width);
+            }
+
+            drawGrid();
+        });
+
+
+        canvas.addEventListener('mouseup', function() {
+            draggingLine = null;
+            draggingType = null;
+        });
+        canvas.addEventListener('mouseleave', function() {
+            draggingLine = null;
+            draggingType = null;
+        });
+
+        // --- analyse ---
+        analyzeBtn.addEventListener('click', function() {
+            if (!imageData) return;
+
+            analyzeBtn.textContent = 'Analyse en cours...';
+            analyzeBtn.disabled = true;
+
+            setTimeout(function() {
+                // Réinitialiser les trous
+                detectedHoles = [];
+
+                // Re-dessiner juste l'image et la grille (sans trous)
+                drawGrid();
+
+                var threshold = parseInt(thresholdSlider.value);
+                var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                var data = imgData.data;
+
+                var grayData = new Uint8Array(canvas.width * canvas.height);
+                for (var i = 0; i < data.length; i += 4) {
+                    var gray = 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
+                    grayData[i / 4] = gray < threshold ? 255 : 0;
+                }
+
+                // Détecter les trous...
+                for (var r = 0; r < rowLines.length-1; r++) {
+                    for (var c = 0; c < colLines.length-1; c++) {
+                        var foundBlack = false;
+                        var minBlackPixels = Math.floor((colLines[c+1]-colLines[c]) * (rowLines[r+1]-rowLines[r]) * 0.05);
+                        var countBlack = 0;
+
+                        for (var y = Math.floor(rowLines[r]); y < Math.floor(rowLines[r+1]); y++) {
+                            for (var x = Math.floor(colLines[c]); x < Math.floor(colLines[c+1]); x++) {
+                                var idx = y * canvas.width + x;
+                                if (grayData[idx] > 100) {
+                                    countBlack++;
+                                    if (countBlack >= minBlackPixels) {
+                                        foundBlack = true;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (foundBlack) break;
+                        }
+
+                        if (foundBlack) detectedHoles.push({ row: r, col: c });
+                    }
+                }
+
+                // Dessiner la grille et les nouveaux trous rouges
+                drawGrid();
+                displayResults();
+
+                analyzeBtn.textContent = 'Analyser la carte';
+                analyzeBtn.disabled = false;
+            }, 100);
+        });
+        decodeBtn.addEventListener('click', function(){
+            message = ""
+            const tuples = [];
+            const groupedByCol = {};
+            for (const hole of detectedHoles) {
+                if (!(hole.col in groupedByCol)) {
+                    groupedByCol[hole.col] = [];
+                }
+                groupedByCol[hole.col].push(hole);
+            }
+            for (const col in groupedByCol) {
+                const holes = groupedByCol[col];
+                let x = -1;
+                for (const h of holes) {
+                    if (h.row === 2) x = 0;
+                    else if (h.row === 1) x = 11;
+                    else if (h.row === 0) x = 12;
+                }
+                let y = 0;
+                for (const h of holes) {
+                    if (h.row > 2) {
+                        y += (h.row - 2);
+                    }
+                }
+                if(y==0){
+                    y = -1
+                }
+                tuples.push([x, y]);
+            }
+            for(const tuple of tuples){
+                if(dict[tuple[0]][tuple[1]]!=undefined){
+                    message+=dict[tuple[0]][tuple[1]]
+                }
+            }
+            var decoded_msg = document.getElementById('message');
+            decoded_msg.innerText = message
+            decoded_msg.style.display = 'block'
+            
+        });
+
+
+        function displayResults() {
+            resultsTitle.textContent = 'Résultats: ' + detectedHoles.length + ' trous détectés';
+            holesGrid.innerHTML = '';
+            const displayLimit = 100;
+            detectedHoles.slice(0, displayLimit).forEach(hole => {
+                let div = document.createElement('div');
+                div.className = 'hole-item';
+                div.textContent = 'L' + hole.row + ' C' + hole.col;
+                holesGrid.appendChild(div);
+            });
+            if (detectedHoles.length > displayLimit) {
+                let div = document.createElement('div');
+                div.style.gridColumn = '1 / -1';
+                div.style.textAlign = 'center';
+                div.style.fontStyle = 'italic';
+                div.style.color = '#64748b';
+                div.textContent = '... et ' + (detectedHoles.length - displayLimit) + ' autres trous';
+                holesGrid.appendChild(div);
+            }
+            results.classList.add('show');
+            exportBtn.style.display = 'block';
+            decodeBtn.style.display = 'block';
+        }
+
+        // export JSON
+        exportBtn.addEventListener('click', function() {
+            var data = {
+                gridSettings: { rows: parseInt(rowsSlider.value), cols: parseInt(colsSlider.value) },
+                threshold: parseInt(thresholdSlider.value),
+                holes: detectedHoles,
+                holesCount: detectedHoles.length
+            };
+            var blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'punchcard_data.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+
+        helpBtn.addEventListener('click', function() {
+            helpModal.style.display = 'flex';
+        });
+
+        closeHelp.addEventListener('click', function() {
+            helpModal.style.display = 'none';
+        });
+
+        helpModal.addEventListener('click', function(e) {
+            if (e.target === helpModal) helpModal.style.display = 'none';
+        });
+
+</script>
+</body>
+</html>

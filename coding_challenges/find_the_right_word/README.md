@@ -1,0 +1,3 @@
+# Fonctionnement
+
+On a besoin d'un dictionnaire pour ce problème. J'ai sort chaque mot du dictionnaire en ordre alphabétique pour ensuite les stocker sous forme dans une map. Les valeurs associés aux clés sont les anagrames possibles. Ainsi on va sort (en ordre alphabétique) la liste des mots non connu provenant de la page web. Pour les mots inexistants qu'on a sort, on cherche un anagrame associé. À noter que le dictionnaire de mots utilisés n'est pas très grand donc la solution marchera pas nécessairement à chaque coup.

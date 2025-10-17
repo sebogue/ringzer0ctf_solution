@@ -1,0 +1,1 @@
+Pas beaucoup d'explication mais assez simple. Il essayer toutes les clés de 10 caractères consécutifs dans la chaîne xor. appliquer ensuite un xor de cette clé avec le message crypté et si le résultat est un texte chiffre et lettres seulement, on peut arrêter puis retourner le résultat.

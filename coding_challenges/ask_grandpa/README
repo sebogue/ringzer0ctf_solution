@@ -1,0 +1,16 @@
+# Intro
+On reçoit une image sans explication.
+
+![Hollerith](2033bb1b194adace86f99c7bb7d72e81.jpg)
+
+Ça ressemble à une une carte perforé à 80 colonnes de IBM. J'ai trouvé l'historique de ce type de carte sur wikipedia (https://fr.wikipedia.org/wiki/Carte_perfor%C3%A9e). 
+
+Pourquoi perforer une carte ?
+Les ordinateurs n’avaient pas de clavier comme on connaît aujourd’hui. Les terminaux interactifs (écran + clavier) n’existaient pas encore. La seule façon d’entrer un programme ou des données était hors ligne, sur un médium physique : cartes perforées ou rubans perforés. Une opératrice (souvent avec une machine à cartes type IBM 029 Keypunch) traduisait le texte ou les nombres en trous selon la table Hollerith. La carte était ensuite lue par un lecteur mécanique et les trous transformés en impulsions électriques.
+
+# Hollerith coding table
+![Hollerith](hollerith_coding_table.png)
+
+Les rangées sur la carte se présentent de haut en bas par 12 11 0 1 2 3 4 5 6 7 8 9
+
+Ex: si sur une même colonne la rangée 12 (donc celle la plus en haut) est trouée, et que la rangée 9 aussi alors ça correspond à I. Si la prochaine colonne a la rangée 0 troué, la rangée 7 et la rangée 8 ça correspon à un point d'interrogation (?).
