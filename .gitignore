@@ -2,3 +2,6 @@
 **/.DS_Store
 **/wordlist.txt
 /node_modules
+**/password-list.txt
+**/hash_extender
+**/__pycache__

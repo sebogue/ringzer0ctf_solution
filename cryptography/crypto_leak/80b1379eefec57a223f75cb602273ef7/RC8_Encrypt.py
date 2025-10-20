@@ -15,17 +15,14 @@ def rc8(state, key, n):
             state = state >> 1 | b << 63
         n -= 1
 
-def main():
-    seed, key = ?, ? # Missing
+# def main():
+#     seed, key = ?, ? # Missing
 
-    with open(sys.argv[1], 'rb') as fin:
-        data = bytearray(fin.read())
+#     with open(sys.argv[1], 'rb') as fin:
+#         data = bytearray(fin.read())
 
-    for i,x in enumerate(rc8(seed, key, len(data))):
-        data[i] ^= x
+#     for i,x in enumerate(rc8(seed, key, len(data))):
+#         data[i] ^= x
 
-    with open(sys.argv[1] + '.enc', 'wb') as fout:
-        fout.write(data)
-
-if __name__ == "__main__":
-    main()
+#     with open(sys.argv[1] + '.enc', 'wb') as fout:
+#         fout.write(data)

