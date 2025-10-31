@@ -1,5 +1,4 @@
 process.stdin.resume();
-
 /***
 Utility
 ***/
@@ -64,8 +63,8 @@ var SpellChecker = {
 }
 
 function spellcheck(obj, options) {
-	var spellcheckLang = SpellChecker[options.lang] || {};
-	var checker = spellcheckLang[options.spellcheck] || function (a) { return a; };
+	var spellcheckLang = SpellChecker[options.lang] || {}; // hardcoded donc on peut pas faire grand chose ici
+	var checker = spellcheckLang[options.spellcheck] || function (a) { return a; }; // je ne vois pas ce que je pourrais faire ici en tout cas
 	
 	for (var attr in obj) {
 		if (typeof obj[attr] == "object") {
@@ -91,7 +90,6 @@ var NewContact = false;
 State.MainMenu = {};
 State.MainMenu.Process = function (data) {
 	var selection = parseInt(data.replace(/[\n\r ]/g, ""), 10);	
-
 	switch (selection) {
 		case 1: goto(State.AddNewContact); break;
 		case 2: goto(State.ListContact); break;
@@ -155,8 +153,10 @@ State.AddNewContact.Process = function (data) {
 		"data" : info
 	};
 
-	info.name = info.name || rand(); 
-	Contacts[info.name] = contact; 
+	info.name = info.name || rand();
+	console.log(Contacts)
+	Contacts[info.name] = contact; // on tente de modifier __proto__ de Contacts
+	console.log(Contacts.__proto__)
 	NewContact = true;
 	goto(State.MainMenu);
 	
@@ -182,6 +182,7 @@ State.ListContact.OnEnter = function () {
 
 	for (var contactName in Contacts) {
 		info = Contacts[contactName].data;
+		console.log(info)
 		write("-----------------\n");
 		write("Name : " + info.name + " \n");
 		write("Description : " + info.description + "\n");
@@ -207,7 +208,8 @@ State.SpellcheckContact.Process = function (data) {
 	}
 
 	var selection = data.replace(/[\n\r]+$/g, ""); 
-	var info = Contacts[selection];
+	var info = Contacts[selection]; // info doit etre la payload
+	console.log(info)
 	if (!info) {
 		write("Contact doesn't exists ! \n");
 		write("#> ");
@@ -215,8 +217,9 @@ State.SpellcheckContact.Process = function (data) {
 	}
 
 	var defaultOptions = { "lang" : "en", "spellcheck" : "simple" };
-	var options = merge(defaultOptions, info.options); 
-	spellcheck(info.data, options);
+	var options = merge(defaultOptions, info.options);  // la section options de ma payload doit ecraser defaultOptions
+	console.log(options)
+	spellcheck(info.data, options); // remarque ma payload n'a pas de section data donc peut etre en definir une
 
 	write("Spellcheck finished ! \n");
 	goto(State.MainMenu);
