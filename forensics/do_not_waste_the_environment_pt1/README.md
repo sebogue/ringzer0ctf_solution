@@ -1,4 +1,6 @@
-Le fichier semble être un fichier memory dump d'windows. Le titre du problème contient environment. Donc probablement qu'il faudra analyser les variables d'environnements dans le RAM memory dump. J'utiliserai volatility pour ce faire. J'aurais pu aussi utiliser rekall mais ça prendrait de vieille version de python.
+Le fichier semble être un fichier memory dump de windows. Le titre du problème contient environment. Donc probablement qu'il faudra analyser les variables d'environnements dans le RAM memory dump. J'utiliserai volatility pour ce faire. J'aurais pu aussi utiliser rekall mais ça prendrait de vieille version de python.
+
+*** je n'ai pas mis le fichier memory dump car il est trop volumineux pour github
 
 ## Setup
 ```bash
