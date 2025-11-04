@@ -1,0 +1,814 @@
+Volatility 3 Framework 2.26.2
+
+PID	Process	Block	Variable	Value
+
+252	smss.exe	0x3208c0	Path	C:\Windows\System32
+252	smss.exe	0x3208c0	SystemDrive	C:
+252	smss.exe	0x3208c0	SystemRoot	C:\Windows
+328	csrss.exe	0x280cc0	ComSpec	C:\Windows\system32\cmd.exe
+328	csrss.exe	0x280cc0	FP_NO_HOST_CHECK	NO
+328	csrss.exe	0x280cc0	NUMBER_OF_PROCESSORS	1
+328	csrss.exe	0x280cc0	OS	Windows_NT
+328	csrss.exe	0x280cc0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+328	csrss.exe	0x280cc0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+328	csrss.exe	0x280cc0	PROCESSOR_ARCHITECTURE	x86
+328	csrss.exe	0x280cc0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+328	csrss.exe	0x280cc0	PROCESSOR_LEVEL	6
+328	csrss.exe	0x280cc0	PROCESSOR_REVISION	3a09
+328	csrss.exe	0x280cc0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+328	csrss.exe	0x280cc0	SystemDrive	C:
+328	csrss.exe	0x280cc0	SystemRoot	C:\Windows
+328	csrss.exe	0x280cc0	TEMP	C:\Windows\TEMP
+328	csrss.exe	0x280cc0	TMP	C:\Windows\TEMP
+328	csrss.exe	0x280cc0	USERNAME	SYSTEM
+328	csrss.exe	0x280cc0	windir	C:\Windows
+364	csrss.exe	0x1a0cc0	ComSpec	C:\Windows\system32\cmd.exe
+364	csrss.exe	0x1a0cc0	FP_NO_HOST_CHECK	NO
+364	csrss.exe	0x1a0cc0	NUMBER_OF_PROCESSORS	1
+364	csrss.exe	0x1a0cc0	OS	Windows_NT
+364	csrss.exe	0x1a0cc0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+364	csrss.exe	0x1a0cc0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+364	csrss.exe	0x1a0cc0	PROCESSOR_ARCHITECTURE	x86
+364	csrss.exe	0x1a0cc0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+364	csrss.exe	0x1a0cc0	PROCESSOR_LEVEL	6
+364	csrss.exe	0x1a0cc0	PROCESSOR_REVISION	3a09
+364	csrss.exe	0x1a0cc0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+364	csrss.exe	0x1a0cc0	SystemDrive	C:
+364	csrss.exe	0x1a0cc0	SystemRoot	C:\Windows
+364	csrss.exe	0x1a0cc0	TEMP	C:\Windows\TEMP
+364	csrss.exe	0x1a0cc0	TMP	C:\Windows\TEMP
+364	csrss.exe	0x1a0cc0	USERNAME	SYSTEM
+364	csrss.exe	0x1a0cc0	windir	C:\Windows
+372	wininit.exe	0x1c0cc0	ALLUSERSPROFILE	C:\ProgramData
+372	wininit.exe	0x1c0cc0	CommonProgramFiles	C:\Program Files\Common Files
+372	wininit.exe	0x1c0cc0	COMPUTERNAME	FLAG-PC
+372	wininit.exe	0x1c0cc0	ComSpec	C:\Windows\system32\cmd.exe
+372	wininit.exe	0x1c0cc0	FP_NO_HOST_CHECK	NO
+372	wininit.exe	0x1c0cc0	NUMBER_OF_PROCESSORS	1
+372	wininit.exe	0x1c0cc0	OS	Windows_NT
+372	wininit.exe	0x1c0cc0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+372	wininit.exe	0x1c0cc0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+372	wininit.exe	0x1c0cc0	PROCESSOR_ARCHITECTURE	x86
+372	wininit.exe	0x1c0cc0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+372	wininit.exe	0x1c0cc0	PROCESSOR_LEVEL	6
+372	wininit.exe	0x1c0cc0	PROCESSOR_REVISION	3a09
+372	wininit.exe	0x1c0cc0	ProgramData	C:\ProgramData
+372	wininit.exe	0x1c0cc0	ProgramFiles	C:\Program Files
+372	wininit.exe	0x1c0cc0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+372	wininit.exe	0x1c0cc0	PUBLIC	C:\Users\Public
+372	wininit.exe	0x1c0cc0	SystemDrive	C:
+372	wininit.exe	0x1c0cc0	SystemRoot	C:\Windows
+372	wininit.exe	0x1c0cc0	TEMP	C:\Windows\TEMP
+372	wininit.exe	0x1c0cc0	TMP	C:\Windows\TEMP
+372	wininit.exe	0x1c0cc0	USERNAME	SYSTEM
+372	wininit.exe	0x1c0cc0	USERPROFILE	C:\Windows\system32\config\systemprofile
+372	wininit.exe	0x1c0cc0	windir	C:\Windows
+460	services.exe	0x1a0e98	ALLUSERSPROFILE	C:\ProgramData
+460	services.exe	0x1a0e98	CommonProgramFiles	C:\Program Files\Common Files
+460	services.exe	0x1a0e98	COMPUTERNAME	FLAG-PC
+460	services.exe	0x1a0e98	ComSpec	C:\Windows\system32\cmd.exe
+460	services.exe	0x1a0e98	FP_NO_HOST_CHECK	NO
+460	services.exe	0x1a0e98	NUMBER_OF_PROCESSORS	1
+460	services.exe	0x1a0e98	OS	Windows_NT
+460	services.exe	0x1a0e98	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+460	services.exe	0x1a0e98	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+460	services.exe	0x1a0e98	PROCESSOR_ARCHITECTURE	x86
+460	services.exe	0x1a0e98	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+460	services.exe	0x1a0e98	PROCESSOR_LEVEL	6
+460	services.exe	0x1a0e98	PROCESSOR_REVISION	3a09
+460	services.exe	0x1a0e98	ProgramData	C:\ProgramData
+460	services.exe	0x1a0e98	ProgramFiles	C:\Program Files
+460	services.exe	0x1a0e98	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+460	services.exe	0x1a0e98	PUBLIC	C:\Users\Public
+460	services.exe	0x1a0e98	SystemDrive	C:
+460	services.exe	0x1a0e98	SystemRoot	C:\Windows
+460	services.exe	0x1a0e98	TEMP	C:\Windows\TEMP
+460	services.exe	0x1a0e98	TMP	C:\Windows\TEMP
+460	services.exe	0x1a0e98	USERNAME	SYSTEM
+460	services.exe	0x1a0e98	USERPROFILE	C:\Windows\system32\config\systemprofile
+460	services.exe	0x1a0e98	windir	C:\Windows
+468	lsass.exe	0x1b0e98	ALLUSERSPROFILE	C:\ProgramData
+468	lsass.exe	0x1b0e98	CommonProgramFiles	C:\Program Files\Common Files
+468	lsass.exe	0x1b0e98	COMPUTERNAME	FLAG-PC
+468	lsass.exe	0x1b0e98	ComSpec	C:\Windows\system32\cmd.exe
+468	lsass.exe	0x1b0e98	FP_NO_HOST_CHECK	NO
+468	lsass.exe	0x1b0e98	NUMBER_OF_PROCESSORS	1
+468	lsass.exe	0x1b0e98	OS	Windows_NT
+468	lsass.exe	0x1b0e98	Path	C:\Windows\System32
+468	lsass.exe	0x1b0e98	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+468	lsass.exe	0x1b0e98	PROCESSOR_ARCHITECTURE	x86
+468	lsass.exe	0x1b0e98	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+468	lsass.exe	0x1b0e98	PROCESSOR_LEVEL	6
+468	lsass.exe	0x1b0e98	PROCESSOR_REVISION	3a09
+468	lsass.exe	0x1b0e98	ProgramData	C:\ProgramData
+468	lsass.exe	0x1b0e98	ProgramFiles	C:\Program Files
+468	lsass.exe	0x1b0e98	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+468	lsass.exe	0x1b0e98	PUBLIC	C:\Users\Public
+468	lsass.exe	0x1b0e98	SystemDrive	C:
+468	lsass.exe	0x1b0e98	SystemRoot	C:\Windows
+468	lsass.exe	0x1b0e98	TEMP	C:\Windows\TEMP
+468	lsass.exe	0x1b0e98	TMP	C:\Windows\TEMP
+468	lsass.exe	0x1b0e98	USERNAME	SYSTEM
+468	lsass.exe	0x1b0e98	USERPROFILE	C:\Windows\system32\config\systemprofile
+468	lsass.exe	0x1b0e98	windir	C:\Windows
+468	lsass.exe	0x1b0e98	USERPROFILE	C:\Windows\system32\config\systemprofile
+468	lsass.exe	0x1b0e98	windir	C:\Windows
+476	lsm.exe	0x1d0e98	ALLUSERSPROFILE	C:\ProgramData
+476	lsm.exe	0x1d0e98	CommonProgramFiles	C:\Program Files\Common Files
+476	lsm.exe	0x1d0e98	COMPUTERNAME	FLAG-PC
+476	lsm.exe	0x1d0e98	ComSpec	C:\Windows\system32\cmd.exe
+476	lsm.exe	0x1d0e98	FP_NO_HOST_CHECK	NO
+476	lsm.exe	0x1d0e98	NUMBER_OF_PROCESSORS	1
+476	lsm.exe	0x1d0e98	OS	Windows_NT
+476	lsm.exe	0x1d0e98	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+476	lsm.exe	0x1d0e98	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+476	lsm.exe	0x1d0e98	PROCESSOR_ARCHITECTURE	x86
+476	lsm.exe	0x1d0e98	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+476	lsm.exe	0x1d0e98	PROCESSOR_LEVEL	6
+476	lsm.exe	0x1d0e98	PROCESSOR_REVISION	3a09
+476	lsm.exe	0x1d0e98	ProgramData	C:\ProgramData
+476	lsm.exe	0x1d0e98	ProgramFiles	C:\Program Files
+476	lsm.exe	0x1d0e98	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+476	lsm.exe	0x1d0e98	PUBLIC	C:\Users\Public
+476	lsm.exe	0x1d0e98	SystemDrive	C:
+476	lsm.exe	0x1d0e98	SystemRoot	C:\Windows
+476	lsm.exe	0x1d0e98	TEMP	C:\Windows\TEMP
+476	lsm.exe	0x1d0e98	TMP	C:\Windows\TEMP
+476	lsm.exe	0x1d0e98	USERNAME	SYSTEM
+476	lsm.exe	0x1d0e98	USERPROFILE	C:\Windows\system32\config\systemprofile
+476	lsm.exe	0x1d0e98	windir	C:\Windows
+572	svchost.exe	0x3d0fd0	ALLUSERSPROFILE	C:\ProgramData
+572	svchost.exe	0x3d0fd0	APPDATA	C:\Windows\system32\config\systemprofile\AppData\Roaming
+572	svchost.exe	0x3d0fd0	CommonProgramFiles	C:\Program Files\Common Files
+572	svchost.exe	0x3d0fd0	COMPUTERNAME	FLAG-PC
+572	svchost.exe	0x3d0fd0	ComSpec	C:\Windows\system32\cmd.exe
+572	svchost.exe	0x3d0fd0	FP_NO_HOST_CHECK	NO
+572	svchost.exe	0x3d0fd0	LOCALAPPDATA	C:\Windows\system32\config\systemprofile\AppData\Local
+572	svchost.exe	0x3d0fd0	NUMBER_OF_PROCESSORS	1
+572	svchost.exe	0x3d0fd0	OS	Windows_NT
+572	svchost.exe	0x3d0fd0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+572	svchost.exe	0x3d0fd0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+572	svchost.exe	0x3d0fd0	PROCESSOR_ARCHITECTURE	x86
+572	svchost.exe	0x3d0fd0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+572	svchost.exe	0x3d0fd0	PROCESSOR_LEVEL	6
+572	svchost.exe	0x3d0fd0	PROCESSOR_REVISION	3a09
+572	svchost.exe	0x3d0fd0	ProgramData	C:\ProgramData
+572	svchost.exe	0x3d0fd0	ProgramFiles	C:\Program Files
+572	svchost.exe	0x3d0fd0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+572	svchost.exe	0x3d0fd0	PUBLIC	C:\Users\Public
+572	svchost.exe	0x3d0fd0	SystemDrive	C:
+572	svchost.exe	0x3d0fd0	SystemRoot	C:\Windows
+572	svchost.exe	0x3d0fd0	TEMP	C:\Windows\TEMP
+572	svchost.exe	0x3d0fd0	TMP	C:\Windows\TEMP
+572	svchost.exe	0x3d0fd0	USERDOMAIN	WORKGROUP
+572	svchost.exe	0x3d0fd0	USERNAME	FLAG-PC$
+572	svchost.exe	0x3d0fd0	USERPROFILE	C:\Windows\system32\config\systemprofile
+572	svchost.exe	0x3d0fd0	windir	C:\Windows
+628	VBoxService.ex	0x200fd0	ALLUSERSPROFILE	C:\ProgramData
+628	VBoxService.ex	0x200fd0	APPDATA	C:\Windows\system32\config\systemprofile\AppData\Roaming
+628	VBoxService.ex	0x200fd0	CommonProgramFiles	C:\Program Files\Common Files
+628	VBoxService.ex	0x200fd0	COMPUTERNAME	FLAG-PC
+628	VBoxService.ex	0x200fd0	ComSpec	C:\Windows\system32\cmd.exe
+628	VBoxService.ex	0x200fd0	FP_NO_HOST_CHECK	NO
+628	VBoxService.ex	0x200fd0	LOCALAPPDATA	C:\Windows\system32\config\systemprofile\AppData\Local
+628	VBoxService.ex	0x200fd0	NUMBER_OF_PROCESSORS	1
+628	VBoxService.ex	0x200fd0	OS	Windows_NT
+628	VBoxService.ex	0x200fd0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;
+628	VBoxService.ex	0x200fd0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+628	VBoxService.ex	0x200fd0	PROCESSOR_ARCHITECTURE	x86
+628	VBoxService.ex	0x200fd0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+628	VBoxService.ex	0x200fd0	PROCESSOR_LEVEL	6
+628	VBoxService.ex	0x200fd0	PROCESSOR_REVISION	3a09
+628	VBoxService.ex	0x200fd0	ProgramData	C:\ProgramData
+628	VBoxService.ex	0x200fd0	ProgramFiles	C:\Program Files
+628	VBoxService.ex	0x200fd0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+628	VBoxService.ex	0x200fd0	PUBLIC	C:\Users\Public
+628	VBoxService.ex	0x200fd0	SystemDrive	C:
+628	VBoxService.ex	0x200fd0	SystemRoot	C:\Windows
+628	VBoxService.ex	0x200fd0	TEMP	C:\Windows\TEMP
+628	VBoxService.ex	0x200fd0	TMP	C:\Windows\TEMP
+628	VBoxService.ex	0x200fd0	USERDOMAIN	WORKGROUP
+628	VBoxService.ex	0x200fd0	USERNAME	FLAG-PC$
+628	VBoxService.ex	0x200fd0	USERPROFILE	C:\Windows\system32\config\systemprofile
+628	VBoxService.ex	0x200fd0	windir	C:\Windows
+692	svchost.exe	0x1f1050	ALLUSERSPROFILE	C:\ProgramData
+692	svchost.exe	0x1f1050	APPDATA	C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming
+692	svchost.exe	0x1f1050	CommonProgramFiles	C:\Program Files\Common Files
+692	svchost.exe	0x1f1050	COMPUTERNAME	FLAG-PC
+692	svchost.exe	0x1f1050	ComSpec	C:\Windows\system32\cmd.exe
+692	svchost.exe	0x1f1050	FP_NO_HOST_CHECK	NO
+692	svchost.exe	0x1f1050	LOCALAPPDATA	C:\Windows\ServiceProfiles\NetworkService\AppData\Local
+692	svchost.exe	0x1f1050	NUMBER_OF_PROCESSORS	1
+692	svchost.exe	0x1f1050	OS	Windows_NT
+692	svchost.exe	0x1f1050	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+692	svchost.exe	0x1f1050	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+692	svchost.exe	0x1f1050	PROCESSOR_ARCHITECTURE	x86
+692	svchost.exe	0x1f1050	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+692	svchost.exe	0x1f1050	PROCESSOR_LEVEL	6
+692	svchost.exe	0x1f1050	PROCESSOR_REVISION	3a09
+692	svchost.exe	0x1f1050	ProgramData	C:\ProgramData
+692	svchost.exe	0x1f1050	ProgramFiles	C:\Program Files
+692	svchost.exe	0x1f1050	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+692	svchost.exe	0x1f1050	PUBLIC	C:\Users\Public
+692	svchost.exe	0x1f1050	SystemDrive	C:
+692	svchost.exe	0x1f1050	SystemRoot	C:\Windows
+692	svchost.exe	0x1f1050	TEMP	C:\Windows\SERVIC~2\NETWOR~1\AppData\Local\Temp
+692	svchost.exe	0x1f1050	TMP	C:\Windows\SERVIC~2\NETWOR~1\AppData\Local\Temp
+692	svchost.exe	0x1f1050	USERDOMAIN	WORKGROUP
+692	svchost.exe	0x1f1050	USERNAME	FLAG-PC$
+692	svchost.exe	0x1f1050	USERPROFILE	C:\Windows\ServiceProfiles\NetworkService
+692	svchost.exe	0x1f1050	windir	C:\Windows
+780	svchost.exe	0x131058	ALLUSERSPROFILE	C:\ProgramData
+780	svchost.exe	0x131058	APPDATA	C:\Windows\ServiceProfiles\LocalService\AppData\Roaming
+780	svchost.exe	0x131058	CommonProgramFiles	C:\Program Files\Common Files
+780	svchost.exe	0x131058	COMPUTERNAME	FLAG-PC
+780	svchost.exe	0x131058	ComSpec	C:\Windows\system32\cmd.exe
+780	svchost.exe	0x131058	FP_NO_HOST_CHECK	NO
+780	svchost.exe	0x131058	LOCALAPPDATA	C:\Windows\ServiceProfiles\LocalService\AppData\Local
+780	svchost.exe	0x131058	NUMBER_OF_PROCESSORS	1
+780	svchost.exe	0x131058	OS	Windows_NT
+780	svchost.exe	0x131058	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+780	svchost.exe	0x131058	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+780	svchost.exe	0x131058	PROCESSOR_ARCHITECTURE	x86
+780	svchost.exe	0x131058	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+780	svchost.exe	0x131058	PROCESSOR_LEVEL	6
+780	svchost.exe	0x131058	PROCESSOR_REVISION	3a09
+780	svchost.exe	0x131058	ProgramData	C:\ProgramData
+780	svchost.exe	0x131058	ProgramFiles	C:\Program Files
+780	svchost.exe	0x131058	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+780	svchost.exe	0x131058	PUBLIC	C:\Users\Public
+780	svchost.exe	0x131058	SystemDrive	C:
+780	svchost.exe	0x131058	SystemRoot	C:\Windows
+780	svchost.exe	0x131058	TEMP	C:\Windows\SERVIC~2\LOCALS~1\AppData\Local\Temp
+780	svchost.exe	0x131058	TMP	C:\Windows\SERVIC~2\LOCALS~1\AppData\Local\Temp
+780	svchost.exe	0x131058	USERDOMAIN	NT AUTHORITY
+780	svchost.exe	0x131058	USERNAME	LOCAL SERVICE
+780	svchost.exe	0x131058	USERPROFILE	C:\Windows\ServiceProfiles\LocalService
+780	svchost.exe	0x131058	windir	C:\Windows
+816	svchost.exe	0xf0fd0	ALLUSERSPROFILE	C:\ProgramData
+816	svchost.exe	0xf0fd0	APPDATA	C:\Windows\system32\config\systemprofile\AppData\Roaming
+816	svchost.exe	0xf0fd0	CommonProgramFiles	C:\Program Files\Common Files
+816	svchost.exe	0xf0fd0	COMPUTERNAME	FLAG-PC
+816	svchost.exe	0xf0fd0	ComSpec	C:\Windows\system32\cmd.exe
+816	svchost.exe	0xf0fd0	FP_NO_HOST_CHECK	NO
+816	svchost.exe	0xf0fd0	LOCALAPPDATA	C:\Windows\system32\config\systemprofile\AppData\Local
+816	svchost.exe	0xf0fd0	NUMBER_OF_PROCESSORS	1
+816	svchost.exe	0xf0fd0	OS	Windows_NT
+816	svchost.exe	0xf0fd0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+816	svchost.exe	0xf0fd0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+816	svchost.exe	0xf0fd0	PROCESSOR_ARCHITECTURE	x86
+816	svchost.exe	0xf0fd0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+816	svchost.exe	0xf0fd0	PROCESSOR_LEVEL	6
+816	svchost.exe	0xf0fd0	PROCESSOR_REVISION	3a09
+816	svchost.exe	0xf0fd0	ProgramData	C:\ProgramData
+816	svchost.exe	0xf0fd0	ProgramFiles	C:\Program Files
+816	svchost.exe	0xf0fd0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+816	svchost.exe	0xf0fd0	PUBLIC	C:\Users\Public
+816	svchost.exe	0xf0fd0	SystemDrive	C:
+816	svchost.exe	0xf0fd0	SystemRoot	C:\Windows
+816	svchost.exe	0xf0fd0	TEMP	C:\Windows\TEMP
+816	svchost.exe	0xf0fd0	TMP	C:\Windows\TEMP
+816	svchost.exe	0xf0fd0	USERDOMAIN	WORKGROUP
+816	svchost.exe	0xf0fd0	USERNAME	FLAG-PC$
+816	svchost.exe	0xf0fd0	USERPROFILE	C:\Windows\system32\config\systemprofile
+816	svchost.exe	0xf0fd0	windir	C:\Windows
+844	svchost.exe	0xa0fd0	ALLUSERSPROFILE	C:\ProgramData
+844	svchost.exe	0xa0fd0	APPDATA	C:\Windows\system32\config\systemprofile\AppData\Roaming
+844	svchost.exe	0xa0fd0	CommonProgramFiles	C:\Program Files\Common Files
+844	svchost.exe	0xa0fd0	COMPUTERNAME	FLAG-PC
+844	svchost.exe	0xa0fd0	ComSpec	C:\Windows\system32\cmd.exe
+844	svchost.exe	0xa0fd0	FP_NO_HOST_CHECK	NO
+844	svchost.exe	0xa0fd0	LOCALAPPDATA	C:\Windows\system32\config\systemprofile\AppData\Local
+844	svchost.exe	0xa0fd0	NUMBER_OF_PROCESSORS	1
+844	svchost.exe	0xa0fd0	OS	Windows_NT
+844	svchost.exe	0xa0fd0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+844	svchost.exe	0xa0fd0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+844	svchost.exe	0xa0fd0	PROCESSOR_ARCHITECTURE	x86
+844	svchost.exe	0xa0fd0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+844	svchost.exe	0xa0fd0	PROCESSOR_LEVEL	6
+844	svchost.exe	0xa0fd0	PROCESSOR_REVISION	3a09
+844	svchost.exe	0xa0fd0	ProgramData	C:\ProgramData
+844	svchost.exe	0xa0fd0	ProgramFiles	C:\Program Files
+844	svchost.exe	0xa0fd0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+844	svchost.exe	0xa0fd0	PUBLIC	C:\Users\Public
+844	svchost.exe	0xa0fd0	SystemDrive	C:
+844	svchost.exe	0xa0fd0	SystemRoot	C:\Windows
+844	svchost.exe	0xa0fd0	TEMP	C:\Windows\TEMP
+844	svchost.exe	0xa0fd0	TMP	C:\Windows\TEMP
+844	svchost.exe	0xa0fd0	USERDOMAIN	WORKGROUP
+844	svchost.exe	0xa0fd0	USERNAME	FLAG-PC$
+844	svchost.exe	0xa0fd0	USERPROFILE	C:\Windows\system32\config\systemprofile
+844	svchost.exe	0xa0fd0	windir	C:\Windows
+1008	svchost.exe	0x201058	ALLUSERSPROFILE	C:\ProgramData
+1008	svchost.exe	0x201058	APPDATA	C:\Windows\ServiceProfiles\LocalService\AppData\Roaming
+1008	svchost.exe	0x201058	CommonProgramFiles	C:\Program Files\Common Files
+1008	svchost.exe	0x201058	COMPUTERNAME	FLAG-PC
+1008	svchost.exe	0x201058	ComSpec	C:\Windows\system32\cmd.exe
+1008	svchost.exe	0x201058	FP_NO_HOST_CHECK	NO
+1008	svchost.exe	0x201058	LOCALAPPDATA	C:\Windows\ServiceProfiles\LocalService\AppData\Local
+1008	svchost.exe	0x201058	NUMBER_OF_PROCESSORS	1
+1008	svchost.exe	0x201058	OS	Windows_NT
+1008	svchost.exe	0x201058	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+1008	svchost.exe	0x201058	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+1008	svchost.exe	0x201058	PROCESSOR_ARCHITECTURE	x86
+1008	svchost.exe	0x201058	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+1008	svchost.exe	0x201058	PROCESSOR_LEVEL	6
+1008	svchost.exe	0x201058	PROCESSOR_REVISION	3a09
+1008	svchost.exe	0x201058	ProgramData	C:\ProgramData
+1008	svchost.exe	0x201058	ProgramFiles	C:\Program Files
+1008	svchost.exe	0x201058	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+1008	svchost.exe	0x201058	PUBLIC	C:\Users\Public
+1008	svchost.exe	0x201058	SystemDrive	C:
+1008	svchost.exe	0x201058	SystemRoot	C:\Windows
+1008	svchost.exe	0x201058	TEMP	C:\Windows\SERVIC~2\LOCALS~1\AppData\Local\Temp
+1008	svchost.exe	0x201058	TMP	C:\Windows\SERVIC~2\LOCALS~1\AppData\Local\Temp
+1008	svchost.exe	0x201058	USERDOMAIN	NT AUTHORITY
+1008	svchost.exe	0x201058	USERNAME	LOCAL SERVICE
+1008	svchost.exe	0x201058	USERPROFILE	C:\Windows\ServiceProfiles\LocalService
+1008	svchost.exe	0x201058	windir	C:\Windows
+1096	svchost.exe	0x181050	ALLUSERSPROFILE	C:\ProgramData
+1096	svchost.exe	0x181050	APPDATA	C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming
+1096	svchost.exe	0x181050	CommonProgramFiles	C:\Program Files\Common Files
+1096	svchost.exe	0x181050	COMPUTERNAME	FLAG-PC
+1096	svchost.exe	0x181050	ComSpec	C:\Windows\system32\cmd.exe
+1096	svchost.exe	0x181050	FP_NO_HOST_CHECK	NO
+1096	svchost.exe	0x181050	LOCALAPPDATA	C:\Windows\ServiceProfiles\NetworkService\AppData\Local
+1096	svchost.exe	0x181050	NUMBER_OF_PROCESSORS	1
+1096	svchost.exe	0x181050	OS	Windows_NT
+1096	svchost.exe	0x181050	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+1096	svchost.exe	0x181050	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+1096	svchost.exe	0x181050	PROCESSOR_ARCHITECTURE	x86
+1096	svchost.exe	0x181050	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+1096	svchost.exe	0x181050	PROCESSOR_LEVEL	6
+1096	svchost.exe	0x181050	PROCESSOR_REVISION	3a09
+1096	svchost.exe	0x181050	ProgramData	C:\ProgramData
+1096	svchost.exe	0x181050	ProgramFiles	C:\Program Files
+1096	svchost.exe	0x181050	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+1096	svchost.exe	0x181050	PUBLIC	C:\Users\Public
+1096	svchost.exe	0x181050	SystemDrive	C:
+1096	svchost.exe	0x181050	SystemRoot	C:\Windows
+1096	svchost.exe	0x181050	TEMP	C:\Windows\SERVIC~2\NETWOR~1\AppData\Local\Temp
+1096	svchost.exe	0x181050	TMP	C:\Windows\SERVIC~2\NETWOR~1\AppData\Local\Temp
+1096	svchost.exe	0x181050	USERDOMAIN	WORKGROUP
+1096	svchost.exe	0x181050	USERNAME	FLAG-PC$
+1096	svchost.exe	0x181050	USERPROFILE	C:\Windows\ServiceProfiles\NetworkService
+1096	svchost.exe	0x181050	windir	C:\Windows
+1272	spoolsv.exe	0x140fd0	ALLUSERSPROFILE	C:\ProgramData
+1272	spoolsv.exe	0x140fd0	APPDATA	C:\Windows\system32\config\systemprofile\AppData\Roaming
+1272	spoolsv.exe	0x140fd0	CommonProgramFiles	C:\Program Files\Common Files
+1272	spoolsv.exe	0x140fd0	COMPUTERNAME	FLAG-PC
+1272	spoolsv.exe	0x140fd0	ComSpec	C:\Windows\system32\cmd.exe
+1272	spoolsv.exe	0x140fd0	FP_NO_HOST_CHECK	NO
+1272	spoolsv.exe	0x140fd0	LOCALAPPDATA	C:\Windows\system32\config\systemprofile\AppData\Local
+1272	spoolsv.exe	0x140fd0	NUMBER_OF_PROCESSORS	1
+1272	spoolsv.exe	0x140fd0	OS	Windows_NT
+1272	spoolsv.exe	0x140fd0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+1272	spoolsv.exe	0x140fd0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+1272	spoolsv.exe	0x140fd0	PROCESSOR_ARCHITECTURE	x86
+1272	spoolsv.exe	0x140fd0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+1272	spoolsv.exe	0x140fd0	PROCESSOR_LEVEL	6
+1272	spoolsv.exe	0x140fd0	PROCESSOR_REVISION	3a09
+1272	spoolsv.exe	0x140fd0	ProgramData	C:\ProgramData
+1272	spoolsv.exe	0x140fd0	ProgramFiles	C:\Program Files
+1272	spoolsv.exe	0x140fd0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+1272	spoolsv.exe	0x140fd0	PUBLIC	C:\Users\Public
+1272	spoolsv.exe	0x140fd0	SystemDrive	C:
+1272	spoolsv.exe	0x140fd0	SystemRoot	C:\Windows
+1272	spoolsv.exe	0x140fd0	TEMP	C:\Windows\TEMP
+1272	spoolsv.exe	0x140fd0	TMP	C:\Windows\TEMP
+1272	spoolsv.exe	0x140fd0	USERDOMAIN	WORKGROUP
+1272	spoolsv.exe	0x140fd0	USERNAME	FLAG-PC$
+1272	spoolsv.exe	0x140fd0	USERPROFILE	C:\Windows\system32\config\systemprofile
+1272	spoolsv.exe	0x140fd0	windir	C:\Windows
+1316	svchost.exe	0x321058	ALLUSERSPROFILE	C:\ProgramData
+1316	svchost.exe	0x321058	APPDATA	C:\Windows\ServiceProfiles\LocalService\AppData\Roaming
+1316	svchost.exe	0x321058	CommonProgramFiles	C:\Program Files\Common Files
+1316	svchost.exe	0x321058	COMPUTERNAME	FLAG-PC
+1316	svchost.exe	0x321058	ComSpec	C:\Windows\system32\cmd.exe
+1316	svchost.exe	0x321058	FP_NO_HOST_CHECK	NO
+1316	svchost.exe	0x321058	LOCALAPPDATA	C:\Windows\ServiceProfiles\LocalService\AppData\Local
+1316	svchost.exe	0x321058	NUMBER_OF_PROCESSORS	1
+1316	svchost.exe	0x321058	OS	Windows_NT
+1316	svchost.exe	0x321058	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+1316	svchost.exe	0x321058	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+1316	svchost.exe	0x321058	PROCESSOR_ARCHITECTURE	x86
+1316	svchost.exe	0x321058	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+1316	svchost.exe	0x321058	PROCESSOR_LEVEL	6
+1316	svchost.exe	0x321058	PROCESSOR_REVISION	3a09
+1316	svchost.exe	0x321058	ProgramData	C:\ProgramData
+1316	svchost.exe	0x321058	ProgramFiles	C:\Program Files
+1316	svchost.exe	0x321058	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+1316	svchost.exe	0x321058	PUBLIC	C:\Users\Public
+1316	svchost.exe	0x321058	SystemDrive	C:
+1316	svchost.exe	0x321058	SystemRoot	C:\Windows
+1316	svchost.exe	0x321058	TEMP	C:\Windows\SERVIC~2\LOCALS~1\AppData\Local\Temp
+1316	svchost.exe	0x321058	TMP	C:\Windows\SERVIC~2\LOCALS~1\AppData\Local\Temp
+1316	svchost.exe	0x321058	USERDOMAIN	NT AUTHORITY
+1316	svchost.exe	0x321058	USERNAME	LOCAL SERVICE
+1316	svchost.exe	0x321058	USERPROFILE	C:\Windows\ServiceProfiles\LocalService
+1316	svchost.exe	0x321058	windir	C:\Windows
+1416	svchost.exe	0x111058	ALLUSERSPROFILE	C:\ProgramData
+1416	svchost.exe	0x111058	APPDATA	C:\Windows\ServiceProfiles\LocalService\AppData\Roaming
+1416	svchost.exe	0x111058	CommonProgramFiles	C:\Program Files\Common Files
+1416	svchost.exe	0x111058	COMPUTERNAME	FLAG-PC
+1416	svchost.exe	0x111058	ComSpec	C:\Windows\system32\cmd.exe
+1416	svchost.exe	0x111058	FP_NO_HOST_CHECK	NO
+1416	svchost.exe	0x111058	LOCALAPPDATA	C:\Windows\ServiceProfiles\LocalService\AppData\Local
+1416	svchost.exe	0x111058	NUMBER_OF_PROCESSORS	1
+1416	svchost.exe	0x111058	OS	Windows_NT
+1416	svchost.exe	0x111058	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+1416	svchost.exe	0x111058	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+1416	svchost.exe	0x111058	PROCESSOR_ARCHITECTURE	x86
+1416	svchost.exe	0x111058	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+1416	svchost.exe	0x111058	PROCESSOR_LEVEL	6
+1416	svchost.exe	0x111058	PROCESSOR_REVISION	3a09
+1416	svchost.exe	0x111058	ProgramData	C:\ProgramData
+1416	svchost.exe	0x111058	ProgramFiles	C:\Program Files
+1416	svchost.exe	0x111058	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+1416	svchost.exe	0x111058	PUBLIC	C:\Users\Public
+1416	svchost.exe	0x111058	SystemDrive	C:
+1416	svchost.exe	0x111058	SystemRoot	C:\Windows
+1416	svchost.exe	0x111058	TEMP	C:\Windows\SERVIC~2\LOCALS~1\AppData\Local\Temp
+1416	svchost.exe	0x111058	TMP	C:\Windows\SERVIC~2\LOCALS~1\AppData\Local\Temp
+1416	svchost.exe	0x111058	USERDOMAIN	NT AUTHORITY
+1416	svchost.exe	0x111058	USERNAME	LOCAL SERVICE
+1416	svchost.exe	0x111058	USERPROFILE	C:\Windows\ServiceProfiles\LocalService
+1416	svchost.exe	0x111058	windir	C:\Windows
+1972	taskhost.exe	0xd1030	ALLUSERSPROFILE	C:\ProgramData
+1972	taskhost.exe	0xd1030	APPDATA	C:\Users\flag\AppData\Roaming
+1972	taskhost.exe	0xd1030	CommonProgramFiles	C:\Program Files\Common Files
+1972	taskhost.exe	0xd1030	COMPUTERNAME	FLAG-PC
+1972	taskhost.exe	0xd1030	ComSpec	C:\Windows\system32\cmd.exe
+1972	taskhost.exe	0xd1030	F l a g -	66d7724d872da91af56907aea0f6bfb8
+1972	taskhost.exe	0xd1030	FP_NO_HOST_CHECK	NO
+1972	taskhost.exe	0xd1030	HOMEDRIVE	C:
+1972	taskhost.exe	0xd1030	HOMEPATH	\Users\flag
+1972	taskhost.exe	0xd1030	LOCALAPPDATA	C:\Users\flag\AppData\Local
+1972	taskhost.exe	0xd1030	LOGONSERVER	\\FLAG-PC
+1972	taskhost.exe	0xd1030	NUMBER_OF_PROCESSORS	1
+1972	taskhost.exe	0xd1030	OS	Windows_NT
+1972	taskhost.exe	0xd1030	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+1972	taskhost.exe	0xd1030	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+1972	taskhost.exe	0xd1030	PROCESSOR_ARCHITECTURE	x86
+1972	taskhost.exe	0xd1030	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+1972	taskhost.exe	0xd1030	PROCESSOR_LEVEL	6
+1972	taskhost.exe	0xd1030	PROCESSOR_REVISION	3a09
+1972	taskhost.exe	0xd1030	ProgramData	C:\ProgramData
+1972	taskhost.exe	0xd1030	ProgramFiles	C:\Program Files
+1972	taskhost.exe	0xd1030	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+1972	taskhost.exe	0xd1030	PUBLIC	C:\Users\Public
+1972	taskhost.exe	0xd1030	SystemDrive	C:
+1972	taskhost.exe	0xd1030	SystemRoot	C:\Windows
+1972	taskhost.exe	0xd1030	TEMP	C:\Users\flag\AppData\Local\Temp
+1972	taskhost.exe	0xd1030	TMP	C:\Users\flag\AppData\Local\Temp
+1972	taskhost.exe	0xd1030	USERDOMAIN	flag-PC
+1972	taskhost.exe	0xd1030	USERNAME	flag
+1972	taskhost.exe	0xd1030	USERPROFILE	C:\Users\flag
+1972	taskhost.exe	0xd1030	windir	C:\Windows
+216	dwm.exe	0x3e1030	ALLUSERSPROFILE	C:\ProgramData
+216	dwm.exe	0x3e1030	APPDATA	C:\Users\flag\AppData\Roaming
+216	dwm.exe	0x3e1030	CommonProgramFiles	C:\Program Files\Common Files
+216	dwm.exe	0x3e1030	COMPUTERNAME	FLAG-PC
+216	dwm.exe	0x3e1030	ComSpec	C:\Windows\system32\cmd.exe
+216	dwm.exe	0x3e1030	F l a g -	66d7724d872da91af56907aea0f6bfb8
+216	dwm.exe	0x3e1030	FP_NO_HOST_CHECK	NO
+216	dwm.exe	0x3e1030	HOMEDRIVE	C:
+216	dwm.exe	0x3e1030	HOMEPATH	\Users\flag
+216	dwm.exe	0x3e1030	LOCALAPPDATA	C:\Users\flag\AppData\Local
+216	dwm.exe	0x3e1030	LOGONSERVER	\\FLAG-PC
+216	dwm.exe	0x3e1030	NUMBER_OF_PROCESSORS	1
+216	dwm.exe	0x3e1030	OS	Windows_NT
+216	dwm.exe	0x3e1030	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+216	dwm.exe	0x3e1030	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+216	dwm.exe	0x3e1030	PROCESSOR_ARCHITECTURE	x86
+216	dwm.exe	0x3e1030	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+216	dwm.exe	0x3e1030	PROCESSOR_LEVEL	6
+216	dwm.exe	0x3e1030	PROCESSOR_REVISION	3a09
+216	dwm.exe	0x3e1030	ProgramData	C:\ProgramData
+216	dwm.exe	0x3e1030	ProgramFiles	C:\Program Files
+216	dwm.exe	0x3e1030	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+216	dwm.exe	0x3e1030	PUBLIC	C:\Users\Public
+216	dwm.exe	0x3e1030	SystemDrive	C:
+216	dwm.exe	0x3e1030	SystemRoot	C:\Windows
+216	dwm.exe	0x3e1030	TEMP	C:\Users\flag\AppData\Local\Temp
+216	dwm.exe	0x3e1030	TMP	C:\Users\flag\AppData\Local\Temp
+216	dwm.exe	0x3e1030	USERDOMAIN	flag-PC
+216	dwm.exe	0x3e1030	USERNAME	flag
+216	dwm.exe	0x3e1030	USERPROFILE	C:\Users\flag
+216	dwm.exe	0x3e1030	windir	C:\Windows
+284	explorer.exe	0xf1050	ALLUSERSPROFILE	C:\ProgramData
+284	explorer.exe	0xf1050	APPDATA	C:\Users\flag\AppData\Roaming
+284	explorer.exe	0xf1050	CommonProgramFiles	C:\Program Files\Common Files
+284	explorer.exe	0xf1050	COMPUTERNAME	FLAG-PC
+284	explorer.exe	0xf1050	ComSpec	C:\Windows\system32\cmd.exe
+284	explorer.exe	0xf1050	F l a g -	66d7724d872da91af56907aea0f6bfb8
+284	explorer.exe	0xf1050	FP_NO_HOST_CHECK	NO
+284	explorer.exe	0xf1050	HOMEDRIVE	C:
+284	explorer.exe	0xf1050	HOMEPATH	\Users\flag
+284	explorer.exe	0xf1050	LOCALAPPDATA	C:\Users\flag\AppData\Local
+284	explorer.exe	0xf1050	LOGONSERVER	\\FLAG-PC
+284	explorer.exe	0xf1050	NUMBER_OF_PROCESSORS	1
+284	explorer.exe	0xf1050	OS	Windows_NT
+284	explorer.exe	0xf1050	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+284	explorer.exe	0xf1050	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+284	explorer.exe	0xf1050	PROCESSOR_ARCHITECTURE	x86
+284	explorer.exe	0xf1050	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+284	explorer.exe	0xf1050	PROCESSOR_LEVEL	6
+284	explorer.exe	0xf1050	PROCESSOR_REVISION	3a09
+284	explorer.exe	0xf1050	ProgramData	C:\ProgramData
+284	explorer.exe	0xf1050	ProgramFiles	C:\Program Files
+284	explorer.exe	0xf1050	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+284	explorer.exe	0xf1050	PUBLIC	C:\Users\Public
+284	explorer.exe	0xf1050	SESSIONNAME	Console
+284	explorer.exe	0xf1050	SystemDrive	C:
+284	explorer.exe	0xf1050	SystemRoot	C:\Windows
+284	explorer.exe	0xf1050	TEMP	C:\Users\flag\AppData\Local\Temp
+284	explorer.exe	0xf1050	TMP	C:\Users\flag\AppData\Local\Temp
+284	explorer.exe	0xf1050	USERDOMAIN	flag-PC
+284	explorer.exe	0xf1050	USERNAME	flag
+284	explorer.exe	0xf1050	USERPROFILE	C:\Users\flag
+284	explorer.exe	0xf1050	windir	C:\Windows
+1336	VBoxTray.exe	0x4f1060	ALLUSERSPROFILE	C:\ProgramData
+1336	VBoxTray.exe	0x4f1060	APPDATA	C:\Users\flag\AppData\Roaming
+1336	VBoxTray.exe	0x4f1060	CommonProgramFiles	C:\Program Files\Common Files
+1336	VBoxTray.exe	0x4f1060	COMPUTERNAME	FLAG-PC
+1336	VBoxTray.exe	0x4f1060	ComSpec	C:\Windows\system32\cmd.exe
+1336	VBoxTray.exe	0x4f1060	F l a g -	66d7724d872da91af56907aea0f6bfb8
+1336	VBoxTray.exe	0x4f1060	FP_NO_HOST_CHECK	NO
+1336	VBoxTray.exe	0x4f1060	HOMEDRIVE	C:
+1336	VBoxTray.exe	0x4f1060	HOMEPATH	\Users\flag
+1336	VBoxTray.exe	0x4f1060	LOCALAPPDATA	C:\Users\flag\AppData\Local
+1336	VBoxTray.exe	0x4f1060	LOGONSERVER	\\FLAG-PC
+1336	VBoxTray.exe	0x4f1060	NUMBER_OF_PROCESSORS	1
+1336	VBoxTray.exe	0x4f1060	OS	Windows_NT
+1336	VBoxTray.exe	0x4f1060	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+1336	VBoxTray.exe	0x4f1060	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+1336	VBoxTray.exe	0x4f1060	PROCESSOR_ARCHITECTURE	x86
+1336	VBoxTray.exe	0x4f1060	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+1336	VBoxTray.exe	0x4f1060	PROCESSOR_LEVEL	6
+1336	VBoxTray.exe	0x4f1060	PROCESSOR_REVISION	3a09
+1336	VBoxTray.exe	0x4f1060	ProgramData	C:\ProgramData
+1336	VBoxTray.exe	0x4f1060	ProgramFiles	C:\Program Files
+1336	VBoxTray.exe	0x4f1060	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+1336	VBoxTray.exe	0x4f1060	PUBLIC	C:\Users\Public
+1336	VBoxTray.exe	0x4f1060	SESSIONNAME	Console
+1336	VBoxTray.exe	0x4f1060	SystemDrive	C:
+1336	VBoxTray.exe	0x4f1060	SystemRoot	C:\Windows
+1336	VBoxTray.exe	0x4f1060	TEMP	C:\Users\flag\AppData\Local\Temp
+1336	VBoxTray.exe	0x4f1060	TMP	C:\Users\flag\AppData\Local\Temp
+1336	VBoxTray.exe	0x4f1060	USERDOMAIN	flag-PC
+1336	VBoxTray.exe	0x4f1060	USERNAME	flag
+1336	VBoxTray.exe	0x4f1060	USERPROFILE	C:\Users\flag
+1336	VBoxTray.exe	0x4f1060	windir	C:\Windows
+1920	SearchIndexer.	0x1d0fd0	ALLUSERSPROFILE	C:\ProgramData
+1920	SearchIndexer.	0x1d0fd0	APPDATA	C:\Windows\system32\config\systemprofile\AppData\Roaming
+1920	SearchIndexer.	0x1d0fd0	CommonProgramFiles	C:\Program Files\Common Files
+1920	SearchIndexer.	0x1d0fd0	COMPUTERNAME	FLAG-PC
+1920	SearchIndexer.	0x1d0fd0	ComSpec	C:\Windows\system32\cmd.exe
+1920	SearchIndexer.	0x1d0fd0	FP_NO_HOST_CHECK	NO
+1920	SearchIndexer.	0x1d0fd0	LOCALAPPDATA	C:\Windows\system32\config\systemprofile\AppData\Local
+1920	SearchIndexer.	0x1d0fd0	NUMBER_OF_PROCESSORS	1
+1920	SearchIndexer.	0x1d0fd0	OS	Windows_NT
+1920	SearchIndexer.	0x1d0fd0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\system32
+1920	SearchIndexer.	0x1d0fd0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+1920	SearchIndexer.	0x1d0fd0	PROCESSOR_ARCHITECTURE	x86
+1920	SearchIndexer.	0x1d0fd0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+1920	SearchIndexer.	0x1d0fd0	PROCESSOR_LEVEL	6
+1920	SearchIndexer.	0x1d0fd0	PROCESSOR_REVISION	3a09
+1920	SearchIndexer.	0x1d0fd0	ProgramData	C:\ProgramData
+1920	SearchIndexer.	0x1d0fd0	ProgramFiles	C:\Program Files
+1920	SearchIndexer.	0x1d0fd0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+1920	SearchIndexer.	0x1d0fd0	PUBLIC	C:\Users\Public
+1920	SearchIndexer.	0x1d0fd0	SystemDrive	C:
+1920	SearchIndexer.	0x1d0fd0	SystemRoot	C:\Windows
+1920	SearchIndexer.	0x1d0fd0	TEMP	C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc
+1920	SearchIndexer.	0x1d0fd0	TMP	C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc
+1920	SearchIndexer.	0x1d0fd0	USERDOMAIN	WORKGROUP
+1920	SearchIndexer.	0x1d0fd0	USERNAME	FLAG-PC$
+1920	SearchIndexer.	0x1d0fd0	USERPROFILE	C:\Windows\system32\config\systemprofile
+1920	SearchIndexer.	0x1d0fd0	windir	C:\Windows
+472	SearchProtocol	0x221088	ALLUSERSPROFILE	C:\ProgramData
+472	SearchProtocol	0x221088	APPDATA	C:\Windows\system32\config\systemprofile\AppData\Roaming
+472	SearchProtocol	0x221088	CommonProgramFiles	C:\Program Files\Common Files
+472	SearchProtocol	0x221088	COMPUTERNAME	FLAG-PC
+472	SearchProtocol	0x221088	ComSpec	C:\Windows\system32\cmd.exe
+472	SearchProtocol	0x221088	FP_NO_HOST_CHECK	NO
+472	SearchProtocol	0x221088	LOCALAPPDATA	C:\Windows\system32\config\systemprofile\AppData\Local
+472	SearchProtocol	0x221088	NUMBER_OF_PROCESSORS	1
+472	SearchProtocol	0x221088	OS	Windows_NT
+472	SearchProtocol	0x221088	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\system32
+472	SearchProtocol	0x221088	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+472	SearchProtocol	0x221088	PROCESSOR_ARCHITECTURE	x86
+472	SearchProtocol	0x221088	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+472	SearchProtocol	0x221088	PROCESSOR_LEVEL	6
+472	SearchProtocol	0x221088	PROCESSOR_REVISION	3a09
+472	SearchProtocol	0x221088	ProgramData	C:\ProgramData
+472	SearchProtocol	0x221088	ProgramFiles	C:\Program Files
+472	SearchProtocol	0x221088	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+472	SearchProtocol	0x221088	PUBLIC	C:\Users\Public
+472	SearchProtocol	0x221088	SystemDrive	C:
+472	SearchProtocol	0x221088	SystemRoot	C:\Windows
+472	SearchProtocol	0x221088	TEMP	C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc
+472	SearchProtocol	0x221088	TMP	C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc
+472	SearchProtocol	0x221088	USERDOMAIN	WORKGROUP
+472	SearchProtocol	0x221088	USERNAME	FLAG-PC$
+472	SearchProtocol	0x221088	USERPROFILE	C:\Windows\system32\config\systemprofile
+472	SearchProtocol	0x221088	windir	C:\Windows
+1684	sppsvc.exe	0x1b1050	ALLUSERSPROFILE	C:\ProgramData
+1684	sppsvc.exe	0x1b1050	APPDATA	C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming
+1684	sppsvc.exe	0x1b1050	CommonProgramFiles	C:\Program Files\Common Files
+1684	sppsvc.exe	0x1b1050	COMPUTERNAME	FLAG-PC
+1684	sppsvc.exe	0x1b1050	ComSpec	C:\Windows\system32\cmd.exe
+1684	sppsvc.exe	0x1b1050	FP_NO_HOST_CHECK	NO
+1684	sppsvc.exe	0x1b1050	LOCALAPPDATA	C:\Windows\ServiceProfiles\NetworkService\AppData\Local
+1684	sppsvc.exe	0x1b1050	NUMBER_OF_PROCESSORS	1
+1684	sppsvc.exe	0x1b1050	OS	Windows_NT
+1684	sppsvc.exe	0x1b1050	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+1684	sppsvc.exe	0x1b1050	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+1684	sppsvc.exe	0x1b1050	PROCESSOR_ARCHITECTURE	x86
+1684	sppsvc.exe	0x1b1050	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+1684	sppsvc.exe	0x1b1050	PROCESSOR_LEVEL	6
+1684	sppsvc.exe	0x1b1050	PROCESSOR_REVISION	3a09
+1684	sppsvc.exe	0x1b1050	ProgramData	C:\ProgramData
+1684	sppsvc.exe	0x1b1050	ProgramFiles	C:\Program Files
+1684	sppsvc.exe	0x1b1050	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+1684	sppsvc.exe	0x1b1050	PUBLIC	C:\Users\Public
+1684	sppsvc.exe	0x1b1050	SystemDrive	C:
+1684	sppsvc.exe	0x1b1050	SystemRoot	C:\Windows
+1684	sppsvc.exe	0x1b1050	TEMP	C:\Windows\SERVIC~2\NETWOR~1\AppData\Local\Temp
+1684	sppsvc.exe	0x1b1050	TMP	C:\Windows\SERVIC~2\NETWOR~1\AppData\Local\Temp
+1684	sppsvc.exe	0x1b1050	USERDOMAIN	WORKGROUP
+1684	sppsvc.exe	0x1b1050	USERNAME	FLAG-PC$
+1684	sppsvc.exe	0x1b1050	USERPROFILE	C:\Windows\ServiceProfiles\NetworkService
+1684	sppsvc.exe	0x1b1050	windir	C:\Windows
+1644	svchost.exe	0xb0fd0	ALLUSERSPROFILE	C:\ProgramData
+1644	svchost.exe	0xb0fd0	APPDATA	C:\Windows\system32\config\systemprofile\AppData\Roaming
+1644	svchost.exe	0xb0fd0	CommonProgramFiles	C:\Program Files\Common Files
+1644	svchost.exe	0xb0fd0	COMPUTERNAME	FLAG-PC
+1644	svchost.exe	0xb0fd0	ComSpec	C:\Windows\system32\cmd.exe
+1644	svchost.exe	0xb0fd0	FP_NO_HOST_CHECK	NO
+1644	svchost.exe	0xb0fd0	LOCALAPPDATA	C:\Windows\system32\config\systemprofile\AppData\Local
+1644	svchost.exe	0xb0fd0	MpConfig_ProductAppDataPath	C:\ProgramData\Microsoft\Windows Defender
+1644	svchost.exe	0xb0fd0	MpConfig_ProductCodeName	AntiSpyware
+1644	svchost.exe	0xb0fd0	MpConfig_ProductPath	c:\program files\windows defender
+1644	svchost.exe	0xb0fd0	MpConfig_ProductUserAppDataPath	C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\Windows Defender
+1644	svchost.exe	0xb0fd0	MpConfig_ReportingGUID	6A71CC70-70B2-45FA-AFB8-D2DCEEDE9D87
+1644	svchost.exe	0xb0fd0	NUMBER_OF_PROCESSORS	1
+1644	svchost.exe	0xb0fd0	OS	Windows_NT
+1644	svchost.exe	0xb0fd0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+1644	svchost.exe	0xb0fd0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+1644	svchost.exe	0xb0fd0	PROCESSOR_ARCHITECTURE	x86
+1644	svchost.exe	0xb0fd0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+1644	svchost.exe	0xb0fd0	PROCESSOR_LEVEL	6
+1644	svchost.exe	0xb0fd0	PROCESSOR_REVISION	3a09
+1644	svchost.exe	0xb0fd0	ProgramData	C:\ProgramData
+1644	svchost.exe	0xb0fd0	ProgramFiles	C:\Program Files
+1644	svchost.exe	0xb0fd0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+1644	svchost.exe	0xb0fd0	PUBLIC	C:\Users\Public
+1644	svchost.exe	0xb0fd0	SystemDrive	C:
+1644	svchost.exe	0xb0fd0	SystemRoot	C:\Windows
+1644	svchost.exe	0xb0fd0	TEMP	C:\Windows\TEMP
+1644	svchost.exe	0xb0fd0	TMP	C:\Windows\TEMP
+1644	svchost.exe	0xb0fd0	USERDOMAIN	WORKGROUP
+1644	svchost.exe	0xb0fd0	USERNAME	FLAG-PC$
+1644	svchost.exe	0xb0fd0	USERPROFILE	C:\Windows\system32\config\systemprofile
+1644	svchost.exe	0xb0fd0	windir	C:\Windows
+2380	WmiPrvSE.exe	0x190fd0	ALLUSERSPROFILE	C:\ProgramData
+2380	WmiPrvSE.exe	0x190fd0	APPDATA	C:\Windows\system32\config\systemprofile\AppData\Roaming
+2380	WmiPrvSE.exe	0x190fd0	CommonProgramFiles	C:\Program Files\Common Files
+2380	WmiPrvSE.exe	0x190fd0	COMPUTERNAME	FLAG-PC
+2380	WmiPrvSE.exe	0x190fd0	ComSpec	C:\Windows\system32\cmd.exe
+2380	WmiPrvSE.exe	0x190fd0	FP_NO_HOST_CHECK	NO
+2380	WmiPrvSE.exe	0x190fd0	LOCALAPPDATA	C:\Windows\system32\config\systemprofile\AppData\Local
+2380	WmiPrvSE.exe	0x190fd0	NUMBER_OF_PROCESSORS	1
+2380	WmiPrvSE.exe	0x190fd0	OS	Windows_NT
+2380	WmiPrvSE.exe	0x190fd0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+2380	WmiPrvSE.exe	0x190fd0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+2380	WmiPrvSE.exe	0x190fd0	PROCESSOR_ARCHITECTURE	x86
+2380	WmiPrvSE.exe	0x190fd0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+2380	WmiPrvSE.exe	0x190fd0	PROCESSOR_LEVEL	6
+2380	WmiPrvSE.exe	0x190fd0	PROCESSOR_REVISION	3a09
+2380	WmiPrvSE.exe	0x190fd0	ProgramData	C:\ProgramData
+2380	WmiPrvSE.exe	0x190fd0	ProgramFiles	C:\Program Files
+2380	WmiPrvSE.exe	0x190fd0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+2380	WmiPrvSE.exe	0x190fd0	PUBLIC	C:\Users\Public
+2380	WmiPrvSE.exe	0x190fd0	SystemDrive	C:
+2380	WmiPrvSE.exe	0x190fd0	SystemRoot	C:\Windows
+2380	WmiPrvSE.exe	0x190fd0	TEMP	C:\Windows\TEMP
+2380	WmiPrvSE.exe	0x190fd0	TMP	C:\Windows\TEMP
+2380	WmiPrvSE.exe	0x190fd0	USERDOMAIN	WORKGROUP
+2380	WmiPrvSE.exe	0x190fd0	USERNAME	FLAG-PC$
+2380	WmiPrvSE.exe	0x190fd0	USERPROFILE	C:\Windows\system32\config\systemprofile
+2380	WmiPrvSE.exe	0x190fd0	windir	C:\Windows
+2528	notepad.exe	0x181060	ALLUSERSPROFILE	C:\ProgramData
+2528	notepad.exe	0x181060	APPDATA	C:\Users\flag\AppData\Roaming
+2528	notepad.exe	0x181060	CommonProgramFiles	C:\Program Files\Common Files
+2528	notepad.exe	0x181060	COMPUTERNAME	FLAG-PC
+2528	notepad.exe	0x181060	ComSpec	C:\Windows\system32\cmd.exe
+2528	notepad.exe	0x181060	F l a g -	66d7724d872da91af56907aea0f6bfb8
+2528	notepad.exe	0x181060	FP_NO_HOST_CHECK	NO
+2528	notepad.exe	0x181060	HOMEDRIVE	C:
+2528	notepad.exe	0x181060	HOMEPATH	\Users\flag
+2528	notepad.exe	0x181060	LOCALAPPDATA	C:\Users\flag\AppData\Local
+2528	notepad.exe	0x181060	LOGONSERVER	\\FLAG-PC
+2528	notepad.exe	0x181060	NUMBER_OF_PROCESSORS	1
+2528	notepad.exe	0x181060	OS	Windows_NT
+2528	notepad.exe	0x181060	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+2528	notepad.exe	0x181060	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+2528	notepad.exe	0x181060	PROCESSOR_ARCHITECTURE	x86
+2528	notepad.exe	0x181060	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+2528	notepad.exe	0x181060	PROCESSOR_LEVEL	6
+2528	notepad.exe	0x181060	PROCESSOR_REVISION	3a09
+2528	notepad.exe	0x181060	ProgramData	C:\ProgramData
+2528	notepad.exe	0x181060	ProgramFiles	C:\Program Files
+2528	notepad.exe	0x181060	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+2528	notepad.exe	0x181060	PUBLIC	C:\Users\Public
+2528	notepad.exe	0x181060	SESSIONNAME	Console
+2528	notepad.exe	0x181060	SystemDrive	C:
+2528	notepad.exe	0x181060	SystemRoot	C:\Windows
+2528	notepad.exe	0x181060	TEMP	C:\Users\flag\AppData\Local\Temp
+2528	notepad.exe	0x181060	TMP	C:\Users\flag\AppData\Local\Temp
+2528	notepad.exe	0x181060	USERDOMAIN	flag-PC
+2528	notepad.exe	0x181060	USERNAME	flag
+2528	notepad.exe	0x181060	USERPROFILE	C:\Users\flag
+2528	notepad.exe	0x181060	windir	C:\Windows
+2744	SearchFilterHo	0x1d1088	ALLUSERSPROFILE	C:\ProgramData
+2744	SearchFilterHo	0x1d1088	APPDATA	C:\Windows\system32\config\systemprofile\AppData\Roaming
+2744	SearchFilterHo	0x1d1088	CommonProgramFiles	C:\Program Files\Common Files
+2744	SearchFilterHo	0x1d1088	COMPUTERNAME	FLAG-PC
+2744	SearchFilterHo	0x1d1088	ComSpec	C:\Windows\system32\cmd.exe
+2744	SearchFilterHo	0x1d1088	FP_NO_HOST_CHECK	NO
+2744	SearchFilterHo	0x1d1088	LOCALAPPDATA	C:\Windows\system32\config\systemprofile\AppData\Local
+2744	SearchFilterHo	0x1d1088	NUMBER_OF_PROCESSORS	1
+2744	SearchFilterHo	0x1d1088	OS	Windows_NT
+2744	SearchFilterHo	0x1d1088	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\system32
+2744	SearchFilterHo	0x1d1088	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+2744	SearchFilterHo	0x1d1088	PROCESSOR_ARCHITECTURE	x86
+2744	SearchFilterHo	0x1d1088	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+2744	SearchFilterHo	0x1d1088	PROCESSOR_LEVEL	6
+2744	SearchFilterHo	0x1d1088	PROCESSOR_REVISION	3a09
+2744	SearchFilterHo	0x1d1088	ProgramData	C:\ProgramData
+2744	SearchFilterHo	0x1d1088	ProgramFiles	C:\Program Files
+2744	SearchFilterHo	0x1d1088	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+2744	SearchFilterHo	0x1d1088	PUBLIC	C:\Users\Public
+2744	SearchFilterHo	0x1d1088	SystemDrive	C:
+2744	SearchFilterHo	0x1d1088	SystemRoot	C:\Windows
+2744	SearchFilterHo	0x1d1088	TEMP	C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc
+2744	SearchFilterHo	0x1d1088	TMP	C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc
+2744	SearchFilterHo	0x1d1088	USERDOMAIN	WORKGROUP
+2744	SearchFilterHo	0x1d1088	USERNAME	FLAG-PC$
+2744	SearchFilterHo	0x1d1088	USERPROFILE	C:\Windows\system32\config\systemprofile
+2744	SearchFilterHo	0x1d1088	windir	C:\Windows
+3148	audiodg.exe	0x508c0	Path	C:\Windows\System32
+3148	audiodg.exe	0x508c0	SystemDrive	C:
+3148	audiodg.exe	0x508c0	SystemRoot	C:\Windows
+3488	DumpIt.exe	0x3a1030	ALLUSERSPROFILE	C:\ProgramData
+3488	DumpIt.exe	0x3a1030	APPDATA	C:\Users\flag\AppData\Roaming
+3488	DumpIt.exe	0x3a1030	CommonProgramFiles	C:\Program Files\Common Files
+3488	DumpIt.exe	0x3a1030	COMPUTERNAME	FLAG-PC
+3488	DumpIt.exe	0x3a1030	ComSpec	C:\Windows\system32\cmd.exe
+3488	DumpIt.exe	0x3a1030	F l a g -	66d7724d872da91af56907aea0f6bfb8
+3488	DumpIt.exe	0x3a1030	FP_NO_HOST_CHECK	NO
+3488	DumpIt.exe	0x3a1030	HOMEDRIVE	C:
+3488	DumpIt.exe	0x3a1030	HOMEPATH	\Users\flag
+3488	DumpIt.exe	0x3a1030	LOCALAPPDATA	C:\Users\flag\AppData\Local
+3488	DumpIt.exe	0x3a1030	LOGONSERVER	\\FLAG-PC
+3488	DumpIt.exe	0x3a1030	NUMBER_OF_PROCESSORS	1
+3488	DumpIt.exe	0x3a1030	OS	Windows_NT
+3488	DumpIt.exe	0x3a1030	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+3488	DumpIt.exe	0x3a1030	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+3488	DumpIt.exe	0x3a1030	PROCESSOR_ARCHITECTURE	x86
+3488	DumpIt.exe	0x3a1030	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+3488	DumpIt.exe	0x3a1030	PROCESSOR_LEVEL	6
+3488	DumpIt.exe	0x3a1030	PROCESSOR_REVISION	3a09
+3488	DumpIt.exe	0x3a1030	ProgramData	C:\ProgramData
+3488	DumpIt.exe	0x3a1030	ProgramFiles	C:\Program Files
+3488	DumpIt.exe	0x3a1030	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+3488	DumpIt.exe	0x3a1030	PUBLIC	C:\Users\Public
+3488	DumpIt.exe	0x3a1030	SystemDrive	C:
+3488	DumpIt.exe	0x3a1030	SystemRoot	C:\Windows
+3488	DumpIt.exe	0x3a1030	TEMP	C:\Users\flag\AppData\Local\Temp
+3488	DumpIt.exe	0x3a1030	TMP	C:\Users\flag\AppData\Local\Temp
+3488	DumpIt.exe	0x3a1030	USERDOMAIN	flag-PC
+3488	DumpIt.exe	0x3a1030	USERNAME	flag
+3488	DumpIt.exe	0x3a1030	USERPROFILE	C:\Users\flag
+3488	DumpIt.exe	0x3a1030	windir	C:\Windows
+3500	conhost.exe	0x210cc0	CommonProgramFiles	C:\Program Files\Common Files
+3500	conhost.exe	0x210cc0	ComSpec	C:\Windows\system32\cmd.exe
+3500	conhost.exe	0x210cc0	FP_NO_HOST_CHECK	NO
+3500	conhost.exe	0x210cc0	NUMBER_OF_PROCESSORS	1
+3500	conhost.exe	0x210cc0	OS	Windows_NT
+3500	conhost.exe	0x210cc0	Path	C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+3500	conhost.exe	0x210cc0	PATHEXT	.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+3500	conhost.exe	0x210cc0	PROCESSOR_ARCHITECTURE	x86
+3500	conhost.exe	0x210cc0	PROCESSOR_IDENTIFIER	x86 Family 6 Model 58 Stepping 9, GenuineIntel
+3500	conhost.exe	0x210cc0	PROCESSOR_LEVEL	6
+3500	conhost.exe	0x210cc0	PROCESSOR_REVISION	3a09
+3500	conhost.exe	0x210cc0	ProgramFiles	C:\Program Files
+3500	conhost.exe	0x210cc0	PSModulePath	C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+3500	conhost.exe	0x210cc0	SystemDrive	C:
+3500	conhost.exe	0x210cc0	SystemRoot	C:\Windows
+3500	conhost.exe	0x210cc0	TEMP	C:\Windows\TEMP
+3500	conhost.exe	0x210cc0	TMP	C:\Windows\TEMP
+3500	conhost.exe	0x210cc0	USERNAME	SYSTEM
+3500	conhost.exe	0x210cc0	windir	C:\Windows

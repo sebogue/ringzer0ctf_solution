@@ -1,0 +1,1 @@
+En cherchant en ligne, j'ai remarqué que les sites web ont parfois un fichier keybase.txt servant à prouver l'authenticité du owner d'un site. En cherchant sur https://ringzer0ctf.com/keybase.txt on trouve directement le flag.
