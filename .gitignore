@@ -10,3 +10,5 @@
 **/originalTitle.txt
 **/MemCapture.mem
 **/*.pcap
+**/forensics/RIP_MsPaint/flagdump.r0
+**/*.data
