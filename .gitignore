@@ -12,3 +12,4 @@
 **/*.pcap
 **/forensics/RIP_MsPaint/flagdump.r0
 **/*.data
+**/sdr-challenge1.cfile
