@@ -14,7 +14,6 @@ print(ct)
 # clé publique MS GPP (32 bytes)
 key = bytes.fromhex("4e9906e8fcb66cc9faf49310620ffee8f496e806cc057990209b09a433b66c1b")
 
-ct = base64.b64decode(cpassword_b64)
 iv = b"\x00" * 16
 
 cipher = AES.new(key, AES.MODE_CBC, iv) # cpassword de GPP est encrypté avec AES en mode cbc 

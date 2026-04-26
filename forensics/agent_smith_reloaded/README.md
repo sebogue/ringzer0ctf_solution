@@ -1,7 +1,7 @@
 file BK
 BK: Linux rev 1.0 ext3 filesystem data, UUID=ca014691-c6ea-4a5a-8da4-74a1aa1c9a80
 
-Bon on devra sûrement utiliser autopsy encore ... comme dans le problème dinosaur survive
+On devra sûrement utiliser autopsy encore ... comme dans le problème dinosaur survive
 
 On trouve cette fois dans autopsy, des fichiers dont 2 supprimés.
 

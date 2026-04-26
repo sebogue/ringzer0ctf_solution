@@ -15,10 +15,11 @@ ce nombre est un timestamp qui va changer à chaque appel.
 
 J'ai d'abord essayé de trouver une clé via un gros dictionnaire ... ça n'a rien donné.
 
-J'ai continué mes recherches pour connaitre les vulnérabilités de HMAC et la technique de length extension attack est apparue.
+J'ai continué mes recherches pour connaitre les vulnérabilités de HMAC et suis tombé sur la technique de length extension attack.
 voir : https://www.youtube.com/watch?v=H_bvdhPMizE
 
-J'ai repris le même outil (hash_extender) que dans la vidéo. Dans notre cas le timestamp change donc il faut re-ssh à chaque taille de clé. N'oubliez pas de l'installer (git clone ...)
+J'ai repris le même outil (hash_extender) que dans la vidéo. 
+Dans notre cas le timestamp change donc il faut re-ssh à chaque taille de clé. Ne pas oublier de l'installer (git clone ...)
 
 
 # Fonctionnement de hash length extension avec visualisation
@@ -46,7 +47,7 @@ state = 86715  ← C'est le hash que vous recevez !
 
 Votre Attaque
 Vous commencez avec l'état que le serveur avait (86715) :
-state = 86715  # Vous initialisez avec le hash reçu !
+state = 86715  # Vous initialisez avec le hash reçu
 
 
 Vous ajoutez votre nouveau bloc
@@ -69,14 +70,14 @@ state = 86715  ← État intermédiaire (votre point de départ !)
 
 Bloc 2 (votre extension)
 state = (86715 * 7 + 150) % 1000000
-state = 607155  ← Même résultat que vous ! ✅
+state = 607155  ← Même résultat que vous
 ```
 
-**Les hashs correspondent** car vous avez continué **exactement** où le serveur s'était arrêté !
+**Les hashs correspondent** car vous avez continué **exactement** où le serveur s'était arrêté
 
 ---
 
-## 📊 Visualisation Étape par Étape
+## Visualisation Étape par Étape
 ```
 CE QUE LE SERVEUR FAIT (calcul original):
 ┌─────────┐

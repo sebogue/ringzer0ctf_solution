@@ -1,4 +1,4 @@
-On doit comprendre comme ce code php fonctionne pour que le timestamp ne soit pas expiré et qu'on soit admin au lieu de anonymous:
+On doit comprendre comment ce code php fonctionne pour que le timestamp ne soit pas expiré et qu'on soit admin au lieu de anonymous:
 
 ```php
 <?php

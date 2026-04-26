@@ -1,4 +1,4 @@
-J'ai vu le mot bacon et j'ai cherché en ligne bacon encrypt.
+J'ai vu le mot bacon dans le titre du challenge et j'ai cherché en ligne bacon encrypt.
 J'ai trouvé un décodeur ici : https://www.dcode.fr/bacon-cipher
 
 input:
@@ -7,7 +7,7 @@ VoiCI unE SUpeRbe reCeTtE cONcontee pAR un GrouPe d'ArtistEs culinaiRe, dONT le 
 output:
 THEFLAGISBACONANDJACKDANIELSACAAAAAAAAAAAAA
 
-# Fonctionnement:
+# Fonctionnement de bacon:
 a = minuscule et b = majuscule
 
 A = aaaaa

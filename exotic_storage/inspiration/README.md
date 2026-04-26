@@ -1,3 +1,3 @@
-Voir ici :
+Voir ici ça explique bien la solution:
 https://github.com/bu19akov/CTF-Challenge-Solutions/blob/main/RingZer0_CTF/exotic_data_storage/Inspiration%20(6p)/solution.md
 

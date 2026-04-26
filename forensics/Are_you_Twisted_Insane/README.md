@@ -18,4 +18,4 @@ G-3CV45Z25
 G-3GV45Z25
 G-3 (B/C/D/G/P/V) (B/C/D/G/P/V) 45Z25
 G-3TC45Z25
-Il y a tellement de bruit, je ne sais même pas comment je vais faire pour comprendre (même en tant que québécois ...).
+Il y a tellement de bruit, je ne sais même pas comment je vais faire pour comprendre.

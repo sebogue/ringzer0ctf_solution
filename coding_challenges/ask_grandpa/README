@@ -13,4 +13,7 @@ Les ordinateurs n’avaient pas de clavier comme on connaît aujourd’hui. Les 
 
 Les rangées sur la carte se présentent de haut en bas par 12 11 0 1 2 3 4 5 6 7 8 9
 
-Ex: si sur une même colonne la rangée 12 (donc celle la plus en haut) est trouée, et que la rangée 9 aussi alors ça correspond à I. Si la prochaine colonne a la rangée 0 troué, la rangée 7 et la rangée 8 ça correspon à un point d'interrogation (?).
+Ex: si sur une même colonne la rangée 12 (donc celle la plus en haut) est trouée, et que la rangée 9 aussi alors ça correspond à I. Si la prochaine colonne a la rangée 0 troué, la rangée 7 et la rangée 8 ça correspond à un point d'interrogation (?).
+
+
+FLAG-DB-INDEX:3801,VAL:FLAG-B493801CDB-831ABDDFA628AC31

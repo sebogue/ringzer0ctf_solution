@@ -1,142 +1,91 @@
-#!/usr/bin/env python3
-"""
-crack_pmkid_threaded.py
-Usage (authorized testing only):
-  python3 crack_pmkid_threaded.py --workers 4 --wordlist rockyou.txt
-"""
-import argparse
-import hashlib
-import hmac
-from binascii import unhexlify
-from multiprocessing import Process, Event, Value, cpu_count
-import sys
-import os
-import time
+import hashlib, hmac as hmac_lib
 
-ITER = 4096
-PMK_LEN = 32
+def decrypt_mppe(enc, salt, secret, auth):
+    prev = auth + salt
+    result = b''
+    for i in range(0, len(enc), 16):
+        block = enc[i:i+16]
+        pad_block = block + b'\x00' * (16 - len(block)) if len(block) < 16 else block
+        digest = hashlib.md5(secret.encode() + prev).digest()
+        dec = bytes(a ^ b for a, b in zip(digest, pad_block))
+        result += dec
+        prev = enc[i:i+16]
+        if len(prev) < 16:
+            prev = prev + b'\x00' * (16 - len(prev))
+    return result
 
-# ========== PARAMÈTRES (modifie si besoin) ==========
-SSID = "Rao likes 1X Movies"
-AP_MAC = "000b867e2169"      # AA (BSSID) en hex sans ':'
-CLIENT_MAC = "100ba96b6198"  # SPA (client) en hex sans ':'
-TARGET_PMKID = "6b4422576017bf09fc42a56d26a43c48"
+def prf512(key, a, b):
+    result = b''
+    for i in range(4):
+        hmac_input = a + b'\x00' + b + bytes([i])
+        result += hmac_lib.new(key, hmac_input, hashlib.sha1).digest()
+    return result[:64]
 
-def pbkdf2_sha1(password: str, ssid: str) -> bytes:
-    return hashlib.pbkdf2_hmac('sha1', password.encode('utf-8'), ssid.encode('utf-8'), ITER, PMK_LEN)
+def calc_mic_sha1(pmk, anonce, snonce, aa, sa, eapol_data):
+    aa_sa_min = min(aa, sa)
+    aa_sa_max = max(aa, sa)
+    nonce_min = min(anonce, snonce)
+    nonce_max = max(anonce, snonce)
+    b = aa_sa_min + aa_sa_max + nonce_min + nonce_max
+    ptk = prf512(pmk, b"Pairwise key expansion", b)
+    kck = ptk[:16]
+    mic = hmac_lib.new(kck, eapol_data, hashlib.sha1).digest()[:16]
+    return mic, kck, ptk
 
-def calculate_pmkid(password: str) -> str:
-    pmk = pbkdf2_sha1(password, SSID)
-    pmk_name = b"PMK Name"
-    aa = unhexlify(AP_MAC)
-    spa = unhexlify(CLIENT_MAC)
-    data = pmk_name + aa + spa
-    digest = hmac.new(pmk, data, hashlib.sha1).digest()[:16]
-    return digest.hex()
+vsa_311_raw1 = bytes.fromhex('1134c7d3e180743f58ffd444e875b511b6a0e2198e312cfc235812a882b4b9e036a359e5aa1e6d6b93309a1a757990bfa9858084')
+salt1 = vsa_311_raw1[2:4]
+enc1 = vsa_311_raw1[4:]
 
-def worker(worker_id: int, workers: int, wordlist_path: str, stop_event: Event, counter: Value):
-    try:
-        with open(wordlist_path, 'r', encoding='utf-8', errors='ignore') as f:
-            for idx, line in enumerate(f):
-                if stop_event.is_set():
-                    return
-                # distribution round-robin
-                if (idx % workers) != worker_id:
-                    continue
-                pw = line.rstrip('\n\r')
-                if not pw or pw.startswith('#'):
-                    continue
-                try:
-                    pmkid = calculate_pmkid(pw)
-                except Exception:
-                    # skip problematic encodings
-                    with counter.get_lock():
-                        counter.value += 1
-                    continue
-                with counter.get_lock():
-                    counter.value += 1
-                if pmkid == TARGET_PMKID:
-                    print(f"\nWorker {worker_id}: PASSWORD TROUVÉ -> {pw}")
-                    with open("password_found.txt", "w", encoding='utf-8') as out:
-                        out.write(f"SSID: {SSID}\n")
-                        out.write(f"Password: {pw}\n")
-                        out.write(f"AP_MAC: {AP_MAC}\n")
-                        out.write(f"CLIENT_MAC: {CLIENT_MAC}\n")
-                        out.write(f"PMKID: {TARGET_PMKID}\n")
-                    stop_event.set()
-                    return
-    except FileNotFoundError:
-        if worker_id == 0:
-            print(f"Fichier wordlist introuvable: {wordlist_path}")
-            stop_event.set()
-        return
-    except Exception as e:
-        if not stop_event.is_set():
-            print(f"Worker {worker_id} erreur: {e}", file=sys.stderr)
-            stop_event.set()
-        return
+acc_authenticator = bytes.fromhex('86001b4a04bfdd2b234154c84798d478')
 
-def main():
-    parser = argparse.ArgumentParser(description="PMKID crack (multiprocess) — authorized testing only.")
-    parser.add_argument("--workers", "-j", type=int, default=max(1, cpu_count()-1))
-    parser.add_argument("--wordlist", "-w", default="rockyou.txt")
-    parser.add_argument("--interval", "-i", type=int, default=5, help="Affichage du compteur (secondes)")
-    args = parser.parse_args()
+anonce = bytes.fromhex('2a64108836acfd7e60591d27456a82753568e2b83d09bf8cd2e6588b8222b9da')
+snonce = bytes.fromhex('a80162851db8432564ef0a1846a24e1fb313eb9a9ab9f24c03e5f7b39a592ded')
+ap_mac = bytes.fromhex('000b867e2169')
+sta_mac = bytes.fromhex('100ba96b6198')
+mic_expected = bytes.fromhex('e007909ac91201927bf26b07b27c9544')
 
-    workers = max(1, args.workers)
-    wordlist = args.wordlist
-    interval = max(1, args.interval)
+eapol_hex = '0103007702010a00000000000000000001a80162851db8432564ef0a1846a24e1fb313eb9a9ab9f24c03e5f7b39a592ded0000000000000000000000000000000000000000000000000000000000000000e007909ac91201927bf26b07b27c9544001830160100000fac040100000fac040100000fac013c000000'
+eapol_bytes = bytes.fromhex(eapol_hex)
+eapol_zeroed = bytearray(eapol_bytes)
+for i in range(16):
+    eapol_zeroed[4+77+i] = 0
 
-    print("=== PMKID cracking (multiprocess) ===")
-    print(f"SSID: {SSID}")
-    print(f"AP MAC: {AP_MAC}  CLIENT MAC: {CLIENT_MAC}")
-    print(f"Target PMKID: {TARGET_PMKID}")
-    print(f"Wordlist: {os.path.abspath(wordlist)}")
-    print(f"Workers: {workers}")
-    print("-------------------------------------")
+new_candidates = [
+    'ggermain', 'GGERMAIN', 'germain',
+    'ggermain123', 'germain123',
+    'final', 'chal1', 'chal', 'challenge',
+    'noradius', 'no-radius', 'final-no-radius',
+    'Desktop', 'Users',
+    'ctf-wifi', 'wifi-ctf', 'WifiCTF',
+    'nps', 'freeradius', 'microsoft',
+    'Hello', 'hello', 'World', 'world',
+    'Scooby', 'scooby',
+    '00:0b:86:7e:21:69',  # AP MAC
+    '000b867e2169',
+    'test', 'Test', 'TEST',
+    'wpa2', 'WPA2', 'enterprise', 'Enterprise',
+    'eduroam', 'EDUROAM',
+]
 
-    stop_event = Event()
-    counter = Value('L', 0)  # unsigned long, atomic via get_lock()
+print("Testing new candidates:")
+found = False
+for secret in new_candidates:
+    dec = decrypt_mppe(enc1, salt1, secret, acc_authenticator)
+    key_len = dec[0]
+    if key_len == 32:
+        pmk = dec[1:33]
+        mic_computed, kck, ptk = calc_mic_sha1(pmk, anonce, snonce, ap_mac, sta_mac, bytes(eapol_zeroed))
+        if mic_computed == mic_expected:
+            print(f"\n✓✓✓ SECRET FOUND: '{secret}'")
+            print(f"PMK: {pmk.hex()}")
+            found = True
+            break
+    print(f"  '{secret}': key_len={key_len}")
 
-    procs = []
-    try:
-        for i in range(workers):
-            p = Process(target=worker, args=(i, workers, wordlist, stop_event, counter), daemon=True)
-            p.start()
-            procs.append(p)
-
-        # monitor loop: affiche le compteur toutes les 'interval' secondes
-        last_print = time.time()
-        while True:
-            if stop_event.is_set():
-                break
-            alive = any(p.is_alive() for p in procs)
-            now = time.time()
-            if now - last_print >= interval:
-                with counter.get_lock():
-                    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Total tried: {counter.value}", flush=True)
-                last_print = now
-            if not alive:
-                break
-            time.sleep(0.2)
-
-        # join children
-        for p in procs:
-            p.join(timeout=1)
-
-    except KeyboardInterrupt:
-        print("\nInterrompu par l'utilisateur. Arrêt des workers...")
-        stop_event.set()
-        for p in procs:
-            p.terminate()
-            p.join()
-    finally:
-        with counter.get_lock():
-            total = counter.value
-        if stop_event.is_set() and os.path.exists("password_found.txt"):
-            print(f"\nTerminé: mot de passe trouvé. Total essais: {total}. Voir password_found.txt")
-        else:
-            print(f"\nTerminé: mot de passe non trouvé. Total essais: {total}. Essayez une wordlist plus grosse ou hashcat GPU.")
-
-if __name__ == "__main__":
-    main()
+if not found:
+    # Also show which ones produce key_len==32
+    print("\nOnes with key_len==32:")
+    for secret in new_candidates:
+        dec = decrypt_mppe(enc1, salt1, secret, acc_authenticator)
+        if dec[0] == 32:
+            print(f"  '{secret}': PMK={dec[1:33].hex()}")

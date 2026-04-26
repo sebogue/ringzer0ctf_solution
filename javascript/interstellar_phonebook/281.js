@@ -1,4 +1,5 @@
 process.stdin.resume();
+
 /***
 Utility
 ***/
@@ -63,16 +64,15 @@ var SpellChecker = {
 }
 
 function spellcheck(obj, options) {
-	var spellcheckLang = SpellChecker[options.lang] || {}; // hardcoded donc on peut pas faire grand chose ici
-	var checker = spellcheckLang[options.spellcheck] || function (a) { return a; }; // je ne vois pas ce que je pourrais faire ici en tout cas
-	
+	var spellcheckLang = SpellChecker[options.lang] || {}; 
+	var checker = spellcheckLang[options.spellcheck] || function (a) { return a; };
 	for (var attr in obj) {
 		if (typeof obj[attr] == "object") {
 			spellcheck(obj[attr], options);
 		}
 
 		if (typeof obj[attr] == "string") {
-			obj[attr] = checker(obj[attr]);
+			obj[attr] = checker(obj[attr]); // on va passer ici et toString sur obj sera maintenant une fonction plutot qu'une string
 		}
 	}
 }
@@ -128,6 +128,7 @@ State.AddNewContact.OnEnter = function () {
 	NewContact = false;
 };
 
+// payload
 State.AddNewContact.Process = function (data) {
 	if (data.substr(0, 4) === "DONE") {
 		goto(State.MainMenu);
@@ -154,15 +155,12 @@ State.AddNewContact.Process = function (data) {
 	};
 
 	info.name = info.name || rand();
-	console.log(Contacts)
-	Contacts[info.name] = contact; // on tente de modifier __proto__ de Contacts
-	console.log(Contacts.__proto__)
+	Contacts[info.name] = contact;
 	NewContact = true;
 	goto(State.MainMenu);
-	
 };
 
-State.AddNewContact.OnExit = function () {
+State.AddNewContact.OnExit = async function () {
 	write("\n");
 	if (NewContact) {
 		write("Contact added successfully ... \n");
@@ -179,13 +177,11 @@ State.ListContact.OnEnter = function () {
 	write("-- List of contacts \n");
 	write("-- \n");
 	write("\n");
-
 	for (var contactName in Contacts) {
 		info = Contacts[contactName].data;
-		console.log(info)
 		write("-----------------\n");
-		write("Name : " + info.name + " \n");
-		write("Description : " + info.description + "\n");
+		write("Name : " + info.name + " \n"); // appel implicite au toString
+		write("Description : " + info.description + " \n");
 	}
 
 	write("-----------------\n");
@@ -194,7 +190,7 @@ State.ListContact.OnEnter = function () {
 
 State.ListContact.OnExit = NO_OP;
 
-// Spellcheck 
+// Spellcheck sur data
 State.SpellcheckContact = {};
 State.SpellcheckContact.OnEnter = function () {
 	write("Please enter the name of contact you want to spellcheck : \n");
@@ -207,9 +203,9 @@ State.SpellcheckContact.Process = function (data) {
 		return;
 	}
 
-	var selection = data.replace(/[\n\r]+$/g, ""); 
-	var info = Contacts[selection]; // info doit etre la payload
-	console.log(info)
+	var selection = data.replace(/[\n\r]+$/g, "");
+	var info = Contacts[selection]; // Prototype de Array .data = mon payload
+
 	if (!info) {
 		write("Contact doesn't exists ! \n");
 		write("#> ");
@@ -217,10 +213,8 @@ State.SpellcheckContact.Process = function (data) {
 	}
 
 	var defaultOptions = { "lang" : "en", "spellcheck" : "simple" };
-	var options = merge(defaultOptions, info.options);  // la section options de ma payload doit ecraser defaultOptions
-	console.log(options)
-	spellcheck(info.data, options); // remarque ma payload n'a pas de section data donc peut etre en definir une
-
+	var options = merge(defaultOptions, info.options); // options devrait avoir mon lang et spellcheck pollué avec constructor
+	spellcheck(info.data, options);	
 	write("Spellcheck finished ! \n");
 	goto(State.MainMenu);
 };
@@ -254,5 +248,4 @@ process.stdout.on('error', function(err) {
 write("================================\n");
 write("Welcome to Mars phonebook (BETA)\n");
 write("================================\n")
-
 goto(State.MainMenu);

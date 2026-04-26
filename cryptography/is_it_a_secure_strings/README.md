@@ -26,7 +26,7 @@ d262683e74729523433e28f2dec1bc6c64<4f0075e2e638af5db922dbb9a1268
 
 FLAG-5tguasm48
 
-# Commande powershell
+# Commande powershell (https://compilebytes.com/tools/powershell)
 ```powershell
 $enc = "76492d1116743f0423413b16050a5345MgB8AEEAYQBNAHgAZQAxAFEAVABIAEEAcABtAE4ATgBVAFoAMwBOAFIAagBIAGcAPQA9AHwAZAAyADYAMgA2ADgAMwBlADcANAA3ADIAOQA1ADIAMwA0ADMAMwBlADIAOABmADIAZABlAGMAMQBiAGMANgBjADYANAA8ADQAZgAwADAANwA1AGUAMgBlADYAMwA4AGEAZgA1AGQAYgA5ADIAMgBkAGIAYgA5AGEAMQAyADYAOAA="; $key = [byte[]]@(3,4,2,3,56,34,254,222,205,34,2,23,42,64,33,223,1,34,2,7,6,5,35,12); $b64 = $enc.Substring(32); $data = [System.Text.Encoding]::Unicode.GetString([Convert]::FromBase64String($b64)); $parts = $data.Split('|'); $iv = [Convert]::FromBase64String($parts[1]); $ciphertext = [byte[]] -split ($parts[2] -replace '<','8' -replace '(..)','0x$1 '); $aes = New-Object System.Security.Cryptography.AesManaged; $aes.Mode = 'CBC'; $aes.Key = $key; $aes.IV = $iv; $decryptor = $aes.CreateDecryptor(); $plaintext = $decryptor.TransformFinalBlock($ciphertext, 0, $ciphertext.Length); [System.Text.Encoding]::Unicode.GetString($plaintext)
 ```
