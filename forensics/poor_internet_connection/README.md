@@ -9,7 +9,7 @@ Un fichier zip commence toujours par :
 et se termine par:
 504b0506
 
-Or en faisant : follow tcp stream, j'ai cherché parmi les 3 streams lequel avait la présence de 504b0304 ET 504b0506 , j'ai vu que le stream 0 respectait ceci ... pas le stream 2 (que la présence d'un début de zip 504b0304 mais pas de fin)
+Or en faisant : follow tcp stream via wireshark, j'ai cherché parmi les 3 streams lequel avait la présence de 504b0304 ET 504b0506 , j'ai vu que le stream 0 respectait ceci ... pas le stream 2 (que la présence d'un début de zip 504b0304 mais pas de fin)
 
 Pour faire tout ça j'ai montré les streams en raw (non en ascii) et utilisé la barre de recherche find pour trouver le début et la fin du zip.
 

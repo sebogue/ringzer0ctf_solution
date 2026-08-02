@@ -18,7 +18,10 @@ done
 
 Your input:
 
-On va tenter de quitter ce shell interactif en mettant bash comme input. On a un shell bash qui part dans lequel les commandes telles que ls n'affiche rien sur le stdout. Le stdout est détourné. En cherchant en ligne j'ai trouvé cette commande qui force l'affichage sur le stdout: commande > /dev/tty
+On va tenter de quitter ce shell interactif en mettant bash comme input. 
+On a un shell bash qui se lance dans lequel les commandes telles que ls n'affiche rien sur le stdout. 
+Le stdout est détourné donc ...
+En cherchant en ligne j'ai trouvé cette commande qui force l'affichage sur le stdout: commande > /dev/tty
 
 Donc en faisant :
 

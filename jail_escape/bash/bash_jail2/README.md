@@ -13,7 +13,7 @@ Challenge bash code:
 function check_space {
 	if [[ $1 == *[bdks';''&'' ']* ]]
 	then 	
-    		return 0
+    	return 0
 	fi
 
 	return 1

@@ -1,0 +1,40 @@
+Function: Encrypt
+	Returns
+		String:
+	Parameters
+		String: clearPassword
+	Static Variables
+	Local variables
+		String: binaryNumber
+		String: preSwapBinaryText
+		String: encryptPassword
+		Number: charASCIINum
+		Number: length
+		Number: origLength
+		Number: index
+		Number: swapPosition
+		Number: position
+	Actions
+		Set length = SalStrLength( clearPassword )
+		Set origLength = length
+		While index < length
+			Set charASCIINum = SalStrLop( clearPassword )
+			Set binaryNumber = libDecimalToBinary( charASCIINum )
+			Set preSwapBinaryText = preSwapBinaryText || binaryNumber
+			Set index = index + 1
+		Set length = SalStrLength( preSwapBinaryText )
+		While SalStrLength( preSwapBinaryText ) < 70
+			Set binaryNumber = libDecimalToBinary( 90 + SalNumberTruncate( SalStrLength( preSwapBinaryText) / 2, 2, 0 ) )
+			Set preSwapBinaryText = preSwapBinaryText || binaryNumber
+		Set swapPosition = 2 + SalStrToNumber( SalStrMidX( preSwapBinaryText, 5, 1 ) )
+		Set length = SalStrLength( preSwapBinaryText )
+		Set index = 0
+		Loop
+			Set encryptPassword = encryptPassword || SalStrMidX( preSwapBinaryText, position, swapPosition - 1 )
+			Set position = position + swapPosition -1
+			Set encryptPassword = encryptPassword || SalStrMidX( preSwapBinaryText, position +1 , 1)
+			Set encryptPassword = encryptPassword || SalStrMidX( preSwapBinaryText, position  , 1)
+			Set position = position + 2
+			If position >= length
+				Break
+		Return encryptPassword

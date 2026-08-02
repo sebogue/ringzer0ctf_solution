@@ -4,3 +4,6 @@ On doit d'abord trouver un code vulnérable à xss. Il semble que la balise scri
 ```
 
 On voit l'alerte partir et afficher XSS_HACK, on va alors utiliser onerror pour injecter un autre script
+
+python3 -m http.server 8080
+ngrok http 8080 --scheme=http

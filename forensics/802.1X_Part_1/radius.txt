@@ -1,0 +1,2912 @@
+Frame 1: 416 bytes on wire (3328 bits), 416 bytes captured (3328 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:38.602914000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335218.602914000 seconds
+    [Time delta from previous captured frame: 0.000000000 seconds]
+    [Time delta from previous displayed frame: 0.000000000 seconds]
+    [Time since reference or first frame: 0.000000000 seconds]
+    Frame Number: 1
+    Frame Length: 416 bytes (3328 bits)
+    Capture Length: 416 bytes (3328 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius]
+Linux cooked capture v1
+    Packet type: Unicast to us (0)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: ArubaaHe_b8:61:20 (00:0b:86:b8:61:20)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.1, Dst: 192.168.10.13
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 400
+    Identification: 0xc160 (49504)
+    000. .... = Flags: 0x0
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0x229e [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.1
+    Destination Address: 192.168.10.13
+User Datagram Protocol, Src Port: 37057, Dst Port: 1813
+    Source Port: 37057
+    Destination Port: 1813
+    Length: 380
+    Checksum: 0xadc2 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 0]
+    [Timestamps]
+        [Time since first frame: 0.000000000 seconds]
+        [Time since previous frame: 0.000000000 seconds]
+    UDP payload (372 bytes)
+RADIUS Protocol
+    Code: Accounting-Request (4)
+    Packet identifier: 0xc5 (197)
+    Length: 372
+    Authenticator: d936fe3ccbe8e7a79f58a19a6adf26f3
+    Attribute Value Pairs
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=NAS-IP-Address(4) l=6 val=192.168.10.1
+            Type: 4
+            Length: 6
+            NAS-IP-Address: 192.168.10.1
+        AVP: t=NAS-Port(5) l=6 val=0
+            Type: 5
+            Length: 6
+            NAS-Port: 0
+        AVP: t=NAS-Port-Type(61) l=6 val=Wireless-802.11(19)
+            Type: 61
+            Length: 6
+            NAS-Port-Type: Wireless-802.11 (19)
+        AVP: t=Acct-Session-Id(44) l=31 val=ARUBANET100BA96B6198-55601A13
+            Type: 44
+            Length: 31
+            Acct-Session-Id: ARUBANET100BA96B6198-55601A13
+        AVP: t=Event-Timestamp(55) l=6 val=May 23, 2015 02:13:57.000000000 EDT
+            Type: 55
+            Length: 6
+            Event-Timestamp: May 23, 2015 02:13:57.000000000 EDT
+        AVP: t=Acct-Multi-Session-Id(50) l=25 val=100BA96B6198-0000000004
+            Type: 50
+            Length: 25
+            Acct-Multi-Session-Id: 100BA96B6198-0000000004
+        AVP: t=Framed-IP-Address(8) l=6 val=192.168.10.159
+            Type: 8
+            Length: 6
+            Framed-IP-Address: 192.168.10.159
+        AVP: t=Calling-Station-Id(31) l=14 val=100BA96B6198
+            Type: 31
+            Length: 14
+            Calling-Station-Id: 100BA96B6198
+        AVP: t=Called-Station-Id(30) l=14 val=000B86B86120
+            Type: 30
+            Length: 14
+            Called-Station-Id: 000B86B86120
+        AVP: t=Class(25) l=58 val=48cd2fc61c604eb0858987ac517fcdf8b90b0000000000005230303030303031332d3031…
+            Type: 25
+            Length: 58
+            Class: 48cd2fc61c604eb0858987ac517fcdf8b90b0000000000005230303030303031332d3031…
+        AVP: t=Acct-Delay-Time(41) l=6 val=0
+            Type: 41
+            Length: 6
+            Acct-Delay-Time: 0
+        AVP: t=Vendor-Specific(26) l=27 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 27
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Essid-Name(5) l=21 val=Rao likes 1X Movies
+                Type: 5
+                Length: 21
+                Aruba-Essid-Name: Rao likes 1X Movies
+        AVP: t=Vendor-Specific(26) l=25 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 25
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Location-Id(6) l=19 val=00:0b:86:cf:e2:16
+                Type: 6
+                Length: 19
+                Aruba-Location-Id: 00:0b:86:cf:e2:16
+        AVP: t=Vendor-Specific(26) l=15 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 15
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-AP-Group(10) l=9 val=default
+                Type: 10
+                Length: 9
+                Aruba-AP-Group: default
+        AVP: t=Vendor-Specific(26) l=21 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 21
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-User-Role(1) l=15 val=authenticated
+                Type: 1
+                Length: 15
+                Aruba-User-Role: authenticated
+        AVP: t=Vendor-Specific(26) l=12 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 12
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-User-Vlan(2) l=6 val=1
+                Type: 2
+                Length: 6
+                Aruba-User-Vlan: 1
+        AVP: t=Vendor-Specific(26) l=13 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 13
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Device-Type(12) l=7 val=Win 7
+                Type: 12
+                Length: 7
+                Aruba-Device-Type: Win 7
+        AVP: t=Acct-Status-Type(40) l=6 val=Stop(2)
+            Type: 40
+            Length: 6
+            Acct-Status-Type: Stop (2)
+        AVP: t=Acct-Input-Octets(42) l=6 val=34011
+            Type: 42
+            Length: 6
+            Acct-Input-Octets: 34011
+        AVP: t=Acct-Output-Octets(43) l=6 val=43848
+            Type: 43
+            Length: 6
+            Acct-Output-Octets: 43848
+        AVP: t=Acct-Input-Packets(47) l=6 val=270
+            Type: 47
+            Length: 6
+            Acct-Input-Packets: 270
+        AVP: t=Acct-Output-Packets(48) l=6 val=195
+            Type: 48
+            Length: 6
+            Acct-Output-Packets: 195
+        AVP: t=Acct-Terminate-Cause(49) l=6 val=NAS-Request(10)
+            Type: 49
+            Length: 6
+            Acct-Terminate-Cause: NAS-Request (10)
+        AVP: t=Acct-Session-Time(46) l=6 val=146
+            Type: 46
+            Length: 6
+            Acct-Session-Time: 146
+
+Frame 2: 64 bytes on wire (512 bits), 64 bytes captured (512 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:38.608331000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335218.608331000 seconds
+    [Time delta from previous captured frame: 0.005417000 seconds]
+    [Time delta from previous displayed frame: 0.005417000 seconds]
+    [Time since reference or first frame: 0.005417000 seconds]
+    Frame Number: 2
+    Frame Length: 64 bytes (512 bits)
+    Capture Length: 64 bytes (512 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius]
+Linux cooked capture v1
+    Packet type: Sent by us (4)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: VMware_cf:19:96 (00:0c:29:cf:19:96)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.13, Dst: 192.168.10.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 48
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0xa55e [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.13
+    Destination Address: 192.168.10.1
+User Datagram Protocol, Src Port: 1813, Dst Port: 37057
+    Source Port: 1813
+    Destination Port: 37057
+    Length: 28
+    Checksum: 0x958c [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 0]
+    [Timestamps]
+        [Time since first frame: 0.005417000 seconds]
+        [Time since previous frame: 0.005417000 seconds]
+    UDP payload (20 bytes)
+RADIUS Protocol
+    Code: Accounting-Response (5)
+    Packet identifier: 0xc5 (197)
+    Length: 20
+    Authenticator: c25afab211e4ba93cb7769be4c742e9d
+    [This is a response to a request in frame 1]
+    [Time from request: 0.005417000 seconds]
+
+Frame 3: 277 bytes on wire (2216 bits), 277 bytes captured (2216 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.744352000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.744352000 seconds
+    [Time delta from previous captured frame: 18.136021000 seconds]
+    [Time delta from previous displayed frame: 18.136021000 seconds]
+    [Time since reference or first frame: 18.141438000 seconds]
+    Frame Number: 3
+    Frame Length: 277 bytes (2216 bits)
+    Capture Length: 277 bytes (2216 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap]
+Linux cooked capture v1
+    Packet type: Unicast to us (0)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: ArubaaHe_b8:61:20 (00:0b:86:b8:61:20)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.1, Dst: 192.168.10.13
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 261
+    Identification: 0xc161 (49505)
+    000. .... = Flags: 0x0
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0x2328 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.1
+    Destination Address: 192.168.10.13
+User Datagram Protocol, Src Port: 37057, Dst Port: 1812
+    Source Port: 37057
+    Destination Port: 1812
+    Length: 241
+    Checksum: 0x8b08 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.000000000 seconds]
+        [Time since previous frame: 0.000000000 seconds]
+    UDP payload (233 bytes)
+RADIUS Protocol
+    Code: Access-Request (1)
+    Packet identifier: 0xc6 (198)
+    Length: 233
+    Authenticator: 6222312a5b7e0fc1e285f30198294816
+    Attribute Value Pairs
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=NAS-IP-Address(4) l=6 val=192.168.10.1
+            Type: 4
+            Length: 6
+            NAS-IP-Address: 192.168.10.1
+        AVP: t=NAS-Port(5) l=6 val=0
+            Type: 5
+            Length: 6
+            NAS-Port: 0
+        AVP: t=NAS-Identifier(32) l=14 val=192.168.10.1
+            Type: 32
+            Length: 14
+            NAS-Identifier: 192.168.10.1
+        AVP: t=NAS-Port-Type(61) l=6 val=Wireless-802.11(19)
+            Type: 61
+            Length: 6
+            NAS-Port-Type: Wireless-802.11 (19)
+        AVP: t=Calling-Station-Id(31) l=14 val=100BA96B6198
+            Type: 31
+            Length: 14
+            Calling-Station-Id: 100BA96B6198
+        AVP: t=Called-Station-Id(30) l=14 val=000B86B86120
+            Type: 30
+            Length: 14
+            Called-Station-Id: 000B86B86120
+        AVP: t=Service-Type(6) l=6 val=Framed(2)
+            Type: 6
+            Length: 6
+            Service-Type: Framed (2)
+        AVP: t=Framed-MTU(12) l=6 val=1100
+            Type: 12
+            Length: 6
+            Framed-MTU: 1100
+        AVP: t=EAP-Message(79) l=24 Last Segment[1]
+            Type: 79
+            Length: 24
+            EAP fragment: 020100160141525542414e4554574f524b535c72616f
+            Extensible Authentication Protocol
+                Code: Response (2)
+                Id: 1
+                Length: 22
+                Type: Identity (1)
+                Identity: ARUBANETWORKS\rao
+        AVP: t=Vendor-Specific(26) l=27 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 27
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Essid-Name(5) l=21 val=Rao likes 1X Movies
+                Type: 5
+                Length: 21
+                Aruba-Essid-Name: Rao likes 1X Movies
+        AVP: t=Vendor-Specific(26) l=25 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 25
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Location-Id(6) l=19 val=00:0b:86:cf:e2:16
+                Type: 6
+                Length: 19
+                Aruba-Location-Id: 00:0b:86:cf:e2:16
+        AVP: t=Vendor-Specific(26) l=15 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 15
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-AP-Group(10) l=9 val=default
+                Type: 10
+                Length: 9
+                Aruba-AP-Group: default
+        AVP: t=Vendor-Specific(26) l=13 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 13
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Device-Type(12) l=7 val=Win 7
+                Type: 12
+                Length: 7
+                Aruba-Device-Type: Win 7
+        AVP: t=Message-Authenticator(80) l=18 val=cb42e52ce0c71d77f63517934c8631ce
+            Type: 80
+            Length: 18
+            Message-Authenticator: cb42e52ce0c71d77f63517934c8631ce
+
+Frame 4: 132 bytes on wire (1056 bits), 132 bytes captured (1056 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.752864000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.752864000 seconds
+    [Time delta from previous captured frame: 0.008512000 seconds]
+    [Time delta from previous displayed frame: 0.008512000 seconds]
+    [Time since reference or first frame: 18.149950000 seconds]
+    Frame Number: 4
+    Frame Length: 132 bytes (1056 bits)
+    Capture Length: 132 bytes (1056 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap]
+Linux cooked capture v1
+    Packet type: Sent by us (4)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: VMware_cf:19:96 (00:0c:29:cf:19:96)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.13, Dst: 192.168.10.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 116
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0xa51a [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.13
+    Destination Address: 192.168.10.1
+User Datagram Protocol, Src Port: 1812, Dst Port: 37057
+    Source Port: 1812
+    Destination Port: 37057
+    Length: 96
+    Checksum: 0x95d0 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.008512000 seconds]
+        [Time since previous frame: 0.008512000 seconds]
+    UDP payload (88 bytes)
+RADIUS Protocol
+    Code: Access-Challenge (11)
+    Packet identifier: 0xc6 (198)
+    Length: 88
+    Authenticator: 30b582c19e75648a49d8802026cb40b1
+    [This is a response to a request in frame 3]
+    [Time from request: 0.008512000 seconds]
+    Attribute Value Pairs
+        AVP: t=EAP-Message(79) l=8 Last Segment[1]
+            Type: 79
+            Length: 8
+            EAP fragment: 010200061922
+            Extensible Authentication Protocol
+                Code: Request (1)
+                Id: 2
+                Length: 6
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x22
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..1. .... = Start: True
+                    .... .010 = Version: 2
+        AVP: t=Message-Authenticator(80) l=18 val=0c1f2d10c203460b04e0631209006dce
+            Type: 80
+            Length: 18
+            Message-Authenticator: 0c1f2d10c203460b04e0631209006dce
+        AVP: t=State(24) l=42 val=414238413967427141474b51414141415a685646465130716466346a47594172304f4150…
+            Type: 24
+            Length: 42
+            State: 414238413967427141474b51414141415a685646465130716466346a47594172304f4150…
+
+Frame 5: 402 bytes on wire (3216 bits), 402 bytes captured (3216 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.760650000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.760650000 seconds
+    [Time delta from previous captured frame: 0.007786000 seconds]
+    [Time delta from previous displayed frame: 0.007786000 seconds]
+    [Time since reference or first frame: 18.157736000 seconds]
+    Frame Number: 5
+    Frame Length: 402 bytes (3216 bits)
+    Capture Length: 402 bytes (3216 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls]
+Linux cooked capture v1
+    Packet type: Unicast to us (0)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: ArubaaHe_b8:61:20 (00:0b:86:b8:61:20)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.1, Dst: 192.168.10.13
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 386
+    Identification: 0xc162 (49506)
+    000. .... = Flags: 0x0
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0x22aa [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.1
+    Destination Address: 192.168.10.13
+User Datagram Protocol, Src Port: 37057, Dst Port: 1812
+    Source Port: 37057
+    Destination Port: 1812
+    Length: 366
+    Checksum: 0x1e20 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.016298000 seconds]
+        [Time since previous frame: 0.007786000 seconds]
+    UDP payload (358 bytes)
+RADIUS Protocol
+    Code: Access-Request (1)
+    Packet identifier: 0xc7 (199)
+    Length: 358
+    Authenticator: bec596a7897fe35ad35037b03281aa28
+    Attribute Value Pairs
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=NAS-IP-Address(4) l=6 val=192.168.10.1
+            Type: 4
+            Length: 6
+            NAS-IP-Address: 192.168.10.1
+        AVP: t=NAS-Port(5) l=6 val=0
+            Type: 5
+            Length: 6
+            NAS-Port: 0
+        AVP: t=NAS-Identifier(32) l=14 val=192.168.10.1
+            Type: 32
+            Length: 14
+            NAS-Identifier: 192.168.10.1
+        AVP: t=NAS-Port-Type(61) l=6 val=Wireless-802.11(19)
+            Type: 61
+            Length: 6
+            NAS-Port-Type: Wireless-802.11 (19)
+        AVP: t=Calling-Station-Id(31) l=14 val=100BA96B6198
+            Type: 31
+            Length: 14
+            Calling-Station-Id: 100BA96B6198
+        AVP: t=Called-Station-Id(30) l=14 val=000B86B86120
+            Type: 30
+            Length: 14
+            Called-Station-Id: 000B86B86120
+        AVP: t=Service-Type(6) l=6 val=Framed(2)
+            Type: 6
+            Length: 6
+            Service-Type: Framed (2)
+        AVP: t=Framed-MTU(12) l=6 val=1100
+            Type: 12
+            Length: 6
+            Framed-MTU: 1100
+        AVP: t=EAP-Message(79) l=107 Last Segment[1]
+            Type: 79
+            Length: 107
+            EAP fragment: 0202006919800000005f160301005a01000056030155600da5220f91d68f9b56eb846fab…
+            Extensible Authentication Protocol
+                Code: Response (2)
+                Id: 2
+                Length: 105
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x80
+                    1... .... = Length Included: True
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                EAP-TLS Length: 95
+                Transport Layer Security
+                    TLSv1 Record Layer: Handshake Protocol: Client Hello
+                        Content Type: Handshake (22)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 90
+                        Handshake Protocol: Client Hello
+                            Handshake Type: Client Hello (1)
+                            Length: 86
+                            Version: TLS 1.0 (0x0301)
+                            Random: 55600da5220f91d68f9b56eb846fabf20f96a1da69d31a43990c689e5798cf8d
+                                GMT Unix Time: May 23, 2015 01:18:29.000000000 EDT
+                                Random Bytes: 220f91d68f9b56eb846fabf20f96a1da69d31a43990c689e5798cf8d
+                            Session ID Length: 0
+                            Cipher Suites Length: 24
+                            Cipher Suites (12 suites)
+                                Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA (0x002f)
+                                Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA (0x0035)
+                                Cipher Suite: TLS_RSA_WITH_RC4_128_SHA (0x0005)
+                                Cipher Suite: TLS_RSA_WITH_3DES_EDE_CBC_SHA (0x000a)
+                                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (0xc013)
+                                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (0xc014)
+                                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (0xc009)
+                                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (0xc00a)
+                                Cipher Suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA (0x0032)
+                                Cipher Suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA (0x0038)
+                                Cipher Suite: TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA (0x0013)
+                                Cipher Suite: TLS_RSA_WITH_RC4_128_MD5 (0x0004)
+                            Compression Methods Length: 1
+                            Compression Methods (1 method)
+                                Compression Method: null (0)
+                            Extensions Length: 21
+                            Extension: renegotiation_info (len=1)
+                                Type: renegotiation_info (65281)
+                                Length: 1
+                                Renegotiation Info extension
+                                    Renegotiation info extension length: 0
+                            Extension: supported_groups (len=6)
+                                Type: supported_groups (10)
+                                Length: 6
+                                Supported Groups List Length: 4
+                                Supported Groups (2 groups)
+                                    Supported Group: secp256r1 (0x0017)
+                                    Supported Group: secp384r1 (0x0018)
+                            Extension: ec_point_formats (len=2)
+                                Type: ec_point_formats (11)
+                                Length: 2
+                                EC point formats Length: 1
+                                Elliptic curves point formats (1)
+                                    EC point format: uncompressed (0)
+                            [JA3 Fullstring: 769,47-53-5-10-49171-49172-49161-49162-50-56-19-4,65281-10-11,23-24,0]
+                            [JA3: 6734f37431670b3ab4292b8f60f29984]
+        AVP: t=State(24) l=42 val=414238413967427141474b51414141415a685646465130716466346a47594172304f4150…
+            Type: 24
+            Length: 42
+            State: 414238413967427141474b51414141415a685646465130716466346a47594172304f4150…
+        AVP: t=Vendor-Specific(26) l=27 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 27
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Essid-Name(5) l=21 val=Rao likes 1X Movies
+                Type: 5
+                Length: 21
+                Aruba-Essid-Name: Rao likes 1X Movies
+        AVP: t=Vendor-Specific(26) l=25 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 25
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Location-Id(6) l=19 val=00:0b:86:cf:e2:16
+                Type: 6
+                Length: 19
+                Aruba-Location-Id: 00:0b:86:cf:e2:16
+        AVP: t=Vendor-Specific(26) l=15 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 15
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-AP-Group(10) l=9 val=default
+                Type: 10
+                Length: 9
+                Aruba-AP-Group: default
+        AVP: t=Vendor-Specific(26) l=13 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 13
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Device-Type(12) l=7 val=Win 7
+                Type: 12
+                Length: 7
+                Aruba-Device-Type: Win 7
+        AVP: t=Message-Authenticator(80) l=18 val=7744a5277fd671ecf59e961ccfdac3ea
+            Type: 80
+            Length: 18
+            Message-Authenticator: 7744a5277fd671ecf59e961ccfdac3ea
+
+Frame 6: 1168 bytes on wire (9344 bits), 1168 bytes captured (9344 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.767354000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.767354000 seconds
+    [Time delta from previous captured frame: 0.006704000 seconds]
+    [Time delta from previous displayed frame: 0.006704000 seconds]
+    [Time since reference or first frame: 18.164440000 seconds]
+    Frame Number: 6
+    Frame Length: 1168 bytes (9344 bits)
+    Capture Length: 1168 bytes (9344 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap]
+Linux cooked capture v1
+    Packet type: Sent by us (4)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: VMware_cf:19:96 (00:0c:29:cf:19:96)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.13, Dst: 192.168.10.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 1152
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0xa10e [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.13
+    Destination Address: 192.168.10.1
+User Datagram Protocol, Src Port: 1812, Dst Port: 37057
+    Source Port: 1812
+    Destination Port: 37057
+    Length: 1132
+    Checksum: 0x99dc [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.023002000 seconds]
+        [Time since previous frame: 0.006704000 seconds]
+    UDP payload (1124 bytes)
+RADIUS Protocol
+    Code: Access-Challenge (11)
+    Packet identifier: 0xc7 (199)
+    Length: 1124
+    Authenticator: ab873f29f8e4bc158fa1ad53d096490e
+    [This is a response to a request in frame 5]
+    [Time from request: 0.006704000 seconds]
+    Attribute Value Pairs
+        AVP: t=EAP-Message(79) l=255 Segment[1]
+            Type: 79
+            Length: 255
+            EAP fragment: 0103040a19c0000005321603010054020000500301ce137523b7cf03bc972cffffddbbb4…
+        AVP: t=EAP-Message(79) l=255 Segment[2]
+            Type: 79
+            Length: 255
+            EAP fragment: 0d3135313030383134313233335a30503119301706035504030c1072616f646975732e77…
+        AVP: t=EAP-Message(79) l=255 Segment[3]
+            Type: 79
+            Length: 255
+            EAP fragment: d2bf998d4d5fa58c660b8522f59f7ff2fadd3a5f56ad54dca0313ef3a2868962f28715b2…
+        AVP: t=EAP-Message(79) l=255 Segment[4]
+            Type: 79
+            Length: 255
+            EAP fragment: 9b66767f02d29679ba428cb1cb1866aa9039758e583f43859bbbfd03ec90d92bc7dc41a6…
+        AVP: t=EAP-Message(79) l=24 Last Segment[5]
+            Type: 79
+            Length: 24
+            EAP fragment: 1dd1bedeea9a657bb09ccd2f745baddb8dc6a3189262
+            Extensible Authentication Protocol
+                Code: Request (1)
+                Id: 3
+                Length: 1034
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0xc0
+                    1... .... = Length Included: True
+                    .1.. .... = More Fragments: True
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                EAP-TLS Length: 1330
+        AVP: t=Message-Authenticator(80) l=18 val=54c6ec955a130eb8af60ff37d17b9f13
+            Type: 80
+            Length: 18
+            Message-Authenticator: 54c6ec955a130eb8af60ff37d17b9f13
+        AVP: t=State(24) l=42 val=414951414967414241442b52414141417441324e766c345a53386659682b5170566e344e…
+            Type: 24
+            Length: 42
+            State: 414951414967414241442b52414141417441324e766c345a53386659682b5170566e344e…
+
+Frame 7: 303 bytes on wire (2424 bits), 303 bytes captured (2424 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.773739000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.773739000 seconds
+    [Time delta from previous captured frame: 0.006385000 seconds]
+    [Time delta from previous displayed frame: 0.006385000 seconds]
+    [Time since reference or first frame: 18.170825000 seconds]
+    Frame Number: 7
+    Frame Length: 303 bytes (2424 bits)
+    Capture Length: 303 bytes (2424 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap]
+Linux cooked capture v1
+    Packet type: Unicast to us (0)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: ArubaaHe_b8:61:20 (00:0b:86:b8:61:20)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.1, Dst: 192.168.10.13
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 287
+    Identification: 0xc163 (49507)
+    000. .... = Flags: 0x0
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0x230c [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.1
+    Destination Address: 192.168.10.13
+User Datagram Protocol, Src Port: 37057, Dst Port: 1812
+    Source Port: 37057
+    Destination Port: 1812
+    Length: 267
+    Checksum: 0x0366 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.029387000 seconds]
+        [Time since previous frame: 0.006385000 seconds]
+    UDP payload (259 bytes)
+RADIUS Protocol
+    Code: Access-Request (1)
+    Packet identifier: 0xc8 (200)
+    Length: 259
+    Authenticator: 407e856f0098796069f13abfe4cb66fa
+    Attribute Value Pairs
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=NAS-IP-Address(4) l=6 val=192.168.10.1
+            Type: 4
+            Length: 6
+            NAS-IP-Address: 192.168.10.1
+        AVP: t=NAS-Port(5) l=6 val=0
+            Type: 5
+            Length: 6
+            NAS-Port: 0
+        AVP: t=NAS-Identifier(32) l=14 val=192.168.10.1
+            Type: 32
+            Length: 14
+            NAS-Identifier: 192.168.10.1
+        AVP: t=NAS-Port-Type(61) l=6 val=Wireless-802.11(19)
+            Type: 61
+            Length: 6
+            NAS-Port-Type: Wireless-802.11 (19)
+        AVP: t=Calling-Station-Id(31) l=14 val=100BA96B6198
+            Type: 31
+            Length: 14
+            Calling-Station-Id: 100BA96B6198
+        AVP: t=Called-Station-Id(30) l=14 val=000B86B86120
+            Type: 30
+            Length: 14
+            Called-Station-Id: 000B86B86120
+        AVP: t=Service-Type(6) l=6 val=Framed(2)
+            Type: 6
+            Length: 6
+            Service-Type: Framed (2)
+        AVP: t=Framed-MTU(12) l=6 val=1100
+            Type: 12
+            Length: 6
+            Framed-MTU: 1100
+        AVP: t=EAP-Message(79) l=8 Last Segment[1]
+            Type: 79
+            Length: 8
+            EAP fragment: 020300061900
+            Extensible Authentication Protocol
+                Code: Response (2)
+                Id: 3
+                Length: 6
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+        AVP: t=State(24) l=42 val=414951414967414241442b52414141417441324e766c345a53386659682b5170566e344e…
+            Type: 24
+            Length: 42
+            State: 414951414967414241442b52414141417441324e766c345a53386659682b5170566e344e…
+        AVP: t=Vendor-Specific(26) l=27 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 27
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Essid-Name(5) l=21 val=Rao likes 1X Movies
+                Type: 5
+                Length: 21
+                Aruba-Essid-Name: Rao likes 1X Movies
+        AVP: t=Vendor-Specific(26) l=25 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 25
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Location-Id(6) l=19 val=00:0b:86:cf:e2:16
+                Type: 6
+                Length: 19
+                Aruba-Location-Id: 00:0b:86:cf:e2:16
+        AVP: t=Vendor-Specific(26) l=15 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 15
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-AP-Group(10) l=9 val=default
+                Type: 10
+                Length: 9
+                Aruba-AP-Group: default
+        AVP: t=Vendor-Specific(26) l=13 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 13
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Device-Type(12) l=7 val=Win 7
+                Type: 12
+                Length: 7
+                Aruba-Device-Type: Win 7
+        AVP: t=Message-Authenticator(80) l=18 val=1cde3fb76ab416b9290455fa9495e123
+            Type: 80
+            Length: 18
+            Message-Authenticator: 1cde3fb76ab416b9290455fa9495e123
+
+Frame 8: 440 bytes on wire (3520 bits), 440 bytes captured (3520 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.775815000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.775815000 seconds
+    [Time delta from previous captured frame: 0.002076000 seconds]
+    [Time delta from previous displayed frame: 0.002076000 seconds]
+    [Time since reference or first frame: 18.172901000 seconds]
+    Frame Number: 8
+    Frame Length: 440 bytes (3520 bits)
+    Capture Length: 440 bytes (3520 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509ce:x509ce]
+Linux cooked capture v1
+    Packet type: Sent by us (4)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: VMware_cf:19:96 (00:0c:29:cf:19:96)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.13, Dst: 192.168.10.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 424
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0xa3e6 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.13
+    Destination Address: 192.168.10.1
+User Datagram Protocol, Src Port: 1812, Dst Port: 37057
+    Source Port: 1812
+    Destination Port: 37057
+    Length: 404
+    Checksum: 0x9704 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.031463000 seconds]
+        [Time since previous frame: 0.002076000 seconds]
+    UDP payload (396 bytes)
+RADIUS Protocol
+    Code: Access-Challenge (11)
+    Packet identifier: 0xc8 (200)
+    Length: 396
+    Authenticator: 08a363a064892ef67eeb9dac77fc1904
+    [This is a response to a request in frame 7]
+    [Time from request: 0.002076000 seconds]
+    Attribute Value Pairs
+        AVP: t=EAP-Message(79) l=255 Segment[1]
+            Type: 79
+            Length: 255
+            EAP fragment: 0104013819004353ae4d1e84b45e60061a5bee805b230f44681bb4cca41cecf8776ed392…
+        AVP: t=EAP-Message(79) l=61 Last Segment[2]
+            Type: 79
+            Length: 61
+            EAP fragment: c70df8521cf6aca856ed38051101c448a64fc6e4f144b0166e0f04a027e4661e63b2b980…
+            Extensible Authentication Protocol
+                Code: Request (1)
+                Id: 4
+                Length: 312
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                [2 EAP-TLS Fragments (1330 bytes): #6(1024), #8(306)]
+                    [Frame: 6, payload: 0-1023 (1024 bytes)]
+                    [Frame: 8, payload: 1024-1329 (306 bytes)]
+                    [Fragment Count: 2]
+                    [Reassembled EAP-TLS Length: 1330]
+                Transport Layer Security
+                    TLSv1 Record Layer: Handshake Protocol: Server Hello
+                        Content Type: Handshake (22)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 84
+                        Handshake Protocol: Server Hello
+                            Handshake Type: Server Hello (2)
+                            Length: 80
+                            Version: TLS 1.0 (0x0301)
+                            Random: ce137523b7cf03bc972cffffddbbb43c89c9910456e362dfdef29717cc1338d3
+                                GMT Unix Time: Jul 23, 2079 19:47:47.000000000 EDT
+                                Random Bytes: b7cf03bc972cffffddbbb43c89c9910456e362dfdef29717cc1338d3
+                            Session ID Length: 32
+                            Session ID: cf2f90ea660043aeb8504a86438e4739a647dd36d0eb168448cb987675baec9f
+                            Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (0xc014)
+                            Compression Method: null (0)
+                            Extensions Length: 8
+                            Extension: ec_point_formats (len=4)
+                                Type: ec_point_formats (11)
+                                Length: 4
+                                EC point formats Length: 3
+                                Elliptic curves point formats (3)
+                                    EC point format: uncompressed (0)
+                                    EC point format: ansiX962_compressed_prime (1)
+                                    EC point format: ansiX962_compressed_char2 (2)
+                            [JA3S Fullstring: 769,49172,11]
+                            [JA3S: 6aa98948bfa9626adc8d77e0f16d39c6]
+                    TLSv1 Record Layer: Handshake Protocol: Certificate
+                        Content Type: Handshake (22)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 891
+                        Handshake Protocol: Certificate
+                            Handshake Type: Certificate (11)
+                            Length: 887
+                            Certificates Length: 884
+                            Certificates (884 bytes)
+                                Certificate Length: 881
+                                Certificate: 3082036d30820255a0030201020209009a20ebd399e3f7f9300d06092a864886f70d0101… (id-at-localityName=NK,id-at-countryName=NK,id-at-stateOrProvinceName=NK,id-at-organizationName=RAO,id-at-commonName=raodius.wifi.ctf)
+                                    signedCertificate
+                                        version: v3 (2)
+                                        serialNumber: 0x009a20ebd399e3f7f9
+                                        signature (sha512WithRSAEncryption)
+                                            Algorithm Id: 1.2.840.113549.1.1.13 (sha512WithRSAEncryption)
+                                        issuer: rdnSequence (0)
+                                            rdnSequence: 5 items (id-at-localityName=NK,id-at-countryName=NK,id-at-stateOrProvinceName=NK,id-at-organizationName=RAO,id-at-commonName=raodius.wifi.ctf)
+                                                RDNSequence item: 1 item (id-at-commonName=raodius.wifi.ctf)
+                                                    RelativeDistinguishedName item (id-at-commonName=raodius.wifi.ctf)
+                                                        Object Id: 2.5.4.3 (id-at-commonName)
+                                                        DirectoryString: uTF8String (4)
+                                                            uTF8String: raodius.wifi.ctf
+                                                RDNSequence item: 1 item (id-at-organizationName=RAO)
+                                                    RelativeDistinguishedName item (id-at-organizationName=RAO)
+                                                        Object Id: 2.5.4.10 (id-at-organizationName)
+                                                        DirectoryString: uTF8String (4)
+                                                            uTF8String: RAO
+                                                RDNSequence item: 1 item (id-at-stateOrProvinceName=NK)
+                                                    RelativeDistinguishedName item (id-at-stateOrProvinceName=NK)
+                                                        Object Id: 2.5.4.8 (id-at-stateOrProvinceName)
+                                                        DirectoryString: uTF8String (4)
+                                                            uTF8String: NK
+                                                RDNSequence item: 1 item (id-at-countryName=NK)
+                                                    RelativeDistinguishedName item (id-at-countryName=NK)
+                                                        Object Id: 2.5.4.6 (id-at-countryName)
+                                                        CountryName: NK
+                                                RDNSequence item: 1 item (id-at-localityName=NK)
+                                                    RelativeDistinguishedName item (id-at-localityName=NK)
+                                                        Object Id: 2.5.4.7 (id-at-localityName)
+                                                        DirectoryString: uTF8String (4)
+                                                            uTF8String: NK
+                                        validity
+                                            notBefore: utcTime (0)
+                                                utcTime: 2015-04-11 14:12:33 (UTC)
+                                            notAfter: utcTime (0)
+                                                utcTime: 2015-10-08 14:12:33 (UTC)
+                                        subject: rdnSequence (0)
+                                            rdnSequence: 5 items (id-at-localityName=NK,id-at-countryName=NK,id-at-stateOrProvinceName=NK,id-at-organizationName=RAO,id-at-commonName=raodius.wifi.ctf)
+                                                RDNSequence item: 1 item (id-at-commonName=raodius.wifi.ctf)
+                                                    RelativeDistinguishedName item (id-at-commonName=raodius.wifi.ctf)
+                                                        Object Id: 2.5.4.3 (id-at-commonName)
+                                                        DirectoryString: uTF8String (4)
+                                                            uTF8String: raodius.wifi.ctf
+                                                RDNSequence item: 1 item (id-at-organizationName=RAO)
+                                                    RelativeDistinguishedName item (id-at-organizationName=RAO)
+                                                        Object Id: 2.5.4.10 (id-at-organizationName)
+                                                        DirectoryString: uTF8String (4)
+                                                            uTF8String: RAO
+                                                RDNSequence item: 1 item (id-at-stateOrProvinceName=NK)
+                                                    RelativeDistinguishedName item (id-at-stateOrProvinceName=NK)
+                                                        Object Id: 2.5.4.8 (id-at-stateOrProvinceName)
+                                                        DirectoryString: uTF8String (4)
+                                                            uTF8String: NK
+                                                RDNSequence item: 1 item (id-at-countryName=NK)
+                                                    RelativeDistinguishedName item (id-at-countryName=NK)
+                                                        Object Id: 2.5.4.6 (id-at-countryName)
+                                                        CountryName: NK
+                                                RDNSequence item: 1 item (id-at-localityName=NK)
+                                                    RelativeDistinguishedName item (id-at-localityName=NK)
+                                                        Object Id: 2.5.4.7 (id-at-localityName)
+                                                        DirectoryString: uTF8String (4)
+                                                            uTF8String: NK
+                                        subjectPublicKeyInfo
+                                            algorithm (rsaEncryption)
+                                                Algorithm Id: 1.2.840.113549.1.1.1 (rsaEncryption)
+                                            subjectPublicKey: 3082010a02820101009b1f7cf1135fb8abac06e599a31a563830c44eef56e8098150d0fd…
+                                                modulus: 0x009b1f7cf1135fb8abac06e599a31a563830c44eef56e8098150d0fd9cb82665ac1286c0…
+                                                publicExponent: 65537
+                                        extensions: 2 items
+                                            Extension (id-ce-extKeyUsage)
+                                                Extension Id: 2.5.29.37 (id-ce-extKeyUsage)
+                                                KeyPurposeIDs: 3 items
+                                                    KeyPurposeId: 1.3.6.1.5.5.7.3.1 (id-kp-serverAuth)
+                                                    KeyPurposeId: 1.3.6.1.5.5.7.3.3 (id-kp-codeSigning)
+                                                    KeyPurposeId: 1.3.6.1.5.5.7.3.14 (id-kp-eapOverLAN)
+                                            Extension (id-ce-subjectKeyIdentifier)
+                                                Extension Id: 2.5.29.14 (id-ce-subjectKeyIdentifier)
+                                                SubjectKeyIdentifier: 406001b2de29864118ed2522e3bdd6bc804e0143
+                                    algorithmIdentifier (sha512WithRSAEncryption)
+                                        Algorithm Id: 1.2.840.113549.1.1.13 (sha512WithRSAEncryption)
+                                    Padding: 0
+                                    encrypted: 0888871dc405b017f911cf9cfba81319e2d14caa9b66767f02d29679ba428cb1cb1866aa…
+                    TLSv1 Record Layer: Handshake Protocol: Server Key Exchange
+                        Content Type: Handshake (22)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 331
+                        Handshake Protocol: Server Key Exchange
+                            Handshake Type: Server Key Exchange (12)
+                            Length: 327
+                            EC Diffie-Hellman Server Params
+                                Curve Type: named_curve (0x03)
+                                Named Curve: secp256r1 (0x0017)
+                                Pubkey Length: 65
+                                Pubkey: 0465d34d1dd1bedeea9a657bb09ccd2f745baddb8dc6a31892624353ae4d1e84b45e6006…
+                                Signature Length: 256
+                                Signature: 3039bf50fc5f2b7315f48d37e1f55baff6e9dc00984a6f832fdf97cf6428d3de290f4619…
+                    TLSv1 Record Layer: Handshake Protocol: Server Hello Done
+                        Content Type: Handshake (22)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 4
+                        Handshake Protocol: Server Hello Done
+                            Handshake Type: Server Hello Done (14)
+                            Length: 0
+        AVP: t=Message-Authenticator(80) l=18 val=28b6ae81a84c96b7e2c7f31eed7bae2b
+            Type: 80
+            Length: 18
+            Message-Authenticator: 28b6ae81a84c96b7e2c7f31eed7bae2b
+        AVP: t=State(24) l=42 val=41506f414c414439414a43534141414134704930774c7266654a34742f55677a74486f44…
+            Type: 24
+            Length: 42
+            State: 41506f414c414439414a43534141414134704930774c7266654a34742f55677a74486f44…
+
+Frame 9: 441 bytes on wire (3528 bits), 441 bytes captured (3528 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.808776000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.808776000 seconds
+    [Time delta from previous captured frame: 0.032961000 seconds]
+    [Time delta from previous displayed frame: 0.032961000 seconds]
+    [Time since reference or first frame: 18.205862000 seconds]
+    Frame Number: 9
+    Frame Length: 441 bytes (3528 bits)
+    Capture Length: 441 bytes (3528 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls]
+Linux cooked capture v1
+    Packet type: Unicast to us (0)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: ArubaaHe_b8:61:20 (00:0b:86:b8:61:20)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.1, Dst: 192.168.10.13
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 425
+    Identification: 0xc164 (49508)
+    000. .... = Flags: 0x0
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0x2281 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.1
+    Destination Address: 192.168.10.13
+User Datagram Protocol, Src Port: 37057, Dst Port: 1812
+    Source Port: 37057
+    Destination Port: 1812
+    Length: 405
+    Checksum: 0x58ff [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.064424000 seconds]
+        [Time since previous frame: 0.032961000 seconds]
+    UDP payload (397 bytes)
+RADIUS Protocol
+    Code: Access-Request (1)
+    Packet identifier: 0xc9 (201)
+    Length: 397
+    Authenticator: 263e945746b5409f5a53a6a233d7cd1c
+    Attribute Value Pairs
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=NAS-IP-Address(4) l=6 val=192.168.10.1
+            Type: 4
+            Length: 6
+            NAS-IP-Address: 192.168.10.1
+        AVP: t=NAS-Port(5) l=6 val=0
+            Type: 5
+            Length: 6
+            NAS-Port: 0
+        AVP: t=NAS-Identifier(32) l=14 val=192.168.10.1
+            Type: 32
+            Length: 14
+            NAS-Identifier: 192.168.10.1
+        AVP: t=NAS-Port-Type(61) l=6 val=Wireless-802.11(19)
+            Type: 61
+            Length: 6
+            NAS-Port-Type: Wireless-802.11 (19)
+        AVP: t=Calling-Station-Id(31) l=14 val=100BA96B6198
+            Type: 31
+            Length: 14
+            Calling-Station-Id: 100BA96B6198
+        AVP: t=Called-Station-Id(30) l=14 val=000B86B86120
+            Type: 30
+            Length: 14
+            Called-Station-Id: 000B86B86120
+        AVP: t=Service-Type(6) l=6 val=Framed(2)
+            Type: 6
+            Length: 6
+            Service-Type: Framed (2)
+        AVP: t=Framed-MTU(12) l=6 val=1100
+            Type: 12
+            Length: 6
+            Framed-MTU: 1100
+        AVP: t=EAP-Message(79) l=146 Last Segment[1]
+            Type: 79
+            Length: 146
+            EAP fragment: 0204009019800000008616030100461000004241049b19543d4a4441980316cfb8dc2934…
+            Extensible Authentication Protocol
+                Code: Response (2)
+                Id: 4
+                Length: 144
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x80
+                    1... .... = Length Included: True
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                EAP-TLS Length: 134
+                Transport Layer Security
+                    TLSv1 Record Layer: Handshake Protocol: Client Key Exchange
+                        Content Type: Handshake (22)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 70
+                        Handshake Protocol: Client Key Exchange
+                            Handshake Type: Client Key Exchange (16)
+                            Length: 66
+                            EC Diffie-Hellman Client Params
+                                Pubkey Length: 65
+                                Pubkey: 049b19543d4a4441980316cfb8dc2934b00898b4e09cce43438fdd50ba66f4807fd27e64…
+                    TLSv1 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+                        Content Type: Change Cipher Spec (20)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 1
+                        Change Cipher Spec Message
+                    TLSv1 Record Layer: Handshake Protocol: Encrypted Handshake Message
+                        Content Type: Handshake (22)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 48
+                        Handshake Protocol: Encrypted Handshake Message
+        AVP: t=State(24) l=42 val=41506f414c414439414a43534141414134704930774c7266654a34742f55677a74486f44…
+            Type: 24
+            Length: 42
+            State: 41506f414c414439414a43534141414134704930774c7266654a34742f55677a74486f44…
+        AVP: t=Vendor-Specific(26) l=27 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 27
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Essid-Name(5) l=21 val=Rao likes 1X Movies
+                Type: 5
+                Length: 21
+                Aruba-Essid-Name: Rao likes 1X Movies
+        AVP: t=Vendor-Specific(26) l=25 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 25
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Location-Id(6) l=19 val=00:0b:86:cf:e2:16
+                Type: 6
+                Length: 19
+                Aruba-Location-Id: 00:0b:86:cf:e2:16
+        AVP: t=Vendor-Specific(26) l=15 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 15
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-AP-Group(10) l=9 val=default
+                Type: 10
+                Length: 9
+                Aruba-AP-Group: default
+        AVP: t=Vendor-Specific(26) l=13 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 13
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Device-Type(12) l=7 val=Win 7
+                Type: 12
+                Length: 7
+                Aruba-Device-Type: Win 7
+        AVP: t=Message-Authenticator(80) l=18 val=ba651a9f413085b7b64716f01056bae2
+            Type: 80
+            Length: 18
+            Message-Authenticator: ba651a9f413085b7b64716f01056bae2
+
+Frame 10: 191 bytes on wire (1528 bits), 191 bytes captured (1528 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.812374000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.812374000 seconds
+    [Time delta from previous captured frame: 0.003598000 seconds]
+    [Time delta from previous displayed frame: 0.003598000 seconds]
+    [Time since reference or first frame: 18.209460000 seconds]
+    Frame Number: 10
+    Frame Length: 191 bytes (1528 bits)
+    Capture Length: 191 bytes (1528 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls]
+Linux cooked capture v1
+    Packet type: Sent by us (4)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: VMware_cf:19:96 (00:0c:29:cf:19:96)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.13, Dst: 192.168.10.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 175
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0xa4df [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.13
+    Destination Address: 192.168.10.1
+User Datagram Protocol, Src Port: 1812, Dst Port: 37057
+    Source Port: 1812
+    Destination Port: 37057
+    Length: 155
+    Checksum: 0x960b [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.068022000 seconds]
+        [Time since previous frame: 0.003598000 seconds]
+    UDP payload (147 bytes)
+RADIUS Protocol
+    Code: Access-Challenge (11)
+    Packet identifier: 0xc9 (201)
+    Length: 147
+    Authenticator: 33fdaad36410e0bff95b84b952ac59dc
+    [This is a response to a request in frame 9]
+    [Time from request: 0.003598000 seconds]
+    Attribute Value Pairs
+        AVP: t=EAP-Message(79) l=67 Last Segment[1]
+            Type: 79
+            Length: 67
+            EAP fragment: 0105004119001403010001011603010030602d0b6724ceda423065fd53a2e3c80de3abb7…
+            Extensible Authentication Protocol
+                Code: Request (1)
+                Id: 5
+                Length: 65
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                Transport Layer Security
+                    TLSv1 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+                        Content Type: Change Cipher Spec (20)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 1
+                        Change Cipher Spec Message
+                    TLSv1 Record Layer: Handshake Protocol: Encrypted Handshake Message
+                        Content Type: Handshake (22)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 48
+                        Handshake Protocol: Encrypted Handshake Message
+        AVP: t=Message-Authenticator(80) l=18 val=fed68617d06fe9193fd829b25a415197
+            Type: 80
+            Length: 18
+            Message-Authenticator: fed68617d06fe9193fd829b25a415197
+        AVP: t=State(24) l=42 val=414951414c774244414f3254414141414a377a4b524c734e626e4c657676764e714b4d68…
+            Type: 24
+            Length: 42
+            State: 414951414c774244414f3254414141414a377a4b524c734e626e4c657676764e714b4d68…
+
+Frame 11: 303 bytes on wire (2424 bits), 303 bytes captured (2424 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.822390000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.822390000 seconds
+    [Time delta from previous captured frame: 0.010016000 seconds]
+    [Time delta from previous displayed frame: 0.010016000 seconds]
+    [Time since reference or first frame: 18.219476000 seconds]
+    Frame Number: 11
+    Frame Length: 303 bytes (2424 bits)
+    Capture Length: 303 bytes (2424 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap]
+Linux cooked capture v1
+    Packet type: Unicast to us (0)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: ArubaaHe_b8:61:20 (00:0b:86:b8:61:20)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.1, Dst: 192.168.10.13
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 287
+    Identification: 0xc165 (49509)
+    000. .... = Flags: 0x0
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0x230a [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.1
+    Destination Address: 192.168.10.13
+User Datagram Protocol, Src Port: 37057, Dst Port: 1812
+    Source Port: 37057
+    Destination Port: 1812
+    Length: 267
+    Checksum: 0xba75 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.078038000 seconds]
+        [Time since previous frame: 0.010016000 seconds]
+    UDP payload (259 bytes)
+RADIUS Protocol
+    Code: Access-Request (1)
+    Packet identifier: 0xca (202)
+    Length: 259
+    Authenticator: e461efa59639f9c2d7a0675dbffc2e9c
+    Attribute Value Pairs
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=NAS-IP-Address(4) l=6 val=192.168.10.1
+            Type: 4
+            Length: 6
+            NAS-IP-Address: 192.168.10.1
+        AVP: t=NAS-Port(5) l=6 val=0
+            Type: 5
+            Length: 6
+            NAS-Port: 0
+        AVP: t=NAS-Identifier(32) l=14 val=192.168.10.1
+            Type: 32
+            Length: 14
+            NAS-Identifier: 192.168.10.1
+        AVP: t=NAS-Port-Type(61) l=6 val=Wireless-802.11(19)
+            Type: 61
+            Length: 6
+            NAS-Port-Type: Wireless-802.11 (19)
+        AVP: t=Calling-Station-Id(31) l=14 val=100BA96B6198
+            Type: 31
+            Length: 14
+            Calling-Station-Id: 100BA96B6198
+        AVP: t=Called-Station-Id(30) l=14 val=000B86B86120
+            Type: 30
+            Length: 14
+            Called-Station-Id: 000B86B86120
+        AVP: t=Service-Type(6) l=6 val=Framed(2)
+            Type: 6
+            Length: 6
+            Service-Type: Framed (2)
+        AVP: t=Framed-MTU(12) l=6 val=1100
+            Type: 12
+            Length: 6
+            Framed-MTU: 1100
+        AVP: t=EAP-Message(79) l=8 Last Segment[1]
+            Type: 79
+            Length: 8
+            EAP fragment: 020500061900
+            Extensible Authentication Protocol
+                Code: Response (2)
+                Id: 5
+                Length: 6
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+        AVP: t=State(24) l=42 val=414951414c774244414f3254414141414a377a4b524c734e626e4c657676764e714b4d68…
+            Type: 24
+            Length: 42
+            State: 414951414c774244414f3254414141414a377a4b524c734e626e4c657676764e714b4d68…
+        AVP: t=Vendor-Specific(26) l=27 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 27
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Essid-Name(5) l=21 val=Rao likes 1X Movies
+                Type: 5
+                Length: 21
+                Aruba-Essid-Name: Rao likes 1X Movies
+        AVP: t=Vendor-Specific(26) l=25 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 25
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Location-Id(6) l=19 val=00:0b:86:cf:e2:16
+                Type: 6
+                Length: 19
+                Aruba-Location-Id: 00:0b:86:cf:e2:16
+        AVP: t=Vendor-Specific(26) l=15 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 15
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-AP-Group(10) l=9 val=default
+                Type: 10
+                Length: 9
+                Aruba-AP-Group: default
+        AVP: t=Vendor-Specific(26) l=13 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 13
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Device-Type(12) l=7 val=Win 7
+                Type: 12
+                Length: 7
+                Aruba-Device-Type: Win 7
+        AVP: t=Message-Authenticator(80) l=18 val=d073f32cb78932953368888bc6d0dac3
+            Type: 80
+            Length: 18
+            Message-Authenticator: d073f32cb78932953368888bc6d0dac3
+
+Frame 12: 169 bytes on wire (1352 bits), 169 bytes captured (1352 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.824461000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.824461000 seconds
+    [Time delta from previous captured frame: 0.002071000 seconds]
+    [Time delta from previous displayed frame: 0.002071000 seconds]
+    [Time since reference or first frame: 18.221547000 seconds]
+    Frame Number: 12
+    Frame Length: 169 bytes (1352 bits)
+    Capture Length: 169 bytes (1352 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls]
+Linux cooked capture v1
+    Packet type: Sent by us (4)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: VMware_cf:19:96 (00:0c:29:cf:19:96)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.13, Dst: 192.168.10.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 153
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0xa4f5 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.13
+    Destination Address: 192.168.10.1
+User Datagram Protocol, Src Port: 1812, Dst Port: 37057
+    Source Port: 1812
+    Destination Port: 37057
+    Length: 133
+    Checksum: 0x95f5 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.080109000 seconds]
+        [Time since previous frame: 0.002071000 seconds]
+    UDP payload (125 bytes)
+RADIUS Protocol
+    Code: Access-Challenge (11)
+    Packet identifier: 0xca (202)
+    Length: 125
+    Authenticator: 45c8187801260b57158964294cd21e8c
+    [This is a response to a request in frame 11]
+    [Time from request: 0.002071000 seconds]
+    Attribute Value Pairs
+        AVP: t=EAP-Message(79) l=45 Last Segment[1]
+            Type: 79
+            Length: 45
+            EAP fragment: 0106002b19001703010020d836cb963fbf112fde304d7af41f5aa99bd1847d721e6d9c6b…
+            Extensible Authentication Protocol
+                Code: Request (1)
+                Id: 6
+                Length: 43
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                Transport Layer Security
+                    TLSv1 Record Layer: Application Data Protocol: Protected Extensible Authentication Protocol
+                        Content Type: Application Data (23)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 32
+                        Encrypted Application Data: d836cb963fbf112fde304d7af41f5aa99bd1847d721e6d9c6b31e25f5c33633d
+                        [Application Data Protocol: Protected Extensible Authentication Protocol]
+        AVP: t=Message-Authenticator(80) l=18 val=c6bf374ddefa0a0996e3d5ea61e1758e
+            Type: 80
+            Length: 18
+            Message-Authenticator: c6bf374ddefa0a0996e3d5ea61e1758e
+        AVP: t=State(24) l=42 val=4143494155414171414d655541414141437830384464577561776147624c463348472b30…
+            Type: 24
+            Length: 42
+            State: 4143494155414171414d655541414141437830384464577561776147624c463348472b30…
+
+Frame 13: 356 bytes on wire (2848 bits), 356 bytes captured (2848 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.828908000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.828908000 seconds
+    [Time delta from previous captured frame: 0.004447000 seconds]
+    [Time delta from previous displayed frame: 0.004447000 seconds]
+    [Time since reference or first frame: 18.225994000 seconds]
+    Frame Number: 13
+    Frame Length: 356 bytes (2848 bits)
+    Capture Length: 356 bytes (2848 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls]
+Linux cooked capture v1
+    Packet type: Unicast to us (0)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: ArubaaHe_b8:61:20 (00:0b:86:b8:61:20)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.1, Dst: 192.168.10.13
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 340
+    Identification: 0xc166 (49510)
+    000. .... = Flags: 0x0
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0x22d4 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.1
+    Destination Address: 192.168.10.13
+User Datagram Protocol, Src Port: 37057, Dst Port: 1812
+    Source Port: 37057
+    Destination Port: 1812
+    Length: 320
+    Checksum: 0xda7c [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.084556000 seconds]
+        [Time since previous frame: 0.004447000 seconds]
+    UDP payload (312 bytes)
+RADIUS Protocol
+    Code: Access-Request (1)
+    Packet identifier: 0xcb (203)
+    Length: 312
+    Authenticator: 0bfe0a3974a806ebf59aa30b40b20bc3
+    Attribute Value Pairs
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=NAS-IP-Address(4) l=6 val=192.168.10.1
+            Type: 4
+            Length: 6
+            NAS-IP-Address: 192.168.10.1
+        AVP: t=NAS-Port(5) l=6 val=0
+            Type: 5
+            Length: 6
+            NAS-Port: 0
+        AVP: t=NAS-Identifier(32) l=14 val=192.168.10.1
+            Type: 32
+            Length: 14
+            NAS-Identifier: 192.168.10.1
+        AVP: t=NAS-Port-Type(61) l=6 val=Wireless-802.11(19)
+            Type: 61
+            Length: 6
+            NAS-Port-Type: Wireless-802.11 (19)
+        AVP: t=Calling-Station-Id(31) l=14 val=100BA96B6198
+            Type: 31
+            Length: 14
+            Calling-Station-Id: 100BA96B6198
+        AVP: t=Called-Station-Id(30) l=14 val=000B86B86120
+            Type: 30
+            Length: 14
+            Called-Station-Id: 000B86B86120
+        AVP: t=Service-Type(6) l=6 val=Framed(2)
+            Type: 6
+            Length: 6
+            Service-Type: Framed (2)
+        AVP: t=Framed-MTU(12) l=6 val=1100
+            Type: 12
+            Length: 6
+            Framed-MTU: 1100
+        AVP: t=EAP-Message(79) l=61 Last Segment[1]
+            Type: 79
+            Length: 61
+            EAP fragment: 0206003b19001703010030d58ddb5b84052327601d4c3e738bff44f5d01de63fced5e6ca…
+            Extensible Authentication Protocol
+                Code: Response (2)
+                Id: 6
+                Length: 59
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                Transport Layer Security
+                    TLSv1 Record Layer: Application Data Protocol: Protected Extensible Authentication Protocol
+                        Content Type: Application Data (23)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 48
+                        Encrypted Application Data: d58ddb5b84052327601d4c3e738bff44f5d01de63fced5e6ca217b10bcd5ea855cdc749c…
+                        [Application Data Protocol: Protected Extensible Authentication Protocol]
+        AVP: t=State(24) l=42 val=4143494155414171414d655541414141437830384464577561776147624c463348472b30…
+            Type: 24
+            Length: 42
+            State: 4143494155414171414d655541414141437830384464577561776147624c463348472b30…
+        AVP: t=Vendor-Specific(26) l=27 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 27
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Essid-Name(5) l=21 val=Rao likes 1X Movies
+                Type: 5
+                Length: 21
+                Aruba-Essid-Name: Rao likes 1X Movies
+        AVP: t=Vendor-Specific(26) l=25 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 25
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Location-Id(6) l=19 val=00:0b:86:cf:e2:16
+                Type: 6
+                Length: 19
+                Aruba-Location-Id: 00:0b:86:cf:e2:16
+        AVP: t=Vendor-Specific(26) l=15 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 15
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-AP-Group(10) l=9 val=default
+                Type: 10
+                Length: 9
+                Aruba-AP-Group: default
+        AVP: t=Vendor-Specific(26) l=13 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 13
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Device-Type(12) l=7 val=Win 7
+                Type: 12
+                Length: 7
+                Aruba-Device-Type: Win 7
+        AVP: t=Message-Authenticator(80) l=18 val=d9f2f71d4d2d5dd214e919b2bf41b1a0
+            Type: 80
+            Length: 18
+            Message-Authenticator: d9f2f71d4d2d5dd214e919b2bf41b1a0
+
+Frame 14: 201 bytes on wire (1608 bits), 201 bytes captured (1608 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.836725000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.836725000 seconds
+    [Time delta from previous captured frame: 0.007817000 seconds]
+    [Time delta from previous displayed frame: 0.007817000 seconds]
+    [Time since reference or first frame: 18.233811000 seconds]
+    Frame Number: 14
+    Frame Length: 201 bytes (1608 bits)
+    Capture Length: 201 bytes (1608 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls]
+Linux cooked capture v1
+    Packet type: Sent by us (4)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: VMware_cf:19:96 (00:0c:29:cf:19:96)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.13, Dst: 192.168.10.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 185
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0xa4d5 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.13
+    Destination Address: 192.168.10.1
+User Datagram Protocol, Src Port: 1812, Dst Port: 37057
+    Source Port: 1812
+    Destination Port: 37057
+    Length: 165
+    Checksum: 0x9615 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.092373000 seconds]
+        [Time since previous frame: 0.007817000 seconds]
+    UDP payload (157 bytes)
+RADIUS Protocol
+    Code: Access-Challenge (11)
+    Packet identifier: 0xcb (203)
+    Length: 157
+    Authenticator: dcf0952f052150edf2526e85c3cacd53
+    [This is a response to a request in frame 13]
+    [Time from request: 0.007817000 seconds]
+    Attribute Value Pairs
+        AVP: t=EAP-Message(79) l=77 Last Segment[1]
+            Type: 79
+            Length: 77
+            EAP fragment: 0107004b19001703010040e93328b312f3b047ac6d342f84ba6eeb7c5f66f2ceef777b4c…
+            Extensible Authentication Protocol
+                Code: Request (1)
+                Id: 7
+                Length: 75
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                Transport Layer Security
+                    TLSv1 Record Layer: Application Data Protocol: Protected Extensible Authentication Protocol
+                        Content Type: Application Data (23)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 64
+                        Encrypted Application Data: e93328b312f3b047ac6d342f84ba6eeb7c5f66f2ceef777b4c9b9b60af62e48620a96753…
+                        [Application Data Protocol: Protected Extensible Authentication Protocol]
+        AVP: t=Message-Authenticator(80) l=18 val=f5f109ad546598df26d86ee4759dc8a4
+            Type: 80
+            Length: 18
+            Message-Authenticator: f5f109ad546598df26d86ee4759dc8a4
+        AVP: t=State(24) l=42 val=414e634167674234414369564141414178556b53682f3469452b67535854324366724535…
+            Type: 24
+            Length: 42
+            State: 414e634167674234414369564141414178556b53682f3469452b67535854324366724535…
+
+Frame 15: 404 bytes on wire (3232 bits), 404 bytes captured (3232 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.845904000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.845904000 seconds
+    [Time delta from previous captured frame: 0.009179000 seconds]
+    [Time delta from previous displayed frame: 0.009179000 seconds]
+    [Time since reference or first frame: 18.242990000 seconds]
+    Frame Number: 15
+    Frame Length: 404 bytes (3232 bits)
+    Capture Length: 404 bytes (3232 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls]
+Linux cooked capture v1
+    Packet type: Unicast to us (0)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: ArubaaHe_b8:61:20 (00:0b:86:b8:61:20)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.1, Dst: 192.168.10.13
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 388
+    Identification: 0xc167 (49511)
+    000. .... = Flags: 0x0
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0x22a3 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.1
+    Destination Address: 192.168.10.13
+User Datagram Protocol, Src Port: 37057, Dst Port: 1812
+    Source Port: 37057
+    Destination Port: 1812
+    Length: 368
+    Checksum: 0xee03 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.101552000 seconds]
+        [Time since previous frame: 0.009179000 seconds]
+    UDP payload (360 bytes)
+RADIUS Protocol
+    Code: Access-Request (1)
+    Packet identifier: 0xcc (204)
+    Length: 360
+    Authenticator: 42bd5ebf8a7be942c38755de6c8271ac
+    Attribute Value Pairs
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=NAS-IP-Address(4) l=6 val=192.168.10.1
+            Type: 4
+            Length: 6
+            NAS-IP-Address: 192.168.10.1
+        AVP: t=NAS-Port(5) l=6 val=0
+            Type: 5
+            Length: 6
+            NAS-Port: 0
+        AVP: t=NAS-Identifier(32) l=14 val=192.168.10.1
+            Type: 32
+            Length: 14
+            NAS-Identifier: 192.168.10.1
+        AVP: t=NAS-Port-Type(61) l=6 val=Wireless-802.11(19)
+            Type: 61
+            Length: 6
+            NAS-Port-Type: Wireless-802.11 (19)
+        AVP: t=Calling-Station-Id(31) l=14 val=100BA96B6198
+            Type: 31
+            Length: 14
+            Calling-Station-Id: 100BA96B6198
+        AVP: t=Called-Station-Id(30) l=14 val=000B86B86120
+            Type: 30
+            Length: 14
+            Called-Station-Id: 000B86B86120
+        AVP: t=Service-Type(6) l=6 val=Framed(2)
+            Type: 6
+            Length: 6
+            Service-Type: Framed (2)
+        AVP: t=Framed-MTU(12) l=6 val=1100
+            Type: 12
+            Length: 6
+            Framed-MTU: 1100
+        AVP: t=EAP-Message(79) l=109 Last Segment[1]
+            Type: 79
+            Length: 109
+            EAP fragment: 0207006b19001703010060baddeb00caa2080763ad40f718c9e4acd85d4a5682babbc192…
+            Extensible Authentication Protocol
+                Code: Response (2)
+                Id: 7
+                Length: 107
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                Transport Layer Security
+                    TLSv1 Record Layer: Application Data Protocol: Protected Extensible Authentication Protocol
+                        Content Type: Application Data (23)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 96
+                        Encrypted Application Data: baddeb00caa2080763ad40f718c9e4acd85d4a5682babbc192e5803f77daf5c347216012…
+                        [Application Data Protocol: Protected Extensible Authentication Protocol]
+        AVP: t=State(24) l=42 val=414e634167674234414369564141414178556b53682f3469452b67535854324366724535…
+            Type: 24
+            Length: 42
+            State: 414e634167674234414369564141414178556b53682f3469452b67535854324366724535…
+        AVP: t=Vendor-Specific(26) l=27 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 27
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Essid-Name(5) l=21 val=Rao likes 1X Movies
+                Type: 5
+                Length: 21
+                Aruba-Essid-Name: Rao likes 1X Movies
+        AVP: t=Vendor-Specific(26) l=25 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 25
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Location-Id(6) l=19 val=00:0b:86:cf:e2:16
+                Type: 6
+                Length: 19
+                Aruba-Location-Id: 00:0b:86:cf:e2:16
+        AVP: t=Vendor-Specific(26) l=15 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 15
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-AP-Group(10) l=9 val=default
+                Type: 10
+                Length: 9
+                Aruba-AP-Group: default
+        AVP: t=Vendor-Specific(26) l=13 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 13
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Device-Type(12) l=7 val=Win 7
+                Type: 12
+                Length: 7
+                Aruba-Device-Type: Win 7
+        AVP: t=Message-Authenticator(80) l=18 val=fa83a1594936ca87b8c9352d5ebe4707
+            Type: 80
+            Length: 18
+            Message-Authenticator: fa83a1594936ca87b8c9352d5ebe4707
+
+Frame 16: 217 bytes on wire (1736 bits), 217 bytes captured (1736 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.851230000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.851230000 seconds
+    [Time delta from previous captured frame: 0.005326000 seconds]
+    [Time delta from previous displayed frame: 0.005326000 seconds]
+    [Time since reference or first frame: 18.248316000 seconds]
+    Frame Number: 16
+    Frame Length: 217 bytes (1736 bits)
+    Capture Length: 217 bytes (1736 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls]
+Linux cooked capture v1
+    Packet type: Sent by us (4)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: VMware_cf:19:96 (00:0c:29:cf:19:96)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.13, Dst: 192.168.10.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 201
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0xa4c5 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.13
+    Destination Address: 192.168.10.1
+User Datagram Protocol, Src Port: 1812, Dst Port: 37057
+    Source Port: 1812
+    Destination Port: 37057
+    Length: 181
+    Checksum: 0x9625 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.106878000 seconds]
+        [Time since previous frame: 0.005326000 seconds]
+    UDP payload (173 bytes)
+RADIUS Protocol
+    Code: Access-Challenge (11)
+    Packet identifier: 0xcc (204)
+    Length: 173
+    Authenticator: c6ef76c4533ef5333c583e9b6fe3913f
+    [This is a response to a request in frame 15]
+    [Time from request: 0.005326000 seconds]
+    Attribute Value Pairs
+        AVP: t=EAP-Message(79) l=93 Last Segment[1]
+            Type: 79
+            Length: 93
+            EAP fragment: 0108005b1900170301005028a865f4f9db9a1a7eac0017cdff7339fcf5e52979130b5e55…
+            Extensible Authentication Protocol
+                Code: Request (1)
+                Id: 8
+                Length: 91
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                Transport Layer Security
+                    TLSv1 Record Layer: Application Data Protocol: Protected Extensible Authentication Protocol
+                        Content Type: Application Data (23)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 80
+                        Encrypted Application Data: 28a865f4f9db9a1a7eac0017cdff7339fcf5e52979130b5e55d9b922c585b3e2c11713ea…
+                        [Application Data Protocol: Protected Extensible Authentication Protocol]
+        AVP: t=Message-Authenticator(80) l=18 val=fb39b32af0f7e9b2c7684e5a36225982
+            Type: 80
+            Length: 18
+            Message-Authenticator: fb39b32af0f7e9b2c7684e5a36225982
+        AVP: t=State(24) l=42 val=414e454161774267414a7557414141417350614f6270515541396b614b776f6f69614e65…
+            Type: 24
+            Length: 42
+            State: 414e454161774267414a7557414141417350614f6270515541396b614b776f6f69614e65…
+
+Frame 17: 340 bytes on wire (2720 bits), 340 bytes captured (2720 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.860952000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.860952000 seconds
+    [Time delta from previous captured frame: 0.009722000 seconds]
+    [Time delta from previous displayed frame: 0.009722000 seconds]
+    [Time since reference or first frame: 18.258038000 seconds]
+    Frame Number: 17
+    Frame Length: 340 bytes (2720 bits)
+    Capture Length: 340 bytes (2720 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls]
+Linux cooked capture v1
+    Packet type: Unicast to us (0)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: ArubaaHe_b8:61:20 (00:0b:86:b8:61:20)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.1, Dst: 192.168.10.13
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 324
+    Identification: 0xc168 (49512)
+    000. .... = Flags: 0x0
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0x22e2 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.1
+    Destination Address: 192.168.10.13
+User Datagram Protocol, Src Port: 37057, Dst Port: 1812
+    Source Port: 37057
+    Destination Port: 1812
+    Length: 304
+    Checksum: 0x6301 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.116600000 seconds]
+        [Time since previous frame: 0.009722000 seconds]
+    UDP payload (296 bytes)
+RADIUS Protocol
+    Code: Access-Request (1)
+    Packet identifier: 0xcd (205)
+    Length: 296
+    Authenticator: 68b016e35092b5a73c2132d1139d4e52
+    Attribute Value Pairs
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=NAS-IP-Address(4) l=6 val=192.168.10.1
+            Type: 4
+            Length: 6
+            NAS-IP-Address: 192.168.10.1
+        AVP: t=NAS-Port(5) l=6 val=0
+            Type: 5
+            Length: 6
+            NAS-Port: 0
+        AVP: t=NAS-Identifier(32) l=14 val=192.168.10.1
+            Type: 32
+            Length: 14
+            NAS-Identifier: 192.168.10.1
+        AVP: t=NAS-Port-Type(61) l=6 val=Wireless-802.11(19)
+            Type: 61
+            Length: 6
+            NAS-Port-Type: Wireless-802.11 (19)
+        AVP: t=Calling-Station-Id(31) l=14 val=100BA96B6198
+            Type: 31
+            Length: 14
+            Calling-Station-Id: 100BA96B6198
+        AVP: t=Called-Station-Id(30) l=14 val=000B86B86120
+            Type: 30
+            Length: 14
+            Called-Station-Id: 000B86B86120
+        AVP: t=Service-Type(6) l=6 val=Framed(2)
+            Type: 6
+            Length: 6
+            Service-Type: Framed (2)
+        AVP: t=Framed-MTU(12) l=6 val=1100
+            Type: 12
+            Length: 6
+            Framed-MTU: 1100
+        AVP: t=EAP-Message(79) l=45 Last Segment[1]
+            Type: 79
+            Length: 45
+            EAP fragment: 0208002b1900170301002023bbbbb6241fea063108adf78eb3bd66feecced84279f205f6…
+            Extensible Authentication Protocol
+                Code: Response (2)
+                Id: 8
+                Length: 43
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                Transport Layer Security
+                    TLSv1 Record Layer: Application Data Protocol: Protected Extensible Authentication Protocol
+                        Content Type: Application Data (23)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 32
+                        Encrypted Application Data: 23bbbbb6241fea063108adf78eb3bd66feecced84279f205f6cf070526055c21
+                        [Application Data Protocol: Protected Extensible Authentication Protocol]
+        AVP: t=State(24) l=42 val=414e454161774267414a7557414141417350614f6270515541396b614b776f6f69614e65…
+            Type: 24
+            Length: 42
+            State: 414e454161774267414a7557414141417350614f6270515541396b614b776f6f69614e65…
+        AVP: t=Vendor-Specific(26) l=27 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 27
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Essid-Name(5) l=21 val=Rao likes 1X Movies
+                Type: 5
+                Length: 21
+                Aruba-Essid-Name: Rao likes 1X Movies
+        AVP: t=Vendor-Specific(26) l=25 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 25
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Location-Id(6) l=19 val=00:0b:86:cf:e2:16
+                Type: 6
+                Length: 19
+                Aruba-Location-Id: 00:0b:86:cf:e2:16
+        AVP: t=Vendor-Specific(26) l=15 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 15
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-AP-Group(10) l=9 val=default
+                Type: 10
+                Length: 9
+                Aruba-AP-Group: default
+        AVP: t=Vendor-Specific(26) l=13 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 13
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Device-Type(12) l=7 val=Win 7
+                Type: 12
+                Length: 7
+                Aruba-Device-Type: Win 7
+        AVP: t=Message-Authenticator(80) l=18 val=220f5efc27b09e4429ec98e441833d72
+            Type: 80
+            Length: 18
+            Message-Authenticator: 220f5efc27b09e4429ec98e441833d72
+
+Frame 18: 169 bytes on wire (1352 bits), 169 bytes captured (1352 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.878925000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.878925000 seconds
+    [Time delta from previous captured frame: 0.017973000 seconds]
+    [Time delta from previous displayed frame: 0.017973000 seconds]
+    [Time since reference or first frame: 18.276011000 seconds]
+    Frame Number: 18
+    Frame Length: 169 bytes (1352 bits)
+    Capture Length: 169 bytes (1352 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls]
+Linux cooked capture v1
+    Packet type: Sent by us (4)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: VMware_cf:19:96 (00:0c:29:cf:19:96)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.13, Dst: 192.168.10.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 153
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0xa4f5 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.13
+    Destination Address: 192.168.10.1
+User Datagram Protocol, Src Port: 1812, Dst Port: 37057
+    Source Port: 1812
+    Destination Port: 37057
+    Length: 133
+    Checksum: 0x95f5 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.134573000 seconds]
+        [Time since previous frame: 0.017973000 seconds]
+    UDP payload (125 bytes)
+RADIUS Protocol
+    Code: Access-Challenge (11)
+    Packet identifier: 0xcd (205)
+    Length: 125
+    Authenticator: e91d0e04190e465b2fd0d945cb1dc117
+    [This is a response to a request in frame 17]
+    [Time from request: 0.017973000 seconds]
+    Attribute Value Pairs
+        AVP: t=EAP-Message(79) l=45 Last Segment[1]
+            Type: 79
+            Length: 45
+            EAP fragment: 0109002b1900170301002083d8f78ce424e2e429846571d119d1ecf98b2c06568d3ee129…
+            Extensible Authentication Protocol
+                Code: Request (1)
+                Id: 9
+                Length: 43
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                Transport Layer Security
+                    TLSv1 Record Layer: Application Data Protocol: Protected Extensible Authentication Protocol
+                        Content Type: Application Data (23)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 32
+                        Encrypted Application Data: 83d8f78ce424e2e429846571d119d1ecf98b2c06568d3ee1293047de044fa904
+                        [Application Data Protocol: Protected Extensible Authentication Protocol]
+        AVP: t=Message-Authenticator(80) l=18 val=0e54c22f5f712801c1139c27dca6da78
+            Type: 80
+            Length: 18
+            Message-Authenticator: 0e54c22f5f712801c1139c27dca6da78
+        AVP: t=State(24) l=42 val=415049413741443441493258414141417a6268627256564a2b754a546a6c365043705638…
+            Type: 24
+            Length: 42
+            State: 415049413741443441493258414141417a6268627256564a2b754a546a6c365043705638…
+
+Frame 19: 340 bytes on wire (2720 bits), 340 bytes captured (2720 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.898372000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.898372000 seconds
+    [Time delta from previous captured frame: 0.019447000 seconds]
+    [Time delta from previous displayed frame: 0.019447000 seconds]
+    [Time since reference or first frame: 18.295458000 seconds]
+    Frame Number: 19
+    Frame Length: 340 bytes (2720 bits)
+    Capture Length: 340 bytes (2720 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap:tls]
+Linux cooked capture v1
+    Packet type: Unicast to us (0)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: ArubaaHe_b8:61:20 (00:0b:86:b8:61:20)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.1, Dst: 192.168.10.13
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 324
+    Identification: 0xc169 (49513)
+    000. .... = Flags: 0x0
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0x22e1 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.1
+    Destination Address: 192.168.10.13
+User Datagram Protocol, Src Port: 37057, Dst Port: 1812
+    Source Port: 37057
+    Destination Port: 1812
+    Length: 304
+    Checksum: 0x073f [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.154020000 seconds]
+        [Time since previous frame: 0.019447000 seconds]
+    UDP payload (296 bytes)
+RADIUS Protocol
+    Code: Access-Request (1)
+    Packet identifier: 0xce (206)
+    Length: 296
+    Authenticator: b93e45c0939dc481cd5b3af47ac03087
+    Attribute Value Pairs
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=NAS-IP-Address(4) l=6 val=192.168.10.1
+            Type: 4
+            Length: 6
+            NAS-IP-Address: 192.168.10.1
+        AVP: t=NAS-Port(5) l=6 val=0
+            Type: 5
+            Length: 6
+            NAS-Port: 0
+        AVP: t=NAS-Identifier(32) l=14 val=192.168.10.1
+            Type: 32
+            Length: 14
+            NAS-Identifier: 192.168.10.1
+        AVP: t=NAS-Port-Type(61) l=6 val=Wireless-802.11(19)
+            Type: 61
+            Length: 6
+            NAS-Port-Type: Wireless-802.11 (19)
+        AVP: t=Calling-Station-Id(31) l=14 val=100BA96B6198
+            Type: 31
+            Length: 14
+            Calling-Station-Id: 100BA96B6198
+        AVP: t=Called-Station-Id(30) l=14 val=000B86B86120
+            Type: 30
+            Length: 14
+            Called-Station-Id: 000B86B86120
+        AVP: t=Service-Type(6) l=6 val=Framed(2)
+            Type: 6
+            Length: 6
+            Service-Type: Framed (2)
+        AVP: t=Framed-MTU(12) l=6 val=1100
+            Type: 12
+            Length: 6
+            Framed-MTU: 1100
+        AVP: t=EAP-Message(79) l=45 Last Segment[1]
+            Type: 79
+            Length: 45
+            EAP fragment: 0209002b1900170301002013ad325362522eb638f947bbc1e7b3bc264f5f12c038323266…
+            Extensible Authentication Protocol
+                Code: Response (2)
+                Id: 9
+                Length: 43
+                Type: Protected EAP (EAP-PEAP) (25)
+                EAP-TLS Flags: 0x00
+                    0... .... = Length Included: False
+                    .0.. .... = More Fragments: False
+                    ..0. .... = Start: False
+                    .... .000 = Version: 0
+                Transport Layer Security
+                    TLSv1 Record Layer: Application Data Protocol: Protected Extensible Authentication Protocol
+                        Content Type: Application Data (23)
+                        Version: TLS 1.0 (0x0301)
+                        Length: 32
+                        Encrypted Application Data: 13ad325362522eb638f947bbc1e7b3bc264f5f12c038323266e2422a419b4796
+                        [Application Data Protocol: Protected Extensible Authentication Protocol]
+        AVP: t=State(24) l=42 val=415049413741443441493258414141417a6268627256564a2b754a546a6c365043705638…
+            Type: 24
+            Length: 42
+            State: 415049413741443441493258414141417a6268627256564a2b754a546a6c365043705638…
+        AVP: t=Vendor-Specific(26) l=27 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 27
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Essid-Name(5) l=21 val=Rao likes 1X Movies
+                Type: 5
+                Length: 21
+                Aruba-Essid-Name: Rao likes 1X Movies
+        AVP: t=Vendor-Specific(26) l=25 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 25
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Location-Id(6) l=19 val=00:0b:86:cf:e2:16
+                Type: 6
+                Length: 19
+                Aruba-Location-Id: 00:0b:86:cf:e2:16
+        AVP: t=Vendor-Specific(26) l=15 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 15
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-AP-Group(10) l=9 val=default
+                Type: 10
+                Length: 9
+                Aruba-AP-Group: default
+        AVP: t=Vendor-Specific(26) l=13 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 13
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Device-Type(12) l=7 val=Win 7
+                Type: 12
+                Length: 7
+                Aruba-Device-Type: Win 7
+        AVP: t=Message-Authenticator(80) l=18 val=f3e8d249a547b760d21982fdf0f590af
+            Type: 80
+            Length: 18
+            Message-Authenticator: f3e8d249a547b760d21982fdf0f590af
+
+Frame 20: 281 bytes on wire (2248 bits), 281 bytes captured (2248 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:56.900533000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335236.900533000 seconds
+    [Time delta from previous captured frame: 0.002161000 seconds]
+    [Time delta from previous displayed frame: 0.002161000 seconds]
+    [Time since reference or first frame: 18.297619000 seconds]
+    Frame Number: 20
+    Frame Length: 281 bytes (2248 bits)
+    Capture Length: 281 bytes (2248 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius:eap]
+Linux cooked capture v1
+    Packet type: Sent by us (4)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: VMware_cf:19:96 (00:0c:29:cf:19:96)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.13, Dst: 192.168.10.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 265
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0xa485 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.13
+    Destination Address: 192.168.10.1
+User Datagram Protocol, Src Port: 1812, Dst Port: 37057
+    Source Port: 1812
+    Destination Port: 37057
+    Length: 245
+    Checksum: 0x9665 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Timestamps]
+        [Time since first frame: 0.156181000 seconds]
+        [Time since previous frame: 0.002161000 seconds]
+    UDP payload (237 bytes)
+RADIUS Protocol
+    Code: Access-Accept (2)
+    Packet identifier: 0xce (206)
+    Length: 237
+    Authenticator: 86001b4a04bfdd2b234154c84798d478
+    [This is a response to a request in frame 19]
+    [Time from request: 0.002161000 seconds]
+    Attribute Value Pairs
+        AVP: t=Vendor-Specific(26) l=58 vnd=Microsoft(311)
+            Type: 26
+            Length: 58
+            Vendor ID: Microsoft (311)
+            VSA: t=MS-MPPE-Recv-Key(17) l=52 val=c7d3e180743f58ffd444e875b511b6a0e2198e312cfc235812a882b4b9e036a359e5aa1e…
+                Type: 17
+                Length: 52
+                MS-MPPE-Recv-Key: c7d3e180743f58ffd444e875b511b6a0e2198e312cfc235812a882b4b9e036a359e5aa1e…
+        AVP: t=Vendor-Specific(26) l=58 vnd=Microsoft(311)
+            Type: 26
+            Length: 58
+            Vendor ID: Microsoft (311)
+            VSA: t=MS-MPPE-Send-Key(16) l=52 val=c8f03c0585fd2574d22d297c00505de15dcb23c2ecc186bbcc31fae1a9c8f2ba2a22d01f…
+                Type: 16
+                Length: 52
+                MS-MPPE-Send-Key: c8f03c0585fd2574d22d297c00505de15dcb23c2ecc186bbcc31fae1a9c8f2ba2a22d01f…
+        AVP: t=EAP-Message(79) l=6 Last Segment[1]
+            Type: 79
+            Length: 6
+            EAP fragment: 03090004
+            Extensible Authentication Protocol
+                Code: Success (3)
+                Id: 9
+                Length: 4
+        AVP: t=Message-Authenticator(80) l=18 val=ac582b8f9615c9476d811bda191ae7a2
+            Type: 80
+            Length: 18
+            Message-Authenticator: ac582b8f9615c9476d811bda191ae7a2
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=Class(25) l=58 val=48cd2fc61c604eb0858987ac517fcdf8b90b0000000000005230303030303031342d3031…
+            Type: 25
+            Length: 58
+            Class: 48cd2fc61c604eb0858987ac517fcdf8b90b0000000000005230303030303031342d3031…
+
+Frame 21: 386 bytes on wire (3088 bits), 386 bytes captured (3088 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:57.259893000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335237.259893000 seconds
+    [Time delta from previous captured frame: 0.359360000 seconds]
+    [Time delta from previous displayed frame: 0.359360000 seconds]
+    [Time since reference or first frame: 18.656979000 seconds]
+    Frame Number: 21
+    Frame Length: 386 bytes (3088 bits)
+    Capture Length: 386 bytes (3088 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius]
+Linux cooked capture v1
+    Packet type: Unicast to us (0)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: ArubaaHe_b8:61:20 (00:0b:86:b8:61:20)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.1, Dst: 192.168.10.13
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 370
+    Identification: 0xc16a (49514)
+    000. .... = Flags: 0x0
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0x22b2 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.1
+    Destination Address: 192.168.10.13
+User Datagram Protocol, Src Port: 37057, Dst Port: 1813
+    Source Port: 37057
+    Destination Port: 1813
+    Length: 350
+    Checksum: 0xf0f4 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 0]
+    [Timestamps]
+        [Time since first frame: 18.656979000 seconds]
+        [Time since previous frame: 18.651562000 seconds]
+    UDP payload (342 bytes)
+RADIUS Protocol
+    Code: Accounting-Request (4)
+    Packet identifier: 0xcf (207)
+    Length: 342
+    Authenticator: 3d9f2e86ee2253d343001e5e8d4fb0e4
+    Attribute Value Pairs
+        AVP: t=User-Name(1) l=19 val=ARUBANETWORKS\rao
+            Type: 1
+            Length: 19
+            User-Name: ARUBANETWORKS\rao
+        AVP: t=NAS-IP-Address(4) l=6 val=192.168.10.1
+            Type: 4
+            Length: 6
+            NAS-IP-Address: 192.168.10.1
+        AVP: t=NAS-Port(5) l=6 val=0
+            Type: 5
+            Length: 6
+            NAS-Port: 0
+        AVP: t=NAS-Port-Type(61) l=6 val=Wireless-802.11(19)
+            Type: 61
+            Length: 6
+            NAS-Port-Type: Wireless-802.11 (19)
+        AVP: t=Acct-Session-Id(44) l=31 val=ARUBANET100BA96B6198-55601AB8
+            Type: 44
+            Length: 31
+            Acct-Session-Id: ARUBANET100BA96B6198-55601AB8
+        AVP: t=Event-Timestamp(55) l=6 val=May 23, 2015 02:14:16.000000000 EDT
+            Type: 55
+            Length: 6
+            Event-Timestamp: May 23, 2015 02:14:16.000000000 EDT
+        AVP: t=Acct-Multi-Session-Id(50) l=25 val=100BA96B6198-0000000005
+            Type: 50
+            Length: 25
+            Acct-Multi-Session-Id: 100BA96B6198-0000000005
+        AVP: t=Framed-IP-Address(8) l=6 val=192.168.10.159
+            Type: 8
+            Length: 6
+            Framed-IP-Address: 192.168.10.159
+        AVP: t=Calling-Station-Id(31) l=14 val=100BA96B6198
+            Type: 31
+            Length: 14
+            Calling-Station-Id: 100BA96B6198
+        AVP: t=Called-Station-Id(30) l=14 val=000B86B86120
+            Type: 30
+            Length: 14
+            Called-Station-Id: 000B86B86120
+        AVP: t=Class(25) l=58 val=48cd2fc61c604eb0858987ac517fcdf8b90b0000000000005230303030303031342d3031…
+            Type: 25
+            Length: 58
+            Class: 48cd2fc61c604eb0858987ac517fcdf8b90b0000000000005230303030303031342d3031…
+        AVP: t=Acct-Delay-Time(41) l=6 val=0
+            Type: 41
+            Length: 6
+            Acct-Delay-Time: 0
+        AVP: t=Vendor-Specific(26) l=27 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 27
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Essid-Name(5) l=21 val=Rao likes 1X Movies
+                Type: 5
+                Length: 21
+                Aruba-Essid-Name: Rao likes 1X Movies
+        AVP: t=Vendor-Specific(26) l=25 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 25
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Location-Id(6) l=19 val=00:0b:86:cf:e2:16
+                Type: 6
+                Length: 19
+                Aruba-Location-Id: 00:0b:86:cf:e2:16
+        AVP: t=Vendor-Specific(26) l=15 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 15
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-AP-Group(10) l=9 val=default
+                Type: 10
+                Length: 9
+                Aruba-AP-Group: default
+        AVP: t=Vendor-Specific(26) l=21 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 21
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-User-Role(1) l=15 val=authenticated
+                Type: 1
+                Length: 15
+                Aruba-User-Role: authenticated
+        AVP: t=Vendor-Specific(26) l=12 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 12
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-User-Vlan(2) l=6 val=1
+                Type: 2
+                Length: 6
+                Aruba-User-Vlan: 1
+        AVP: t=Vendor-Specific(26) l=13 vnd=Aruba, a Hewlett Packard Enterprise company(14823)
+            Type: 26
+            Length: 13
+            Vendor ID: Aruba, a Hewlett Packard Enterprise company (14823)
+            VSA: t=Aruba-Device-Type(12) l=7 val=Win 7
+                Type: 12
+                Length: 7
+                Aruba-Device-Type: Win 7
+        AVP: t=Acct-Status-Type(40) l=6 val=Start(1)
+            Type: 40
+            Length: 6
+            Acct-Status-Type: Start (1)
+        AVP: t=Acct-Authentic(45) l=6 val=RADIUS(1)
+            Type: 45
+            Length: 6
+            Acct-Authentic: RADIUS (1)
+
+Frame 22: 64 bytes on wire (512 bits), 64 bytes captured (512 bits) on interface unknown, id 1
+    Section number: 1
+    Interface id: 1 (unknown)
+        Interface name: unknown
+    Encapsulation type: Linux cooked-mode capture v1 (25)
+    Arrival Time: May 22, 2015 18:53:57.261668000 EDT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1432335237.261668000 seconds
+    [Time delta from previous captured frame: 0.001775000 seconds]
+    [Time delta from previous displayed frame: 0.001775000 seconds]
+    [Time since reference or first frame: 18.658754000 seconds]
+    Frame Number: 22
+    Frame Length: 64 bytes (512 bits)
+    Capture Length: 64 bytes (512 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: sll:ethertype:ip:udp:radius]
+Linux cooked capture v1
+    Packet type: Sent by us (4)
+    Link-layer address type: Ethernet (1)
+    Link-layer address length: 6
+    Source: VMware_cf:19:96 (00:0c:29:cf:19:96)
+    Unused: 0000
+    Protocol: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.10.13, Dst: 192.168.10.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 48
+    Identification: 0x0000 (0)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: UDP (17)
+    Header Checksum: 0xa55e [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.10.13
+    Destination Address: 192.168.10.1
+User Datagram Protocol, Src Port: 1813, Dst Port: 37057
+    Source Port: 1813
+    Destination Port: 37057
+    Length: 28
+    Checksum: 0x958c [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 0]
+    [Timestamps]
+        [Time since first frame: 18.658754000 seconds]
+        [Time since previous frame: 0.001775000 seconds]
+    UDP payload (20 bytes)
+RADIUS Protocol
+    Code: Accounting-Response (5)
+    Packet identifier: 0xcf (207)
+    Length: 20
+    Authenticator: bbd7cff07e615e5bb0fec93bdf7ef2ed
+    [This is a response to a request in frame 21]
+    [Time from request: 0.001775000 seconds]
+

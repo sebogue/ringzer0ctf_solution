@@ -1,0 +1,93 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. GET-FLAG.
+       
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       78 KEY-LEN          VALUE   28.
+       78 ANSWER-OF-LIFE   VALUE   42.
+       01 CHAR-INDEX       PIC     99.
+       01 USER-KEY         PIC     X(KEY-LEN).
+       01 KEY-TABLE.
+           05 KEY-VALUE    PIC     X(09)    OCCURS KEY-LEN TIMES.     
+       01 IS-VALID         PIC     9(5)     COMP.
+       01 ARG1             PIC     9(5)     COMP.
+       01 ARG2             PIC     9(5)     COMP.
+       01 RETRN            PIC     9(5)     COMP.
+       01 RSD1             PIC     9(5)     COMP.
+       01 RSD2             PIC     9(5)     COMP.
+       01 QTN1             PIC     9(5)     COMP.
+       01 QTN2             PIC     9(5)     COMP.
+       01 BIT-VAL          PIC     9(5)     COMP.
+           
+       
+       PROCEDURE DIVISION.
+       000-MAIN.
+           DISPLAY "PLEASE ENTER THE KEY ("KEY-LEN" chars)".
+           ACCEPT USER-KEY.
+           PERFORM 001-SET-FLAG-KEY.
+           MOVE 1 TO IS-VALID
+           MOVE 1 TO CHAR-INDEX.
+           PERFORM UNTIL CHAR-INDEX > KEY-LEN
+               COMPUTE ARG1 = FUNCTION ORD(USER-KEY(CHAR-INDEX:1)) - 1
+               MOVE KEY-VALUE(CHAR-INDEX) TO ARG2
+               PERFORM 002-MAGIC-OP
+               IF RETRN IS NOT EQUAL TO ANSWER-OF-LIFE
+                  MOVE 0 TO IS-VALID
+                END-IF
+               ADD 1 TO CHAR-INDEX
+           END-PERFORM.
+           IF IS-VALID IS EQUAL TO 1
+              DISPLAY "VALID KEY ENTERED. WELCOME TO THE CABAL."
+          ELSE
+              DISPLAY "INVALID KEY ENTERED."
+          END-IF.  
+           STOP RUN.
+       
+       001-SET-FLAG-KEY.
+           MOVE 108 TO KEY-VALUE(1).
+           MOVE 102 TO KEY-VALUE(2).
+           MOVE 107 TO KEY-VALUE(3).
+           MOVE 109 TO KEY-VALUE(4).
+           MOVE 7 TO KEY-VALUE(5).
+           MOVE 105 TO KEY-VALUE(6).
+           MOVE 101 TO KEY-VALUE(7).
+           MOVE 104 TO KEY-VALUE(8).
+           MOVE 101 TO KEY-VALUE(9).
+           MOVE 102 TO KEY-VALUE(10).
+           MOVE 27 TO KEY-VALUE(11).
+           MOVE 121 TO KEY-VALUE(12).
+           MOVE 126 TO KEY-VALUE(13).
+           MOVE 98 TO KEY-VALUE(14).
+           MOVE 111 TO KEY-VALUE(15).
+           MOVE 105 TO KEY-VALUE(16).
+           MOVE 107 TO KEY-VALUE(17).
+           MOVE 104 TO KEY-VALUE(18).
+           MOVE 107 TO KEY-VALUE(19).
+           MOVE 102 TO KEY-VALUE(20).
+           MOVE 108 TO KEY-VALUE(21).
+           MOVE 106 TO KEY-VALUE(22).
+           MOVE 124 TO KEY-VALUE(23).
+           MOVE 101 TO KEY-VALUE(24).
+           MOVE 120 TO KEY-VALUE(25).
+           MOVE 99 TO KEY-VALUE(26).
+           MOVE 126 TO KEY-VALUE(27).
+           MOVE 25 TO KEY-VALUE(28).
+           
+       002-MAGIC-OP.
+           MOVE 1 TO BIT-VAL.
+           MOVE ZERO TO RETRN.
+           IF ARG1 IS NOT EQUAL TO ZERO OR ARG2 IS NOT EQUAL TO ZERO
+              PERFORM 003-MAGIC-OP-SUB
+                UNTIL ARG1 IS EQUAL TO ZERO AND ARG2 IS EQUAL TO ZERO.
+       
+       003-MAGIC-OP-SUB.
+           DIVIDE ARG1 BY 2 GIVING QTN1.
+           COMPUTE RSD1 = ARG1 - QTN1 * 2.
+           DIVIDE ARG2 BY 2 GIVING QTN2.
+           COMPUTE RSD2 = ARG2 - QTN2 * 2.
+           IF RSD1 IS NOT EQUAL TO RSD2 THEN
+              ADD BIT-VAL TO RETRN
+            END-IF.
+           MULTIPLY BIT-VAL BY 2 GIVING BIT-VAL.
+           MOVE QTN1 TO ARG1.
+           MOVE QTN2 TO ARG2. 

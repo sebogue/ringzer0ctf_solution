@@ -20,7 +20,7 @@ WARNING: this prompt is launched using ./prompt.sh 2>/dev/null
 function check_space {
 	if [[ $1 == *[bdksc'/''<''>''&''$']* ]]
 	then 	
-    		return 0
+    	return 0
 	fi
 
 	return 1

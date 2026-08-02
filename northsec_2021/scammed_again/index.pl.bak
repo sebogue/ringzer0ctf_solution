@@ -1,0 +1,47 @@
+use Carp;
+
+use Mojolicious::Lite;
+use Mojo::JSON qw(decode_json encode_json);
+
+use lib ('/var/www/html');
+use Wizard;
+
+my $str;
+my $pattern;
+my %CACHED_PATTERNS;
+
+sub run_wizzard_censorship {
+  my ($str, $pattern) = @_;
+  
+  unless (exists $CACHED_PATTERNS{$pattern}) {
+    (my $escaped_pattern = $pattern) =~ s!([/\$\[\(\.])!\\$1!g;
+    $CACHED_PATTERNS{$pattern} = eval "sub { \$_[0] =~ s/($escaped_pattern)/\"*\"x (length \$1)/gie }" or croak $@;
+  }
+  $CACHED_PATTERNS{$pattern}->($str);
+  
+  return $str;
+}
+
+get '/' => sub {} => 'index';
+
+post '/send' => sub {
+	my $self = shift;
+	my $msg = $self->req->param("msg");
+	my $censored_words = $self->req->param("censored_words");
+  
+  my $userMsg = run_wizzard_censorship($msg, $censored_words);
+
+  my $answer = encode_json {userMsg => $userMsg, wizardMsg => get_wizard_answer($userMsg)};
+	$self->render(json => $answer);
+};
+
+app->config(
+    hypnotoad => {
+        listen => [ 'http://[::1]:8080/' ],
+        proxy  => 1,
+    },
+);
+
+app->secrets(['{REDACTED}']);
+
+app->start;
